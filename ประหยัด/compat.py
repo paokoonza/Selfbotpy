@@ -17,20 +17,24 @@
 # under the License.
 #
 
-from os import path
-from SCons.Builder import Builder
-from six.moves import map
+import sys
 
+if sys.version_info[0] == 2:
 
-def scons_env(env, add=''):
-    opath = path.dirname(path.abspath('$TARGET'))
-    lstr = 'thrift --gen cpp -o ' + opath + ' ' + add + ' $SOURCE'
-    cppbuild = Builder(action=lstr)
-    env.Append(BUILDERS={'ThriftCpp': cppbuild})
+    from cStringIO import StringIO as BufferIO
 
+    def binary_to_str(bin_val):
+        return bin_val
 
-def gen_cpp(env, dir, file):
-    scons_env(env)
-    suffixes = ['_types.h', '_types.cpp']
-    targets = map(lambda s: 'gen-cpp/' + file + s, suffixes)
-    return env.ThriftCpp(targets, dir + file + '.thrift')
+    def str_to_binary(str_val):
+        return str_val
+
+else:
+
+    from io import BytesIO as BufferIO  # noqa
+
+    def binary_to_str(bin_val):
+        return bin_val.decode('utf8')
+
+    def str_to_binary(str_val):
+        return bytes(str_val, 'utf8')
