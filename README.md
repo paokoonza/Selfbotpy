@@ -16,20 +16,10 @@ Cara Install Self Bot :
 - Ketik -> `pip3 install pytz`
 - Ketik -> `pip3 install humanfriendly`
 - Ketik -> `pip3 install googletrans`
-- Ketik -> `git clone https://github.com/Nadyatjia/BotLinePython3`
-- Ketik -> `cd BotLinePython3`
+- Ketik -> `git clone https://github.com/prataennaimjoi/Selfbotpy`
+- Ketik -> `cd Selfbotpy`
 - Ketik -> `python3 Nadyasb.py`
 
-Cara Menjalankan Bot Kembali :
-------
-- Ketik -> `cd LineBotPython3`
-- Ketik -> `python3 Nadyasb.py`
-
-
-Credit By@ Nadya Sutjiadi.
-------
-- `Follow My Instagram : nadya.tjia`
-- `Add My ID LINE : nad_nad. (pake titik)`
 
 Thx To :
 ------
