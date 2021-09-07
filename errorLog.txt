@@ -1,0 +1,86 @@
+
+[<module 'time' (built-in)>] [Errno 103] Software caused connection abort
+[<module 'time' (built-in)>] Request-sent
+[<module 'time' (built-in)>] Request-sent
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] TalkException(code=0, reason='Invalid groupId', parameterMap={})
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'MENTION'
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] object of type 'NoneType' has no len()
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] 'commet'
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] 'commet'
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] 'commet'
+[<module 'time' (built-in)>] 'commet'
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] list index out of range
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] can only concatenate str (not "NoneType") to str
+[<module 'time' (built-in)>] can only concatenate str (not "NoneType") to str
+[<module 'time' (built-in)>] can only concatenate str (not "NoneType") to str
+[<module 'time' (built-in)>] can only concatenate str (not "NoneType") to str
+[<module 'time' (built-in)>] can only concatenate str (not "NoneType") to str
+[<module 'time' (built-in)>] can only concatenate str (not "NoneType") to str
+[<module 'time' (built-in)>] can only concatenate str (not "NoneType") to str
+[<module 'time' (built-in)>] can only concatenate str (not "NoneType") to str
+[<module 'time' (built-in)>] can only concatenate str (not "NoneType") to str
+[<module 'time' (built-in)>] 'bool' object is not iterable
+[<module 'time' (built-in)>] can only concatenate str (not "NoneType") to str
+[<module 'time' (built-in)>] list index out of range
