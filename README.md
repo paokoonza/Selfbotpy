@@ -18,7 +18,7 @@ Cara Install Self Bot :
 - Ketik -> `pip3 install googletrans`
 - Ketik -> `git clone https://github.com/prataennaimjoi/Selfbotpy`
 - Ketik -> `cd Selfbotpy`
-- Ketik -> `python3 Nadyasb.py`
+- Ketik -> `python3 Tan.py`
 
 
 Thx To :
