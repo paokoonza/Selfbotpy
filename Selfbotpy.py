@@ -1335,7 +1335,7 @@ async def lineBot(op):
                       try:
                           tagadd["tag"] = text_
                           sa = "「 ตั้งคำแทค 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                           sendTemplate(to,data)
                       except:
                           line.sendMessage(to,"Done. >_<")
@@ -1344,7 +1344,7 @@ async def lineBot(op):
                       try:
                           settings["reply"] = text_
                           sa = "「 ตั้งคำแทค 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                           sendTemplate(to,data)
                       except:
                           line.sendMessage(to,"Done. >_<")
@@ -1353,7 +1353,7 @@ async def lineBot(op):
                       try:
                           tagadd["wctext"] = text_
                           sa = "「 ตั้งต้อนรับ 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": " TANBOTNEVERDIES✯͜͡❂➣", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": " TANBOTNEVERDIES✯͜͡❂➣", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                           sendTemplate(to,data)
                       except:
                           line.sendMessags(to,"Done. >_<")
@@ -1369,7 +1369,7 @@ async def lineBot(op):
                       try:
                           tagadd["add"] = text_
                           sa = "「 ตั้งแอด 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                           sendTemplate(to,data)
                       except:
                           line.sendMessags(to,"Done. >_<")
@@ -1378,7 +1378,7 @@ async def lineBot(op):
                       try:
                           settings["commet"] = text_
                           sa = "「 ตั้งคอมเม้น 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                           sendTemplate(to,data)
                       except:
                           line.sendMessags(to,"Done. >_<")
@@ -3362,7 +3362,7 @@ async def lineBot(op):
                             "sentBy": {
                                  "label": "{}".format(line.getContact(lineMID).displayName),
                                  "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
-                                 "linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                 "linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                             }
                         }
                         sendTemplate(to, data)
@@ -3382,7 +3382,7 @@ async def lineBot(op):
                                             "size": "full",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                             }
                                         }
                                     ]
@@ -3402,7 +3402,7 @@ async def lineBot(op):
                                             "size": "full",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                             }
                                         }
                                     ]
@@ -3422,7 +3422,7 @@ async def lineBot(op):
                                             "size": "full",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                             }
                                         }
                                     ]
@@ -3680,7 +3680,7 @@ async def lineBot(op):
                     line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดมุดลิ้งเรียบร้อย🌟")
 
-                elif text.lower() == 'speed':start = time.time();line.sendMessage("uda8195e53e6c6e17f3f745743e477100", "TANBOTNEVERDIES✯͜͡❂➣ ");elapsed_time = time.time() - start;duc1(to, "Speed : %s second"%str(round(elapsed_time,4)))
+                elif text.lower() == 'speed':start = time.time();line.sendMessage("udb43d62b8ab3d9390881ded66f8a037a", "TANBOTNEVERDIES✯͜͡❂➣ ");elapsed_time = time.time() - start;duc1(to, "Speed : %s second"%str(round(elapsed_time,4)))
                 
                 elif msg.text.lower().startswith("ประกาศ "):
                             txt = removeCmd("ประกาศ", text)
@@ -3824,7 +3824,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "TANBOTNEVERDIES✯͜͡❂➣ ",
-"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
+"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
 }
 },
 {
@@ -3837,7 +3837,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "TANBOTNEVERDIES✯͜͡❂➣ ",
-"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
+"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
 }
 }
 ]
@@ -3889,7 +3889,7 @@ async def lineBot(op):
                                               "aspectMode": "cover",
                                               "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                               }
                                             },
                                         "body": {
@@ -3991,7 +3991,7 @@ async def lineBot(op):
                                                       "text": "สนใจติดต่อ",
                                                       "size": "xl",
                                                       "action": {
-                                                        "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
+                                                        "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
                                                         "type": "uri",
                                                         "label": "Add Maker"
                                                       },
@@ -4049,7 +4049,7 @@ async def lineBot(op):
                                               "aspectMode": "cover",
                                               "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                               }
                                             },
                                         "body": {
@@ -4151,7 +4151,7 @@ async def lineBot(op):
                                                       "text": "สนใจติดต่อ",
                                                       "size": "xl",
                                                       "action": {
-                                                        "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
+                                                        "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
                                                         "type": "uri",
                                                         "label": "Add Maker"
                                                       },
@@ -4209,7 +4209,7 @@ async def lineBot(op):
                                               "aspectMode": "cover",
                                               "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                               }
                                             },
                                         "body": {
@@ -4311,7 +4311,7 @@ async def lineBot(op):
                                                       "text": "สนใจติดต่อ",
                                                       "size": "xl",
                                                       "action": {
-                                                        "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
+                                                        "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
                                                         "type": "uri",
                                                         "label": "Add Maker"
                                                       },
@@ -4838,7 +4838,7 @@ async def lineBot(op):
                         if spl[1] != "":
                             txt = txt + " ด้วยข้อความ \""+spl[1]+"\""
                         txt = txt + "\nกรุณารอสักครู่.."
-                        data = {"type": "text","text": "{}".format(str(txt)),"sentBy": {"label": "{}".format(line.getContact(lineMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ubd86e8c77559b1493f0ad64b1dba2d6c"}}
+                        data = {"type": "text","text": "{}".format(str(txt)),"sentBy": {"label": "{}".format(line.getContact(lineMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
                         sendTemplate(to, data)
                         procLock = len(ag)
                         for gr in ag:
@@ -4850,7 +4850,7 @@ async def lineBot(op):
                             except:
                                 pass
                         sis = "สำเร็จแล้ว (｀・ω・´)"
-                        data = {"type": "text","text": "{}".format(str(sis)),"sentBy": {"label": "{}".format(line.getContact(maxgieMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ubd86e8c77559b1493f0ad64b1dba2d6c"}}
+                        data = {"type": "text","text": "{}".format(str(sis)),"sentBy": {"label": "{}".format(line.getContact(lineMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
                         sendTemplate(to, data)
             
 #=====================================================================
@@ -4910,7 +4910,7 @@ async def lineBot(op):
                   #  
                     line.unsendMessage(msg_id)
                     duc1(to, "{ Group ID }\n" + gid.id)
-                    line.sendMessage(to, line.getGroup(to).name, contentMetadata = {'previewUrl': 'http://dl.profile.line-cdn.net/'+maxgie.getGroup(to).pictureStatus, 'i-installUrl': 'https://line.me/ti/p/~', 'type': 'mt', 'subText': "★ʄທയஆടஷະ★ ", 'a-installUrl': 'https://line.me/ti/p/~', 'a-installUrl': ' https://line.me/ti/p/~', 'a-packageName': 'com.spotify.music', 'countryCode': 'ID', 'a-linkUri': 'https://line.me/ti/p/~', 'i-linkUri': 'https://line.me/ti/p/~', 'id': 'mt000000000a6b79f9', 'text': '★ʄທയஆടஷະ★ ', 'linkUri': 'https://line.me/ti/p/~'}, contentType=19)
+                    line.sendMessage(to, line.getGroup(to).name, contentMetadata = {'previewUrl': 'http://dl.profile.line-cdn.net/'+line.getGroup(to).pictureStatus, 'i-installUrl': 'https://line.me/ti/p/~', 'type': 'mt', 'subText': "꧁TANBOTNEVERDIES꧂ ", 'a-installUrl': 'https://line.me/ti/p/~', 'a-installUrl': ' https://line.me/ti/p/~', 'a-packageName': 'com.spotify.music', 'countryCode': 'ID', 'a-linkUri': 'https://line.me/ti/p/~', 'i-linkUri': 'https://line.me/ti/p/~', 'id': 'mt000000000a6b79f9', 'text': '꧁TANBOTNEVERDIES꧂ ', 'linkUri': 'https://line.me/ti/p/~'}, contentType=19)
                 elif text.lower() == 'รูปกลุ่ม':
                     group = line.getGroup(to)
                     path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
@@ -4946,7 +4946,7 @@ async def lineBot(op):
                             line.updateGroup(group)
                             line.sendMessage(to, "ปิดลิ้งเรียบร้อย")
                 elif text.lower() == 'ข้อมูลกลุ่ม':
-                    group = maxgie.getGroup(to)
+                    group = line.getGroup(to)
                     try:
                         gCreator = group.creator.displayName
                     except:
@@ -5024,7 +5024,7 @@ async def lineBot(op):
                                 },
                                    "hero": {
                                             "type": "image",
-                                            "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(sender).pictureStatus),
+                                            "url": "https://obs.line-scdn.net/{}".format(line.getContact(sender).pictureStatus),
                                             "size": "full",
                                             "aspectRatio": "1:1",
                                             "aspectMode": "fit",
@@ -5120,7 +5120,7 @@ async def lineBot(op):
                         msgs+="\n[%i] %s" % (num, ids.displayName)
                         num=(num+1)
                     msgs+="\n☢️รายชื่อเพื่อนทั้งหมด☢️\n\nมีดังต่อไปนี้ : %i" % len(kontak)
-                    maxgie.sendMessage(msg.to, msgs)
+                    line.sendMessage(msg.to, msgs)
             #      if msg.toType == 2:                
 #
              #              ginfo = line.getGroup(receiver)
@@ -5185,7 +5185,7 @@ async def lineBot(op):
 #=====================================================================
             elif msg.contentType == 1:
                 if sets["changePictureProfile"] == True:
-                    path = maxgie.downloadObjectMsg(msg_id)
+                    path = line.downloadObjectMsg(msg_id)
                     sets["changePictureProfile"] = False
                     line.updateProfilePicture(path)
                     line.unsendMessage(msg_id)
@@ -5241,7 +5241,7 @@ async def lineBot(op):
                                 if l not in n_links:
                                     n_links.append(l)
                             for ticket_id in n_links:
-                                group = maxgie.findGroupByTicket(ticket_id)
+                                group = line.findGroupByTicket(ticket_id)
                                 line.acceptGroupInvitationByTicket(group.id,ticket_id)
                                 line.sendMessage(group.id,str(tagadd["m"]))
                             #    msgSticker = sets["messageSticker"]["listSticker"]["join2"]
@@ -5528,7 +5528,7 @@ async def lineBot(op):
             sender = msg._from
             try:
                if mc["wr"][str(msg.text)]:
-                   maxgie.sendMessage(msg.to,mc["wr"][str(msg.text)])
+                   line.sendMessage(msg.to,mc["wr"][str(msg.text)])
             except:
               pass
         if op.type == 25:
@@ -5581,7 +5581,7 @@ async def lineBot(op):
                     for i in mc["wr"]:
                         lisk+="\nคีย์เวิร์ด: "+str(i)+"\nตอบโต้: "+str(mc["wr"][i])+"\n"
                     lisk+="\nวิธีล้างapi >\\<\nล้างapi ตามด้วยคำที่จะล้าง"
-                    data = {"type": "text","text": "{}".format(lisk),"sentBy": {"label": "list API", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
+                    data = {"type": "text","text": "{}".format(lisk),"sentBy": {"label": "list API", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                     sendTemplate(to,data)
 #==============================================================================#
 #==============================================================================#
