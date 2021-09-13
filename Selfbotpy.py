@@ -5494,26 +5494,26 @@ async def maxgieBot(op):
             setKey = settings["keyCommand"].title()
             if settings["setKey"] == False: setKey = ''
             if isValid != False:
-                if msg.contentType == 0 and sender not in maxgieMID and msg.toType == 2:
+                if msg.contentType == 0 and sender not in lineMID and msg.toType == 2:
                     if 'MENTION' in msg.contentMetadata.keys() != None:
                         if sets["tagsticker"] == True:
                             name = re.findall(r'@(\w+)', msg.text)
                             mention = ast.literal_eval(msg.contentMetadata['MENTION'])
                             mentionees = mention['MENTIONEES']
                             for mention in mentionees:
-                                 if maxgieMID in mention["M"]:
-                                    #  contact = maxgie.getContact(maxgieMID)
+                                 if lineMID in mention["M"]:
+                                    #  contact = line.getContact(maxgieMID)
                                    #   a = contact.displayName
                                       msg = sets["messageSticker"]["listSticker"]["tag"]
                                       if msg != None:
-                                          contact = maxgie.getContact(maxgieMID)
+                                          contact = line.getContact(lineMID)
                                           a = contact.displayName
                                           stk = msg['STKID']
                                           spk = msg['STKPKGID']
                                           data={'type':'template','altText': str(a)+' ส่งสติ๊กเกอร์','template':{'type':'image_carousel','columns':[{'imageUrl':'https://stickershop.line-scdn.net/stickershop/v1/sticker/{}/IOS/sticker_animation@2x.png'.format(stk),'action':{'type':'uri','uri':'https://line.me/S/sticker/{}'.format(spk)}}]}}
                                           sendTemplate(to, data)
                                       else:
-                                          contact = maxgie.getContact(maxgieMID)
+                                          contact = line.getContact(lineMID)
                                           a = contact.displayName
                                           stk = msg['STKID']
                                           spk = msg['STKPKGID']
@@ -5521,7 +5521,7 @@ async def maxgieBot(op):
                                           sendTemplate(to, data)
 #==============================================================================#
         if op.type == 19:
-            if maxgieMID in op.param3:
+            if lineMID in op.param3:
                 apalo["Talkblacklist"][op.param2] = True
         if op.type == 26 or op.type == 25:
             msg = op.message
@@ -5553,7 +5553,7 @@ async def maxgieBot(op):
                 if msg.text.lower().startswith("แปรงคท "):
                     delcmd = msg.text.split(" ")
                     getx = msg.text.replace(delcmd[0] + " ","")
-                    maxgie.sendContact(msg.to,str(getx))
+                    line.sendContact(msg.to,str(getx))
                 if msg.text.startswith("ตั้งapi "):
                     try:
                         delcmd = msg.text.split(" ")
@@ -5563,7 +5563,7 @@ async def maxgieBot(op):
                         mc["wr"][kw] = ans
                         f=codecs.open('sb.json','w','utf-8')
                         json.dump(mc, f, sort_keys=True, indent=4, ensure_ascii=False)
-                        maxgie.sendMessage(msg.to,"คีย์เวิร์ด: " + str(kw) + "\nตอบกลับ: "+ str(ans))
+                        line.sendMessage(msg.to,"คีย์เวิร์ด: " + str(kw) + "\nตอบกลับ: "+ str(ans))
                     except Exception as Error:
                         print(Error)
                 if msg.text.startswith("ล้างapi "):
@@ -5571,7 +5571,7 @@ async def maxgieBot(op):
                         delcmd = msg.text.split(" ")
                         getx = msg.text.replace(delcmd[0] + " ","")
                         del mc["wr"][getx]
-                        maxgie.sendMessage(msg.to, "คำ " + str(getx) + " ล้างแล้ว")
+                        line.sendMessage(msg.to, "คำ " + str(getx) + " ล้างแล้ว")
                         f=codecs.open('sb.json','w','utf-8')
                         json.dump(mc, f, sort_keys=True, indent=4, ensure_ascii=False)
                     except Exception as Error:
@@ -5581,7 +5581,7 @@ async def maxgieBot(op):
                     for i in mc["wr"]:
                         lisk+="\nคีย์เวิร์ด: "+str(i)+"\nตอบโต้: "+str(mc["wr"][i])+"\n"
                     lisk+="\nวิธีล้างapi >\\<\nล้างapi ตามด้วยคำที่จะล้าง"
-                    data = {"type": "text","text": "{}".format(lisk),"sentBy": {"label": "list API", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"}}
+                    data = {"type": "text","text": "{}".format(lisk),"sentBy": {"label": "list API", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
                     sendTemplate(to,data)
 #==============================================================================#
 #==============================================================================#
@@ -5592,7 +5592,7 @@ async def maxgieBot(op):
             receiver = msg.to
             sender = msg._from
             if msg.toType == 0:
-                if sender != maxgie.profile.mid:
+                if sender != line.profile.mid:
                     to = sender
                 else:
                     to = receiver
@@ -5608,7 +5608,7 @@ async def maxgieBot(op):
                                 "STKVER": msg.contentMetadata["STKVER"],
                                 "STKPKGID": msg.contentMetadata["STKPKGID"]
                             }
-                            maxgie.sendMessage(to, "Success Added " + name)
+                            line.sendMessage(to, "Success Added " + name)
                         sets["messageSticker"]["addStatus"] = False
                         sets["messageSticker"]["addName"] = None
                     if sets["addSticker"]["status"] == True:
@@ -5634,7 +5634,7 @@ async def maxgieBot(op):
             setKey = settings["keyCommand"].title()
             if settings["setKey"] == False: setKey = ''
             if isValid != False:
-                if msg.toType == 0 and sender != maxgieMID: to = sender
+                if msg.toType == 0 and sender != lineMID: to = sender
                 else: to = receiver
                 if msg.contentType == 0 and to not in chatbot["botMute"]:
                     if settings["unsendMessage"] == True:
@@ -5651,7 +5651,7 @@ async def maxgieBot(op):
                     if settings["unsendMessage"] == True:
                         try:
                             unsendmsg1 = time.time()
-                            path = maxgie.downloadObjectMsg(msg_id)
+                            path = line.downloadObjectMsg(msg_id)
                             msg_dict[msg.id] = {"from":msg._from,"image":path,"waktu":unsendmsg1}
                         except Exception as e:
                             print (e)
@@ -5659,7 +5659,7 @@ async def maxgieBot(op):
                     if settings["unsendMessage"] == True:
                         try:
                             unsendmsg2 = time.time()
-                            path = maxgie.downloadObjectMsg(msg_id)
+                            path = line.downloadObjectMsg(msg_id)
                             msg_dict[msg.id] = {"from":msg._from,"video":path,"waktu":unsendmsg2}
                         except Exception as e:
                             print (e)
@@ -5667,7 +5667,7 @@ async def maxgieBot(op):
                     if settings["unsendMessage"] == True:
                         try:
                             unsendmsg3 = time.time()
-                            path = maxgie.downloadObjectMsg(msg_id)
+                            path = line.downloadObjectMsg(msg_id)
                             msg_dict[msg.id] = {"from":msg._from,"audio":path,"waktu":unsendmsg3}
                         except Exception as e:
                             print (e)
@@ -5692,7 +5692,7 @@ async def maxgieBot(op):
                     if settings["unsendMessage"] == True:
                         try:
                             unsendmsg14 = time.time()
-                            path = maxgie.downloadObjectMsg(msg_id)
+                            path = line.downloadObjectMsg(msg_id)
                             msg_dict[msg.id] = {"from":msg._from,"file":path,"waktu":unsendmsg14}
                         except Exception as e:
                             print (e)
@@ -5703,7 +5703,7 @@ async def maxgieBot(op):
                     msg_id = op.param2
                     if msg_id in msg_dict:
                         ah = time.time()
-                        ikkeh = maxgie.getContact(msg_dict[msg_id]["from"])
+                        ikkeh = line.getContact(msg_dict[msg_id]["from"])
                         if "text" in msg_dict[msg_id]:
                             waktumsg = ah - msg_dict[msg_id]["waktu"]
                             waktumsg = format_timespan(waktumsg)
@@ -5718,7 +5718,7 @@ async def maxgieBot(op):
                                 rat_ = "\nSend At :\n{} ago".format(waktumsg)
                                 rat_ += "\nImage :\nBelow"
                                 sendMentionFooter(at, ikkeh.mid, "# Resend Message\n\nMaker :\n", str(rat_))
-                                maxgie.sendImage(at, msg_dict[msg_id]["image"])
+                                line.sendImage(at, msg_dict[msg_id]["image"])
                                 del msg_dict[msg_id]
                             else:
                                 if "video" in msg_dict[msg_id]:
@@ -5727,7 +5727,7 @@ async def maxgieBot(op):
                                     rat_ = "\nSend At :\n{} ago".format(waktumsg)
                                     rat_ += "\nVideo :\nBelow"
                                     sendMentionFooter(at, ikkeh.mid, "# Resend Message\n\nMaker :\n", str(rat_))
-                                    maxgie.sendVideo(at, msg_dict[msg_id]["video"])
+                                    line.sendVideo(at, msg_dict[msg_id]["video"])
                                     del msg_dict[msg_id]
                                 else:
                                     if "audio" in msg_dict[msg_id]:
@@ -5763,7 +5763,7 @@ async def maxgieBot(op):
                                                     rat_ = "\nSend At :\n{} ago".format(waktumsg)
                                                     rat_ += "\nLocation :\nBelow"
                                                     sendMentionFooter(at, ikkeh.mid, "# Resend Message\n\nMaker :\n", str(rat_))
-                                                    maxgie.sendLocation(at, msg_dict[msg_id]["location"])
+                                                    line.sendLocation(at, msg_dict[msg_id]["location"])
                                                     del msg_dict[msg_id]
                                                 else:
                                                     if "file" in msg_dict[msg_id]:
@@ -5772,7 +5772,7 @@ async def maxgieBot(op):
                                                         rat_ = "\nSend At :\n{} ago".format(waktumsg)
                                                         rat_ += "\nFile :\nBelow"
                                                         sendMentionFooter(at, ikkeh.mid, "# Resend Message\n\nMaker :\n", str(rat_))
-                                                        maxgie.sendFile(at, msg_dict[msg_id]["file"])
+                                                        line.sendFile(at, msg_dict[msg_id]["file"])
                                                         del msg_dict[msg_id]
                 else:
                     print ("[ ERROR ] Terjadi Error Karena Tidak Ada Data Chat Tersebut~")
@@ -5797,16 +5797,16 @@ async def maxgieBot(op):
                         if msg.text == "/open":
                            temp_flood[receiver]["expire"] = False
                            temp_flood[receiver]["time"] = time.time()
-                           maxgie.sendMessage(to,"Bot Actived")
+                           line.sendMessage(to,"Bot Actived")
                         return
                       elif time.time() - temp_flood[receiver]["time"] <= 5:
                          temp_flood[receiver]["flood"] += 1
                          if temp_flood[receiver]["flood"] >= 200:
                             temp_flood[receiver]["flood"] = 0
                             temp_flood[receiver]["expire"] = True
-                            maxgie.unsendMessage(msg_id)
+                            line.unsendMessage(msg_id)
                             duc1(to, "🌟มีคนส่งข้อความเกิน200ระบบขอออกอัติโนมัติ🌟")
-                            maxgie.leaveGroup(to)
+                            line.leaveGroup(to)
                       else:
                        temp_flood[receiver]["flood"] = 0
                       temp_flood[receiver]["time"] = time.time()
