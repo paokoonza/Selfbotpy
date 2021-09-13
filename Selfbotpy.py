@@ -376,7 +376,7 @@ def sendTemplate(to, data):
     xyz = LiffChatContext(to)
     xyzz = LiffContext(chat=xyz)
     view = LiffViewRequest('1626602314-Vrp0l7Ae', xyzz)
-    token = maxgie.liff.issueLiffView(view)
+    token = line.liff.issueLiffView(view)
     url = 'https://api.line.me/v2/bot/message/reply'
     headers = {
         'Content-Type': 'application/json',
@@ -388,7 +388,7 @@ def sendTemplate(group, data):
     xyz = LiffChatContext(group)
     xyzz = LiffContext(chat=xyz)
     view = LiffViewRequest('1626602314-Vrp0l7Ae', xyzz)
-    token = maxgie.liff.issueLiffView(view)
+    token = line.liff.issueLiffView(view)
     url = 'https://api.line.me/v2/bot/message/reply'
     headers = {
         'Content-Type': 'application/json',
