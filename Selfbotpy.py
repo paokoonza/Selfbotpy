@@ -65,7 +65,7 @@ kcn = {"autojoin": False,"Members":5,}
 sets = {
     "l":True, 
       "c":True, 
-      "cm":"AUTO LIKE FOR : TANBOTNEVERDIES✯͜͡❂➣",  
+      "cm":"AUTO LIKE FOR : ꧁TANBOTNEVERDIES꧂",  
     "winvite": False,
     "wblacklist": False,
     "tagsticker": False,
@@ -135,8 +135,8 @@ tagadd = {
     "add": "ยินดีที่ได้รู้จักนะครับ 😃\nรับแอดละน้า. >_<",
     "wctext": "หวัดดีๆๆๆๆ",
     "lv": "จะรีบไปใหน หว่า",
-    "b": "บัญชีนี้ถูกป้องกันด้วย\n AUTO BLOCK TANBOTNEVERDIES✯͜͡❂➣  \nระบบได้บล็อคบัญชีคุณอัตโนมัติ >_<",
-    "c":"AUTO LIKE FOR TANBOTNEVERDIES✯͜͡❂➣ ",
+    "b": "บัญชีนี้ถูกป้องกันด้วย\n AUTO BLOCK ꧁TANBOTNEVERDIES꧂  \nระบบได้บล็อคบัญชีคุณอัตโนมัติ >_<",
+    "c":"AUTO LIKE FOR ꧁TANBOTNEVERDIES꧂ ",
     "m": "เจอลิ้งไม่ได้นะ ผมต้องมุด555",
 }
 apalo = {
@@ -1087,28 +1087,28 @@ async def lineBot(op):
                     sa+="\n- ประกาศ ข้อความ/ไอดีไลน์"
                     sa+="\nตัวอย่าง >\\<"
                     sa+="\n- ประกาศ มอนิ่ง/nonbysignal"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineeMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "꧁TANBOTNEVERDIES꧂", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineeMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                     sendTemplate(to,data)
                 if text.lower() == "ตั้งapi":
                     sa = "วีธีใช้ api >\\<"
                     sa += "\n- ตั้งapi คีย์เวิร์ด;;ตอบกลับ"
                     sa += "\nตัวอย่าง >\\<"
                     sa += "\n- ตั้งapi เทส;;เทสทำไม"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "꧁TANBOTNEVERDIES꧂  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                     sendTemplate(to,data)
                 if text.lower() == "stag":
                     sa = "วิธีใช้ stag >\\<"
                     sa += "\n- stag [เลขที่ต้องการ] @user"
                     sa += "\nตัวอย่าง >\\<"
                     sa += "\n- stag 1 @user"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "꧁TANBOTNEVERDIES꧂ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                     sendTemplate(to,data)
                 if text.lower() == "สะกด":
                     sa = "วิธีใช้ สะกด >\\<"
                     sa += "\n- สะกดกิต [ข้อความ] @user"
                     sa += "\nตัวอย่าง >\\<"
                     sa += "\n- สะกด รักทอป @user"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "꧁TANBOTNEVERDIES꧂  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                     sendTemplate(to,data)
                 if text.lower() == "เชคค่า" or text.lower() == "set":
                     sas = "☆ Settings ☆"
@@ -1335,7 +1335,7 @@ async def lineBot(op):
                       try:
                           tagadd["tag"] = text_
                           sa = "「 ตั้งคำแทค 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "꧁TANBOTNEVERDIES꧂", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                           sendTemplate(to,data)
                       except:
                           line.sendMessage(to,"Done. >_<")
@@ -1344,7 +1344,7 @@ async def lineBot(op):
                       try:
                           settings["reply"] = text_
                           sa = "「 ตั้งคำแทค 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "꧁TANBOTNEVERDIES꧂", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                           sendTemplate(to,data)
                       except:
                           line.sendMessage(to,"Done. >_<")
@@ -1353,7 +1353,7 @@ async def lineBot(op):
                       try:
                           tagadd["wctext"] = text_
                           sa = "「 ตั้งต้อนรับ 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": " TANBOTNEVERDIES✯͜͡❂➣", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": " ꧁TANBOTNEVERDIES꧂", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                           sendTemplate(to,data)
                       except:
                           line.sendMessags(to,"Done. >_<")
@@ -1369,7 +1369,7 @@ async def lineBot(op):
                       try:
                           tagadd["add"] = text_
                           sa = "「 ตั้งแอด 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "꧁TANBOTNEVERDIES꧂ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                           sendTemplate(to,data)
                       except:
                           line.sendMessags(to,"Done. >_<")
@@ -1378,7 +1378,7 @@ async def lineBot(op):
                       try:
                           settings["commet"] = text_
                           sa = "「 ตั้งคอมเม้น 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "꧁TANBOTNEVERDIES꧂", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                           sendTemplate(to,data)
                       except:
                           line.sendMessags(to,"Done. >_<")
@@ -1609,7 +1609,7 @@ async def lineBot(op):
                                         "contents": [
                                             {
                                                "type": "image",
-                                                "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                "url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                                 "size": "full"
                                             },
                                             {
@@ -1643,7 +1643,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                     "uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                  },
                                             },
                                         ]
@@ -1663,7 +1663,7 @@ async def lineBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                "url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                                 "size": "full"
                                             },
                                             {
@@ -1695,8 +1695,8 @@ async def lineBot(op):
                                                  "color":"#353535",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"TANBOTNEVERDIES✯͜͡❂➣",
-                                                     "uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                     "label":"꧁TANBOTNEVERDIES꧂",
+                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                  },
                                             },
                                         ]
@@ -1716,7 +1716,7 @@ async def lineBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                "url": "https://obs.line-scdn.net/{}".format(.getContact(lineMID).pictureStatus),
                                                 "size": "full"
                                             },
                                             {
@@ -1748,8 +1748,8 @@ async def lineBot(op):
                                                  "color":"#353535",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"TANBOTNEVERDIES✯͜͡❂➣",
-                                                     "uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                     "label":"꧁TANBOTNEVERDIES꧂",
+                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                  },
                                             },
                                         ]
@@ -1769,7 +1769,7 @@ async def lineBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                "url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                                 "size": "full"
                                             },
                                             {
@@ -1824,8 +1824,8 @@ async def lineBot(op):
                                                  "color":"#353535",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                     "uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                     "label":"꧁TANBOTNEVERDIES꧂ ",
+                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                  },
                                             },
                                         ]
@@ -1845,7 +1845,7 @@ async def lineBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                "url": "https://obs.line-scdn.net/{}".format(liNe.getContact(liNeMID).pictureStatus),
                                                 "size": "full"
                                             },
                                             {
@@ -1877,9 +1877,8 @@ async def lineBot(op):
                                                  "color":"#353535",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                     "uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
-                                                 },
+                                                     "label":"꧁TANBOTNEVERDIES꧂ ",
+                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a'
                                             },
                                         ]
                                     },
@@ -2022,8 +2021,8 @@ async def lineBot(op):
                                                  "color":"#00F5FF",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                     "label":"꧁TANBOTNEVERDIES꧂",
+                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                  },
                                             },
                                         ]
@@ -2075,8 +2074,8 @@ async def lineBot(op):
                                                  "color":"#00F5FF",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"TANBOTNEVERDIES✯͜͡❂➣",
-                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                     "label":"udb43d62b8ab3d9390881ded66f8a037a",
+                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                  },
                                             },
                                         ]
@@ -2129,7 +2128,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"TANBOTNEVERDIES✯͜͡❂➣",
-                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                  },
                                             },
                                         ]
@@ -2204,8 +2203,8 @@ async def lineBot(op):
                                                  "color":"#00F5FF",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                     "label":"꧁TANBOTNEVERDIES꧂ ",
+                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                  },
                                             },
                                         ]
@@ -2257,8 +2256,8 @@ async def lineBot(op):
                                                  "color":"#00F5FF",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                     "label":"꧁TANBOTNEVERDIES꧂ ",
+                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                  },
                                             },
                                         ]
@@ -2490,7 +2489,7 @@ async def lineBot(op):
 "size": "md"
 },
 {
-"text": "  is bot line TANBOTNEVERDIES✯͜͡❂➣ ",
+"text": "  is bot line ꧁TANBOTNEVERDIES꧂ ",
 "size": "xs",
 "margin": "none",
 "color": "#00F5FF",
@@ -2525,7 +2524,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อเชล",
-"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
+"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
 }
 },
 {
@@ -2538,7 +2537,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อผู้สร้าง",
-"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
+"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
 }
 }
 ]
@@ -2637,7 +2636,7 @@ async def lineBot(op):
 "size": "md"
 },
 {
-"text": " is bot line TANBOTNEVERDIES✯͜͡❂➣ ",
+"text": " is bot line ꧁TANBOTNEVERDIES꧂ ",
 "size": "xs",
 "margin": "none",
 "color": "#00F5FF",
@@ -2672,7 +2671,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อเชล",
-"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
+"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
 }
 },
 {
@@ -2685,7 +2684,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อผู้สร้าง",
-"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
+"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
 }
 }
 ]
@@ -2796,10 +2795,10 @@ async def lineBot(op):
                                     {
                                       "contents": [
                                         {
-                                          "text": "TANBOTNEVERDIES✯͜͡❂➣ ",
+                                          "text": "꧁TANBOTNEVERDIES꧂ ",
                                           "size": "xl",
                                           "action": {
-                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
+                                            "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
                                             "type": "uri",
                                             "label": "Add Maker"
                                           },
@@ -2895,13 +2894,13 @@ async def lineBot(op):
                                                     },
                                                     {
                                                         "type": "text",
-                                                        "text": "TANBOTNEVERDIES✯͜͡❂➣ ",
+                                                        "text": "꧁TANBOTNEVERDIES꧂",
                                                         "align": "center",
                                                         "color": s,
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                            "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                         }
                                                     },
                                                     {
@@ -2967,13 +2966,13 @@ async def lineBot(op):
                                                     },
                                                     {
                                                         "type": "text",
-                                                        "text": "TANBOTNEVERDIES✯͜͡❂➣ ",
+                                                        "text": "꧁TANBOTNEVERDIES꧂ ",
                                                         "align": "center",
                                                         "color": s,
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                            "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                         }
                                                     },
                                                     {
@@ -3053,13 +3052,13 @@ async def lineBot(op):
                                                     },
                                                     {
                                                         "type": "text",
-                                                        "text": "TANBOTNEVERDIES✯͜͡❂➣ ",
+                                                        "text": "꧁TANBOTNEVERDIES꧂ ",
                                                         "align": "center",
                                                         "color": s,
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
+                                                            "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                         }
                                                     },
                                                     {
@@ -3083,7 +3082,7 @@ async def lineBot(op):
                             sendTemplate(to, data)
                 if text.lower() == "เรา":
                     contact = line.getContact(sender)
-                    sendTemplate(to,{"type":"flex","altText": "TANBOTNEVERDIES✯͜͡❂➣ ","contents":{"type":"bubble","footer":{"type":"box","layout":"horizontal","contents":[{"color":"#333333","size":"xs","wrap":True,"action":{"type":"uri","uri":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},"type":"text","text":"★ʄທയஆടஷະ★ ","align":"center","weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"xs","wrap":True,"action":{"type":"uri","uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"},"type":"text","text":"ผู้สร้าง","align":"center","weight":"bold"}]},"styles":{"footer":{"backgroundColor":"#000000"},"body":{"backgroundColor":"#CCFFFF"}},"body":{"type":"box","contents":[{"type":"box","contents":[{"type":"separator","color":"#FF3333"},{"aspectMode":"cover","gravity":"bottom","aspectRatio":"1:1","size":"sm","type":"image","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://img.live/images/2019/02/10/1549778907829.jpg"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"}],"layout":"vertical","spacing":"none","flex":1},{"type":"separator","color":"#FF3333"},{"type":"box","contents":[{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"md","wrap":True,"type":"text","text":" ★ʄທയஆടஷະ★ ","weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"md","wrap":True,"type":"text","text":"{}".format(contact.displayName),"weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"xs","wrap":True,"type":"text","text":"Status Profile:","weight":"bold"},{"type":"text","text":"{}".format(contact.statusMessage),"size":"xxs","wrap":True,"color":"#FF3333"}],"layout":"vertical","flex":2}],"layout":"horizontal","spacing":"md"},"hero":{"aspectMode":"cover","margin":"xxl","aspectRatio":"1:1","size":"full","type":"image","url":"https://obs.line-scdn.net/{}".format(contact.pictureStatus)}}})            
+                    sendTemplate(to,{"type":"flex","altText": "꧁TANBOTNEVERDIES꧂ ","contents":{"type":"bubble","footer":{"type":"box","layout":"horizontal","contents":[{"color":"#333333","size":"xs","wrap":True,"action":{"type":"uri","uri":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},"type":"text","text":"★ʄທയஆടஷະ★ ","align":"center","weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"xs","wrap":True,"action":{"type":"uri","uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"},"type":"text","text":"ผู้สร้าง","align":"center","weight":"bold"}]},"styles":{"footer":{"backgroundColor":"#000000"},"body":{"backgroundColor":"#CCFFFF"}},"body":{"type":"box","contents":[{"type":"box","contents":[{"type":"separator","color":"#FF3333"},{"aspectMode":"cover","gravity":"bottom","aspectRatio":"1:1","size":"sm","type":"image","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://img.live/images/2019/02/10/1549778907829.jpg"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"}],"layout":"vertical","spacing":"none","flex":1},{"type":"separator","color":"#FF3333"},{"type":"box","contents":[{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"md","wrap":True,"type":"text","text":" ★ʄທയஆടஷະ★ ","weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"md","wrap":True,"type":"text","text":"{}".format(contact.displayName),"weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"xs","wrap":True,"type":"text","text":"Status Profile:","weight":"bold"},{"type":"text","text":"{}".format(contact.statusMessage),"size":"xxs","wrap":True,"color":"#FF3333"}],"layout":"vertical","flex":2}],"layout":"horizontal","spacing":"md"},"hero":{"aspectMode":"cover","margin":"xxl","aspectRatio":"1:1","size":"full","type":"image","url":"https://obs.line-scdn.net/{}".format(contact.pictureStatus)}}})            
                 elif text.lower() == "/runtime" or text.lower() == "/ออน":
                     timeNow = time.time() - Start
                     runtime = timeChange(timeNow)
@@ -3263,8 +3262,8 @@ async def lineBot(op):
                                                 "height": "sm",
                                                 "action": {
                                                     "type": "uri",
-                                                    "label": "TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                    "uri": "line://nv/profilePopup/mid=lineuda8195e53e6c6e17f3f745743e477100"
+                                                    "label": "꧁TANBOTNEVERDIES꧂ ",
+                                                    "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
                                                 }                                                   
                                             },
                                             {
@@ -3314,7 +3313,7 @@ async def lineBot(op):
                                 line.acquireGroupCallRoute(to)
                                 line.inviteIntoGroupCall(to, contactIds=members)
                             ret_ += "\n├> @!"
-                        ret_ += "\n╰─── TANBOTNEVERDIES✯͜͡❂➣ "
+                        ret_ += "\n╰─── ꧁TANBOTNEVERDIES꧂ "
                         line.sendPhu(to, ret_, lists)   
                                         
                 elif "Spam " in msg.text:
@@ -3354,7 +3353,7 @@ async def lineBot(op):
                         ret_ += "\n├ {}".format(str(runtime))
                         ret_ += "\n├────────────"
                         ret_ += "\n├ ผู้สร้าง : {}".format(str(creator.displayName))
-                        ret_ += "\n╰───「 TANBOTNEVERDIES✯͜͡❂➣  」"
+                        ret_ += "\n╰───「 ꧁TANBOTNEVERDIES꧂  」"
                         feds = "{}".format(str(ret_))
                         data = {
                             "type": "text",
@@ -3680,7 +3679,7 @@ async def lineBot(op):
                     line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดมุดลิ้งเรียบร้อย🌟")
 
-                elif text.lower() == 'speed':start = time.time();line.sendMessage("udb43d62b8ab3d9390881ded66f8a037a", "TANBOTNEVERDIES✯͜͡❂➣ ");elapsed_time = time.time() - start;duc1(to, "Speed : %s second"%str(round(elapsed_time,4)))
+                elif text.lower() == 'speed':start = time.time();line.sendMessage("udb43d62b8ab3d9390881ded66f8a037a", "꧁TANBOTNEVERDIES꧂ ");elapsed_time = time.time() - start;duc1(to, "Speed : %s second"%str(round(elapsed_time,4)))
                 
                 elif msg.text.lower().startswith("ประกาศ "):
                             txt = removeCmd("ประกาศ", text)
@@ -3789,7 +3788,7 @@ async def lineBot(op):
 "size": "md"
 },
 {
-"text": "TANBOTNEVERDIES✯͜͡❂➣ ",
+"text": "꧁TANBOTNEVERDIES꧂ ",
 "size": "xs",
 "margin": "none",
 "color": "#FFD300",
@@ -3823,7 +3822,7 @@ async def lineBot(op):
 "height": "sm",
 "action": {
 "type": "uri",
-"label": "TANBOTNEVERDIES✯͜͡❂➣ ",
+"label": "꧁TANBOTNEVERDIES꧂ ",
 "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
 }
 },
@@ -3836,7 +3835,7 @@ async def lineBot(op):
 "height": "sm",
 "action": {
 "type": "uri",
-"label": "TANBOTNEVERDIES✯͜͡❂➣ ",
+"label": "꧁TANBOTNEVERDIES꧂ ",
 "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
 }
 }
@@ -3873,7 +3872,7 @@ async def lineBot(op):
                                                 "contents": [
                                                     {
                                                         "type": "text",
-                                                        "text": "TANBOTNEVERDIES✯͜͡❂➣ ",
+                                                        "text": "꧁TANBOTNEVERDIES꧂ ",
                                                         "size": "md",
                                                         "weight": "bold",
                                                         "align": "center",
@@ -4033,7 +4032,7 @@ async def lineBot(op):
                                                 "contents": [
                                                     {
                                                         "type": "text",
-                                                        "text": "TANBOTNEVERDIES✯͜͡❂➣ ",
+                                                        "text": "꧁TANBOTNEVERDIES꧂",
                                                         "size": "md",
                                                         "weight": "bold",
                                                         "align": "center",
@@ -4193,7 +4192,7 @@ async def lineBot(op):
                                                 "contents": [
                                                     {
                                                         "type": "text",
-                                                        "text": "TANBOTNEVERDIES✯͜͡❂➣ ",
+                                                        "text": "꧁TANBOTNEVERDIES꧂ ",
                                                         "size": "md",
                                                         "weight": "bold",
                                                         "align": "center",
@@ -4349,7 +4348,7 @@ async def lineBot(op):
 #==============================================================================#
                 elif text.lower() == "แทค":
                         group = line.getGroup(to);nama = [contact.mid for contact in group.members];nama.remove(line.getProfile().mid)
-                        line.datamention(to,'TANBOTNEVERDIES✯͜͡❂➣ ',nama)
+                        line.datamention(to,'꧁TANBOTNEVERDIES꧂',nama)
                 elif text.lower() == "/แทค" or text.lower() == "tagall":
                     if msg._from in maxgieMID:
                         group = line.getGroup(msg.to)
