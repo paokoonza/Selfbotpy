@@ -560,7 +560,7 @@ def duc1(to, duc1):
 "contents": [
 {
 "type": "icon",
-"url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+"url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
 "size": "md"
 },
 {
@@ -574,7 +574,7 @@ def duc1(to, duc1):
 },
 {
 "type": "icon",
-"url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+"url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
 "size": "md"
 },
 ]
@@ -646,7 +646,7 @@ async def lineBot(op):
                  line.acceptGroupInvitation(op.param1)
                  line.leaveGroup(op.param1)               	
              else:
-                 maxgie.acceptGroupInvitation(op.param1)
+                 line.acceptGroupInvitation(op.param1)
                  
         if op.type == 13:
             if lineMID in op.param3:
@@ -880,7 +880,7 @@ async def lineBot(op):
             sendTemplate(op.param1, data)
         if op.type == 17:
           if settings["wcsti2"] == True:
-              ginfo = maxgie.getGroup(op.param1)
+              ginfo = line.getGroup(op.param1)
               msg = sets["messageSticker"]["listSticker"]["wc"]
               if msg != None:
                   contact = line.getContact(lineMID)
@@ -1087,28 +1087,28 @@ async def lineBot(op):
                     sa+="\n- ประกาศ ข้อความ/ไอดีไลน์"
                     sa+="\nตัวอย่าง >\\<"
                     sa+="\n- ประกาศ มอนิ่ง/nonbysignal"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineeMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                     sendTemplate(to,data)
                 if text.lower() == "ตั้งapi":
                     sa = "วีธีใช้ api >\\<"
                     sa += "\n- ตั้งapi คีย์เวิร์ด;;ตอบกลับ"
                     sa += "\nตัวอย่าง >\\<"
                     sa += "\n- ตั้งapi เทส;;เทสทำไม"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                     sendTemplate(to,data)
                 if text.lower() == "stag":
                     sa = "วิธีใช้ stag >\\<"
                     sa += "\n- stag [เลขที่ต้องการ] @user"
                     sa += "\nตัวอย่าง >\\<"
                     sa += "\n- stag 1 @user"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                     sendTemplate(to,data)
                 if text.lower() == "สะกด":
                     sa = "วิธีใช้ สะกด >\\<"
                     sa += "\n- สะกดกิต [ข้อความ] @user"
                     sa += "\nตัวอย่าง >\\<"
                     sa += "\n- สะกด รักทอป @user"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTMEVERDIE✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
                     sendTemplate(to,data)
                 if text.lower() == "เชคค่า" or text.lower() == "set":
                     sas = "☆ Settings ☆"
@@ -1157,7 +1157,7 @@ async def lineBot(op):
                             },
                             "hero": {
                                             "type": "image",
-                                            "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(sender).pictureStatus),
+                                            "url": "https://obs.line-scdn.net/{}".format(line.getContact(sender).pictureStatus),
                                             "size": "full",
                                             "aspectRatio": "1:1",
                                             "aspectMode": "fit",
