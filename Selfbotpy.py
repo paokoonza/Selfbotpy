@@ -2306,86 +2306,86 @@ async def maxgieBot(op):
                                 BackupProfile = maxgie.getContact(sender)
                                 sendMention(to, BackupProfile.mid, "=͟͟͞͞➳ กลับบัญชีเดิมเรียบร้อย", ">_<");maxgie.sendContact(to, str(BackupProfile.mid))
                             except Exception as error:
-                                maxgie.unsendMessage(msg_id)
+                                line.unsendMessage(msg_id)
                                 duc1(to, "🌟คุณยังไม่ได้ก๊อปปี้🌟")
                 elif msg.text.lower().startswith("."):
                     text = msg.text.lower().replace("."," ")
-                    maxgie.unsendMessage(msg_id)                                       
+                    line.unsendMessage(msg_id)                                       
                     duc1(msg.to,text)
                 if text.lower() == "คท":
-                    maxgie.generateReplyMessage(msg.id) 
-                    maxgie.sendReplyMessage(msg.id, to, None, contentMetadata={'mid': maxgieMID}, contentType=13)
+                    line.generateReplyMessage(msg.id) 
+                    line.sendReplyMessage(msg.id, to, None, contentMetadata={'mid': maxgieMID}, contentType=13)
                 if text.lower() == "mid" or text.lower() == "ไอดีเรา":
-                    maxgie.generateReplyMessage(msg.id)
-                    maxgie.sendReplyMessage(msg.id, to,maxgieMID)
+                    line.generateReplyMessage(msg.id)
+                    line.sendReplyMessage(msg.id, to,lineMID)
                 elif text.lower() == "myname" or text.lower() == "ชื่อเรา":
-                            h = maxgie.getContact(maxgieMID)
-                            maxgie.generateReplyMessage(msg.id)
-                            maxgie.sendReplyMessage(msg.id, to, "「 ชื่อของคุณ 」\n"+str(h.displayName))
+                            h = line.getContact(lineMID)
+                            line.generateReplyMessage(msg.id)
+                            line.sendReplyMessage(msg.id, to, "「 ชื่อของคุณ 」\n"+str(h.displayName))
                 elif text.lower() == "mybio" or text.lower() == "ตัสเรา":
-                            h = maxgie.getContact(maxgieMID)
-                            maxgie.generateReplyMessage(msg.id)
-                            maxgie.sendReplyMessage(msg.id, to, "「 ตัสของคุณ 」\n"+str(h.statusMessage))
+                            h = line.getContact(lineMID)
+                            line.generateReplyMessage(msg.id)
+                            line.sendReplyMessage(msg.id, to, "「 ตัสของคุณ 」\n"+str(h.statusMessage))
                 elif text.lower() == "mypicture" or text.lower() == "รูปเรา":
-                            h = maxgie.getContact(maxgieMID)
-                            image = "http://dl.profile.line-cdn.net/" + h.pictureStatus
-                            maxgie.generateReplyMessage(msg.id)
-                            maxgie.sendReplyImageWithURL(msg.id, to, image)
+                            h = line.getContact(lineMID)
+                            line = "http://dl.profile.line-cdn.net/" + h.pictureStatus
+                            line.generateReplyMessage(msg.id)
+                            line.sendReplyImageWithURL(msg.id, to, image)
                 elif text.lower() == "myvideo" or text.lower() == "รูปวีดีโอเรา":
-                            h = maxgie.getContact(maxgieMID)
+                            h = line.getContact(maxgieMID)
                             if h.videoProfile == None:
-                            	return maxgie.sendMessage(to, "คุณไม่ได้ใส่รูปวีดีโอ >_<")
-                            maxgie.generateReplyMessage(msg.id)
-                            maxgie.sendReplyVideoWithURL(msg.id, to,"http://dl.profile.line-cdn.net/" + h.pictureStatus + "/vp")
+                            	return line.sendMessage(to, "คุณไม่ได้ใส่รูปวีดีโอ >_<")
+                            line.generateReplyMessage(msg.id)
+                            line.sendReplyVideoWithURL(msg.id, to,"http://dl.profile.line-cdn.net/" + h.pictureStatus + "/vp")
                 elif text.lower() == "mycover" or text.lower() == "ปกเรา":
-                            h = maxgie.getContact(maxgieMID)
-                            cu = maxgie.getProfileCoverURL(maxgieMID)
-                            image = str(cu)
-                            maxgie.generateReplyMessage(msg.id)
-                            maxgie.sendReplyImageWithURL(msg.id, to, image)
+                            h = line.getContact(lineMID)
+                            cu = line.getProfileCoverURL(lineMID)
+                            line = str(cu)
+                            line.generateReplyMessage(msg.id)
+                            line.sendReplyImageWithURL(msg.id, to, image)
                 elif msg.text in ["ดึง"]:
                         apalo["winvite"] = True
-                        maxgie.unsendMessage(msg_id)
+                        line.unsendMessage(msg_id)
                         duc1(to, "🌟ส่งคทที่จะดึงลงมา..🌟")                        
                             
                 elif "อัพชื่อ " in text.lower():
                     if msg._from in admin:
                         proses = text.split(" ")
                         string = text.replace(proses[0] + " ","")
-                        profile_A = maxgie.getProfile()
+                        profile_A = line.getProfile()
                         profile_A.displayName = string
-                        maxgie.updateProfile(profile_A)
-                        maxgie.sendMessage(msg.to,"Update to :\n" + string)
+                        line.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"Update to :\n" + string)
                         print ("Update Name")
 
                 elif "อัพตัส " in msg.text.lower():
                     if msg._from in admin:
                         proses = text.split(" ")
                         string = text.replace(proses[0] + " ","")
-                        profile_A = maxgie.getProfile()
+                        profile_A = line.getProfile()
                         profile_A.statusMessage = string
-                        maxgie.updateProfile(profile_A)
-                        maxgie.sendMessage(msg.to,"Succes Update :\n" + string)
+                        line.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"Succes Update :\n" + string)
                         print ("Update Bio Succes")
                         
                 elif text.lower() == "อัพดิส":
                     sets["changePictureProfile"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ส่งรูปที่จะอัพลงมาครับ..🌟")
                 elif text.lower() == 'เปิดออก':
                     did["join"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ออกแชทรวมอัตโนมัติ (เปิด) ใช้งาน🌟")
                 elif text.lower() == 'ปิดออก':
                     did["join"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ออกแชทรวมอัตโนมัติ (ปิด) ใช้งาน🌟") 
                 if text.lower() == "ออน1":
-                    cover = maxgie.getProfileCoverURL(maxgie.profile.mid)
-                    pp = maxgie.getProfile().pictureStatus
+                    cover = line.getProfileCoverURL(maxgie.profile.mid)
+                    pp = line.getProfile().pictureStatus
                     profile = "https://profile.line-scdn.net/" + str(pp)
-                    name = maxgie.getProfile().displayName
-                    status = maxgie.getProfile().statusMessage     
+                    name = line.getProfile().displayName
+                    status = line.getProfile().statusMessage     
                     tz = pytz.timezone("Asia/Jakarta")
                     timeNow = datetime.now(tz=tz)
                     eltime = time.time() - mulai
@@ -2685,7 +2685,7 @@ async def maxgieBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อผู้สร้าง",
-"uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 }
 ]
@@ -2825,11 +2825,11 @@ async def maxgieBot(op):
                     }
                     sendTemplate(to, data)      
                 if text.lower() == "me":
-                    cover = maxgie.getProfileCoverURL(maxgie.profile.mid)
-                    pp = maxgie.getProfile().pictureStatus
+                    cover = line.getProfileCoverURL(line.profile.mid)
+                    pp = line.getProfile().pictureStatus
                     profile = "https://profile.line-scdn.net/" + str(pp)
-                    name = maxgie.getProfile().displayName
-                    status = maxgie.getProfile().statusMessage
+                    name = line.getProfile().displayName
+                    status = line.getProfile().statusMessage
                     s = temp["te"]
                     a = temp["t"]
                     data={"type":"flex","altText":"{} sendFlex".format(name),"contents":{"type":"bubble",'styles': {"body":{"backgroundColor":a}},"hero":{"type":"image","url":cover,"size":"full","aspectRatio":"20:13","aspectMode":"cover"},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":" "},{"type":"image","url":profile,"size":"lg"},{"type":"text","text":" "},{"type":"text","text":name,"size":"xl","weight":"bold","color":s,"align":"center"},{"type":"text","text":" "},{"type":"text","text":status,"align":"center","size":"xs","color":s,"wrap":True},{"type":"text","text":" "},{"type":"button","style":"primary","color":"#EE1289","action":{"type":"uri","label":"★ʄທയஆടஷະ★ ","uri":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"}}]}}}
@@ -2837,8 +2837,8 @@ async def maxgieBot(op):
                 elif text.lower() == "me2":
                             s = temp["te"]
                             a = temp["t"]
-                            contact = maxgie.getContact(maxgieMID)
-                            cover = maxgie.getProfileCoverURL(maxgieMID)
+                            contact = line.getContact(lineMID)
+                            cover = line.getProfileCoverURL(lineMID)
                             dataProfile = [
                                 {
                                     "type": "bubble",
@@ -3082,7 +3082,7 @@ async def maxgieBot(op):
                             }
                             sendTemplate(to, data)
                 if text.lower() == "เรา":
-                    contact = maxgie.getContact(sender)
+                    contact = line.getContact(sender)
                     sendTemplate(to,{"type":"flex","altText": "TANBOTNEVERDIES✯͜͡❂➣ ","contents":{"type":"bubble","footer":{"type":"box","layout":"horizontal","contents":[{"color":"#333333","size":"xs","wrap":True,"action":{"type":"uri","uri":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},"type":"text","text":"★ʄທയஆടஷະ★ ","align":"center","weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"xs","wrap":True,"action":{"type":"uri","uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"},"type":"text","text":"ผู้สร้าง","align":"center","weight":"bold"}]},"styles":{"footer":{"backgroundColor":"#000000"},"body":{"backgroundColor":"#CCFFFF"}},"body":{"type":"box","contents":[{"type":"box","contents":[{"type":"separator","color":"#FF3333"},{"aspectMode":"cover","gravity":"bottom","aspectRatio":"1:1","size":"sm","type":"image","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://img.live/images/2019/02/10/1549778907829.jpg"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"}],"layout":"vertical","spacing":"none","flex":1},{"type":"separator","color":"#FF3333"},{"type":"box","contents":[{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"md","wrap":True,"type":"text","text":" ★ʄທയஆടஷະ★ ","weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"md","wrap":True,"type":"text","text":"{}".format(contact.displayName),"weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"xs","wrap":True,"type":"text","text":"Status Profile:","weight":"bold"},{"type":"text","text":"{}".format(contact.statusMessage),"size":"xxs","wrap":True,"color":"#FF3333"}],"layout":"vertical","flex":2}],"layout":"horizontal","spacing":"md"},"hero":{"aspectMode":"cover","margin":"xxl","aspectRatio":"1:1","size":"full","type":"image","url":"https://obs.line-scdn.net/{}".format(contact.pictureStatus)}}})            
                 elif text.lower() == "/runtime" or text.lower() == "/ออน":
                     timeNow = time.time() - Start
@@ -3094,9 +3094,9 @@ async def maxgieBot(op):
                         "type": "text",
                         "text": "{}".format(str(run)),
                         "sentBy": {
-                             "label": "{}".format(maxgie.getContact(maxgieMID).displayName),
-                             "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
-                             "linkUrl": "line://nv/profilePopup/mid=uca43cd15fb994f5e04c0984b7c1693ef"
+                             "label": "{}".format(line.getContact(lineMID).displayName),
+                             "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
+                             "linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                         } 
                     }
                     sendTemplate(to, data)                            
@@ -3110,9 +3110,9 @@ async def maxgieBot(op):
                         "type": "text",
                         "text": "{}".format(str(run)),
                         "sentBy": {
-                             "label": "{}".format(maxgie.getContact(maxgieMID).displayName),
-                             "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
-                             "linkUrl": "line://nv/profilePopup/mid=ubd86e8c77559b1493f0ad64b1dba2d6c"
+                             "label": "{}".format(line.getContact(lineMID).displayName),
+                             "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
+                             "linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                         }
                     }
                     sendTemplate(to, data)
@@ -3195,9 +3195,9 @@ async def maxgieBot(op):
                     }
                     sendTemplate(to, data)
                 elif text.lower() == "Sp" or text.lower() == "สปีด":                       
-                    contact = maxgie.getContact(sender)
+                    contact = line.getContact(sender)
                     start = time.time()
-                    maxgie.sendMessage(to, "ทดสอบความเร็ว")
+                    line.sendMessage(to, "ทดสอบความเร็ว")
                     elapsed_time = time.time() - start
                     took = time.time() - start
                     a = " สปีดบอท \nความเร็วปิง ✔️\n Took : %.3fms ✔️\nความเร็วสปีด: %.10f ✔️" % (took,elapsed_time)
@@ -3283,16 +3283,16 @@ async def maxgieBot(op):
                       resp = msg.text.replace(sep[0] + " ","")
                       num = int(resp)
                       try:
-                            maxgie.unsendMessage(msg_id)
+                            line.unsendMessage(msg_id)
                             duc1(to, "เริ่มการเชิญ....") 
                       except:
                          pass
                       for var in range(num):
-                            group = maxgie.getGroup(msg.to)
+                            group = line.getGroup(msg.to)
                             members = [mem.mid for mem in group.members]
-                            maxgie.acquireGroupCallRoute(msg.to)
-                            maxgie.inviteIntoGroupCall(msg.to, contactIds=members)
-                      maxgie.unsendMessage(msg_id)
+                            line.acquireGroupCallRoute(msg.to)
+                            line.inviteIntoGroupCall(msg.to, contactIds=members)
+                      line.unsendMessage(msg_id)
                       duc1(to, "เชิญเรียบร้อย")
 
                 elif msg.text.startswith("โทร"):
@@ -3309,13 +3309,13 @@ async def maxgieBot(op):
                                 lists.append(mention["M"])
                         for ls in lists:
                             for var in range(0,num):
-                                group = maxgie.getGroup(to)
+                                group = line.getGroup(to)
                                 members = [ls]
-                                maxgie.acquireGroupCallRoute(to)
-                                maxgie.inviteIntoGroupCall(to, contactIds=members)
+                                line.acquireGroupCallRoute(to)
+                                line.inviteIntoGroupCall(to, contactIds=members)
                             ret_ += "\n├> @!"
                         ret_ += "\n╰─── TANBOTNEVERDIES✯͜͡❂➣ "
-                        maxgie.sendPhu(to, ret_, lists)   
+                        line.sendPhu(to, ret_, lists)   
                                         
                 elif "Spam " in msg.text:
                     txt = msg.text.split(" ")
@@ -3325,22 +3325,22 @@ async def maxgieBot(op):
                     if txt[1] == "on":
                         if jmlh <= 100000:
                            for x in range(jmlh):
-                               maxgie.sendMessage(msg.to, teks)
+                               line.sendMessage(msg.to, teks)
                         else:
-                           maxgie.sendMessage(msg.to, "Out of Range!")
+                           line.sendMessage(msg.to, "Out of Range!")
                     elif txt[1] == "off":
                         if jmlh <= 100000:
-                            maxgie.sendMessage(msg.to, tulisan)
+                            line.sendMessage(msg.to, tulisan)
                 elif text.lower() == 'ข้อมูล' or text.lower() == "about":
                     try:
                         arr = []
                         owner = "ubd86e8c77559b1493f0ad64b1dba2d6c"
-                        creator = maxgie.getContact(owner)
-                        contact = maxgie.getContact(maxgieMID)
-                        grouplist = maxgie.getGroupIdsJoined()
-                        contactlist = maxgie.getAllContactIds()
-                        blockedlist = maxgie.getBlockedContactIds()
-                        IdsInvit = maxgie.getGroupIdsInvited()
+                        creator = line.getContact(owner)
+                        contact = line.getContact(lineMID)
+                        grouplist = line.getGroupIdsJoined()
+                        contactlist = line.getAllContactIds()
+                        blockedlist = line.getBlockedContactIds()
+                        IdsInvit = line.getGroupIdsInvited()
                         times = time.time() - Start
                         runtime = timeChange(times)
                         ret_ = "╭───「 About Your 」"
@@ -3360,15 +3360,15 @@ async def maxgieBot(op):
                             "type": "text",
                             "text": "{}".format(str(ret_)),
                             "sentBy": {
-                                 "label": "{}".format(maxgie.getContact(maxgieMID).displayName),
-                                 "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
-                                 "linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                 "label": "{}".format(line.getContact(lineMID).displayName),
+                                 "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
+                                 "linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                             }
                         }
                         sendTemplate(to, data)
-                        maxgie.sendContact(msg.to, creator.mid)
+                        line.sendContact(msg.to, creator.mid)
                     except Exception as e:
-                        maxgie.sendMessage(msg.to, str(e))
+                        line.sendMessage(msg.to, str(e))
                 elif text.lower() == "หลุดมือ":
                             gifnya = ['https://i.pinimg.com/originals/87/a8/9b/87a89b5aeaf35ba0c8879db5a136ccbd.gif']
                             data = {
@@ -3432,15 +3432,15 @@ async def maxgieBot(op):
                             
                 elif msg.text.lower().startswith("ตั้งรูปโปรไฟล์"):
                             link = removeCmd("ตั้งรูปโปรไฟล์", text)
-                            contact = maxgie.getContact(sender)
-                            maxgie.sendMessage(to, "Type: Profile\n • Detail: Change video url\n • Status: Download...")
+                            contact = line.getContact(sender)
+                            line.sendMessage(to, "Type: Profile\n • Detail: Change video url\n • Status: Download...")
                             print("Sedang Mendownload Data ~")
                             pic = "http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus)
                             subprocess.getoutput('youtube-dl --format mp4 --output TeamAnuBot.mp4 {}'.format(link))
-                            pict = maxgie.downloadFileURL(pic)
+                            pict = line.downloadFileURL(pic)
                             vids = "TeamAnuBot.mp4"
                             changeVideoAndPictureProfile(pict, vids)
-                            maxgie.sendMessage(to, "Type: Profile\n • Detail: Change video url\n • Status: Succes")
+                            line.sendMessage(to, "Type: Profile\n • Detail: Change video url\n • Status: Succes")
                             os.remove("TeamAnuBot.mp4")
 #=====================================================================
 
@@ -3455,9 +3455,9 @@ async def maxgieBot(op):
                             if mention["M"] not in lists:
                                 lists.append(mention["M"])
                         for ls in lists:
-                            contact = maxgie.getContact(ls)
+                            contact = line.getContact(ls)
                             mi_d = contact.mid
-                            maxgie.sendContact(msg.to, mi_d)
+                            line.sendContact(msg.to, mi_d)
                             
                 elif text.lower() == "เทส":
                     duc1(to, "█▒... 10.0%")
