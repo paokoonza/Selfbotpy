@@ -27,9 +27,9 @@ _session = requests.session()
 #======================================================================================
 botStart = time.time()
 #======================================================================================
-maxgie = LINE('')
-maxgie.log("Auth Token : " + str(maxgie.authToken))
-maxgie.log("Timeline Token : " + str(maxgie.tl.channelAccessToken))
+LINE = LINE('')
+LINE.log("Auth Token : " + str(LINE.authToken))
+LINE.log("Timeline Token : " + str(LINE.tl.channelAccessToken))
 
 waitOpen = codecs.open("Max2.json","r","utf-8")
 settingsOpen = codecs.open("max.json","r","utf-8")
@@ -40,13 +40,13 @@ images = json.load(imagesOpen)
 settings = json.load(settingsOpen)
 stickers = json.load(stickersOpen)
 #==============================================================================#
-maxgieMID = maxgie.profile.mid
-maxgieProfile = maxgie.getProfile()
-maxgieSettings = maxgie.getSettings()
+LINEMID = LINE.profile.mid
+LINEProfile = LINE.getProfile()
+LINESettings = LINE.getSettings()
 #==============================================================================#
-maxgiePoll = OEPoll(maxgie)
-maxgieMID = maxgie.getProfile().mid
-admin = [maxgieMID]
+LINEPoll = OEPoll(LINE)
+LINEMID = LINE.getProfile().mid
+admin = [LINEMID]
 loop = asyncio.get_event_loop()
 listToken = ['desktopmac','desktopwin','iosipad','chromeos','win10']
 mc = {"wr":{}}
@@ -177,14 +177,14 @@ hoho = {
     "namefile": "",
 }
 
-user1 = maxgieMID
+user1 = LINEMID
 user2 = ""
 
 setTime = {}
 setTime = rfuSet['setTime']
 
-contact = maxgie.getProfile() 
-backup = maxgie.getProfile() 
+contact = LINE.getProfile() 
+backup = LINE.getProfile() 
 backup.dispalyName = contact.displayName 
 backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
@@ -195,16 +195,16 @@ Start = time.time()
 tz = pytz.timezone("Asia/Jakarta")
 timeNow = datetime.now(tz=tz)
 
-settings["myProfile"]["displayName"] = maxgieProfile.displayName
-settings["myProfile"]["statusMessage"] = maxgieProfile.statusMessage
-settings["myProfile"]["pictureStatus"] = maxgieProfile.pictureStatus
-cont = maxgie.getContact(maxgieMID)
+settings["myProfile"]["displayName"] = LINEProfile.displayName
+settings["myProfile"]["statusMessage"] = LINEProfile.statusMessage
+settings["myProfile"]["pictureStatus"] = LINEProfile.pictureStatus
+cont = LINE.getContact(LINEMID)
 settings["myProfile"]["videoProfile"] = cont.videoProfile
 coverId = maxgie.getProfileDetail()["result"]["objectId"]
 settings["myProfile"]["coverId"] = coverId
 
-ProfileMe["statusMessage"] = maxgieProfile.statusMessage
-ProfileMe["pictureStatus"] = maxgieProfile.pictureStatus
+ProfileMe["statusMessage"] = LINEProfile.statusMessage
+ProfileMe["pictureStatus"] = LINEProfile.pictureStatus
 coverId = maxgie.getProfileDetail()["result"]["objectId"]
 ProfileMe["coverId"] = coverId
 #=====================================================================
