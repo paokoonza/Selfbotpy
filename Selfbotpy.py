@@ -183,8 +183,8 @@ user2 = ""
 setTime = {}
 setTime = rfuSet['setTime']
 
-contact = LINE.getProfile() 
-backup = LINE.getProfile() 
+contact = line.getProfile() 
+backup = line.getProfile() 
 backup.dispalyName = contact.displayName 
 backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
@@ -205,7 +205,7 @@ settings["myProfile"]["coverId"] = coverId
 
 ProfileMe["statusMessage"] = LINEProfile.statusMessage
 ProfileMe["pictureStatus"] = LINEProfile.pictureStatus
-coverId = maxgie.getProfileDetail()["result"]["objectId"]
+coverId = line.getProfileDetail()["result"]["objectId"]
 ProfileMe["coverId"] = coverId
 #=====================================================================
 with open("max.json", "r", encoding="utf_8_sig") as f:
@@ -221,89 +221,89 @@ def RhyN_(to, mid):
     try:
         aa = '{"S":"0","E":"3","M":'+json.dumps(mid)+'}'
         text_ = '@Ma '
-        maxgie.sendMessage(to, text_, contentMetadata={'MENTION':'{"MENTIONEES":['+aa+']}'}, contentType=0)
+        line.sendMessage(to, text_, contentMetadata={'MENTION':'{"MENTIONEES":['+aa+']}'}, contentType=0)
     except Exception as error:
         logError(error)
 def sendMessageCustom(to, text, icon , name):
     annda = {'MSG_SENDER_ICON': icon,
         'MSG_SENDER_NAME':  name,
     }
-    maxgie.sendMessage(to, text, contentMetadata=annda)
+    line.sendMessage(to, text, contentMetadata=annda)
 def sendMessageCustomContact(to, icon, name, mid):
     annda = { 'mid': mid,
     'MSG_SENDER_ICON': icon,
     'MSG_SENDER_NAME':  name,
     }
-    maxgie.sendMessage(to, '', annda, 13)
+    line.sendMessage(to, '', annda, 13)
 def cloneProfile(mid):
-    contact = maxgie.getContact(mid)
+    contact = line.getContact(mid)
     if contact.videoProfile == None:
-        maxgie.cloneContactProfile(mid)
+        line.cloneContactProfile(mid)
     else:
-        profile = maxgie.getProfile()
+        profile = line.getProfile()
         profile.displayName, profile.statusMessage = contact.displayName, contact.statusMessage
-        maxgie.updateProfile(profile)
-        pict = maxgie.downloadFileURL('http://dl.profile.line-cdn.net/' + contact.pictureStatus, saveAs="tmp/pict.bin")
-        vids = maxgie.downloadFileURL( 'http://dl.profile.line-cdn.net/' + contact.pictureStatus + '/vp', saveAs="tmp/video.bin")
+        line.updateProfile(profile)
+        pict = line.downloadFileURL('http://dl.profile.line-cdn.net/' + contact.pictureStatus, saveAs="tmp/pict.bin")
+        vids = line.downloadFileURL( 'http://dl.profile.line-cdn.net/' + contact.pictureStatus + '/vp', saveAs="tmp/video.bin")
         changeVideoAndPictureProfile(pict, vids)
-    coverId = maxgie.getProfileDetail(mid)['result']['objectId']
-    maxgie.updateProfileCoverById(coverId)
+    coverId = line.getProfileDetail(mid)['result']['objectId']
+    line.updateProfileCoverById(coverId)
 def backupProfile():
-    profile = maxgie.getContact(maxgieMID)
+    profile = line.getContact(lineMID)
     settings['myProfile']['displayName'] = profile.displayName
     settings['myProfile']['pictureStatus'] = profile.pictureStatus
     settings['myProfile']['statusMessage'] = profile.statusMessage
     settings['myProfile']['videoProfile'] = profile.videoProfile
-    coverId = maxgie.getProfileDetail()['result']['objectId']
+    coverId = line.getProfileDetail()['result']['objectId']
     settings['myProfile']['coverId'] = str(coverId)
 def restoreProfile():
-    profile = maxgie.getProfile()
+    profile = line.getProfile()
     profile.displayName = settings['myProfile']['displayName']
     profile.statusMessage = settings['myProfile']['statusMessage']
     if settings['myProfile']['videoProfile'] == None:
         profile.pictureStatus = settings['myProfile']['pictureStatus']
-        maxgie.updateProfileAttribute(8, profile.pictureStatus)
-        maxgie.updateProfile(profile)
+        line.updateProfileAttribute(8, profile.pictureStatus)
+        line.updateProfile(profile)
     else:
-        maxgie.updateProfile(profile)
-        pict = maxgie.downloadFileURL('http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'], saveAs="tmp/pict.bin")
-        vids = maxgie.downloadFileURL( 'http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'] + '/vp', saveAs="tmp/video.bin")
+        line.updateProfile(profile)
+        pict = line.downloadFileURL('http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'], saveAs="tmp/pict.bin")
+        vids = line.downloadFileURL( 'http://dl.profile.line-cdn.net/' + settings['myProfile']['pictureStatus'] + '/vp', saveAs="tmp/video.bin")
         changeVideoAndPictureProfile(pict, vids)
     coverId = settings['myProfile']['coverId']
-    maxgie.updateProfileCoverById(coverId)
+    line.updateProfileCoverById(coverId)
 def autoresponuy(to,msg,wait):
     to = msg.to
     if msg.to not in wait["GROUP"]['AR']['AP']:
         return
     if msg.to in wait["GROUP"]['AR']['S']:
-        maxgie.sendMessage(msg.to,text=None,contentMetadata=wait["GROUP"]['AR']['S'][msg.to]['Sticker'], contentType=7)
+        line.sendMessage(msg.to,text=None,contentMetadata=wait["GROUP"]['AR']['S'][msg.to]['Sticker'], contentType=7)
     if(wait["GROUP"]['AR']['P'][msg.to] in [""," ","\n",None]):
         return
     if '@!' not in wait["GROUP"]['AR']['P'][msg.to]:
         wait["GROUP"]['AR']['P'][msg.to] = '@!'+wait["GROUP"]['AR']['P'][msg.to]
-    nama = maxgie.getGroup(msg.to).name
-    sd = maxgie.waktunjir()
-    maxgie.sendMention(msg.to,wait["GROUP"]['AR']['P'][msg.to].replace('greeting',sd).replace(';',nama),'',[msg._from]*wait["GROUP"]['AR']['P'][msg.to].count('@!'))
+    nama = line.getGroup(msg.to).name
+    sd = line.waktunjir()
+    line.sendMention(msg.to,wait["GROUP"]['AR']['P'][msg.to].replace('greeting',sd).replace(';',nama),'',[msg._from]*wait["GROUP"]['AR']['P'][msg.to].count('@!'))
 def ClonerV2(to):
     try:
-        contact = maxgie.getContact(to)
-        profile = maxgie.profile
-        profileName = maxgie.profile
-        profileStatus = maxgie.profile
+        contact = line.getContact(to)
+        profile = line.profile
+        profileName = line.profile
+        profileStatus = line.profile
         profileName.displayName = contact.displayName
         profileStatus.statusMessage = contact.statusMessage
-        maxgie.updateProfile(profileName)
-        maxgie.updateProfile(profileStatus)
-        profile.pictureStatus = maxgie.downloadFileURL('http://dl.profile.line-cdn.net/{}'.format(contact.pictureStatus, 'path'))
-        if maxgie.getProfileCoverId(to) is not None:
-            maxgie.updateProfileCoverById(maxgie.getProfileCoverId(to))
-        maxgie.updateProfilePicture(profile.pictureStatus)
+        line.updateProfile(profileName)
+        line.updateProfile(profileStatus)
+        profile.pictureStatus = line.downloadFileURL('http://dl.profile.line-cdn.net/{}'.format(contact.pictureStatus, 'path'))
+        if line.getProfileCoverId(to) is not None:
+            line.updateProfileCoverById(line.getProfileCoverId(to))
+        line.updateProfilePicture(profile.pictureStatus)
         print("Success Clone Profile {}".format(contact.displayName))
-        return maxgie.updateProfile(profile)
+        return line.updateProfile(profile)
         if contact.videoProfile == None:
             return "Get Video Profile"
         path2 = "http://dl.profile.line-cdn.net/" + profile.pictureStatus
-        maxgie.updateProfilePicture(path2, 'vp')
+        line.updateProfilePicture(path2, 'vp')
     except Exception as error:
         print(error)
         
@@ -318,13 +318,13 @@ def sendMentionFooter(to, mid, firstmessage, lastmessage):
         arrData = {'S':slen, 'E':elen, 'M':mid}
         arr.append(arrData)
         text += mention + str(lastmessage)
-        nama = "{}".format(maxgie.getContact(maxgieMID).displayName)
-        img = "http://dl.profile.line-cdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus)
+        nama = "{}".format(line.getContact(lineMID).displayName)
+        img = "http://dl.profile.line-cdn.net/{}".format(line.getContact(lineMID).pictureStatus)
         ticket = "https://line.me/ti/p/~ptatan1983"
-        maxgie.sendMessage(to, text, {'AGENT_LINK': ticket, 'AGENT_ICON': img, 'AGENT_NAME': nama, 'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+        line.sendMessage(to, text, {'AGENT_LINK': ticket, 'AGENT_ICON': img, 'AGENT_NAME': nama, 'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         logError(error)
-        maxgie.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+        line.sendMessage(to, "[ INFO ] Error :\n" + str(error))
         
 def ggggg(secs):
     mins, secs = divmod(secs,60)
@@ -358,16 +358,16 @@ def mentions(to, text="", mids=[]):
         arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mids[0]}
         arr.append(arrData)
         textx += mention + str(text)
-    maxgie.sendMessage(to, textx, {'AGENT_NAME':'LINE OFFICIAL', 'AGENT_LINK': 'line://ti/p/~{}'.format(maxgie.getProfile().userid), 'AGENT_ICON': "http://dl.profile.line-cdn.net/" + maxgie.getContact("ua053fcd4c52917706ae60c811e39d3ea").picturePath, 'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    line.sendMessage(to, textx, {'AGENT_NAME':'LINE OFFICIAL', 'AGENT_LINK': 'line://ti/p/~{}'.format(line.getProfile().userid), 'AGENT_ICON': "http://dl.profile.line-cdn.net/" + line.getContact("uda8195e53e6c6e17f3f745743e477100").picturePath, 'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
 def changeVideoAndPictureProfile(pict, vids):
     try:
         files = {'file': open(vids, 'rb')}
-        obs_params = maxgie.genOBSParams({'oid': maxgieMID, 'ver': '2.0', 'type': 'video', 'cat': 'vp.mp4'})
+        obs_params = line.genOBSParams({'oid': lineMID, 'ver': '2.0', 'type': 'video', 'cat': 'vp.mp4'})
         data = {'params': obs_params}
-        r_vp = maxgie.server.postContent('{}/talk/vp/upload.nhn'.format(str(maxgie.server.LINE_OBS_DOMAIN)), data=data, files=files)
+        r_vp = line.server.postContent('{}/talk/vp/upload.nhn'.format(str(maxgie.server.LINE_OBS_DOMAIN)), data=data, files=files)
         if r_vp.status_code != 201:
             return "Failed update profile"
-        maxgie.updateProfilePicture(pict, 'vp')
+        line.updateProfilePicture(pict, 'vp')
         return "Success update profile"
     except Exception as e:
         raise Exception("Error change video and picture profile {}".format(str(e)))
@@ -410,7 +410,7 @@ def NOTIFIED_READ_MESSAGE(op):
     except:
         pass
 def logError(text):
-    maxgie.log("[ แจ้งเตือน ] " + str(text))
+    line.log("[ แจ้งเตือน ] " + str(text))
     time_ = datetime.now()
     with open("errorLog.txt","a") as error:
         error.write("\n[%s] %s" % (str(time), text))
@@ -443,13 +443,13 @@ def sendMention(to, mid, firstmessage, lastmessage):
         arrData = {'S':slen, 'E':elen, 'M':mid}
         arr.append(arrData)
         text += mention + str(lastmessage)
-        maxgie.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+        line.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         logError(error)
-        maxgie.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+        line.sendMessage(to, "[ INFO ] Error :\n" + str(error))
 def mentionMembers(to, mid):
     try:
-        group = maxgie.getGroup(to)
+        group = line.getGroup(to)
         mids = [mem.mid for mem in group.members]
         jml = len(mids)
         arrData = ""
@@ -470,10 +470,10 @@ def mentionMembers(to, mid):
         if no == jml:
             textx += ""
             textx += ""
-        maxgie.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+        line.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         logError(error)
-        maxgie.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+        line.sendMessage(to, "[ INFO ] Error :\n" + str(error))
 def timeChange(secs):
     mins, secs = divmod(secs,60)
     hours, mins = divmod(mins,60)
@@ -509,20 +509,20 @@ def sendStickers(to, sver, spkg, sid):
         'STKPKGID': spkg,
         'STKID': sid
     }
-    maxgie.sendMessage(to, '', contentMetadata, 7)
+    line.sendMessage(to, '', contentMetadata, 7)
 def sendSticker(to, mid, sver, spkg, sid):
     contentMetadata = {
-        'MSG_SENDER_NAME': maxgie.getContact(mid).displayName,
-        'MSG_SENDER_ICON': 'http://dl.profile.line-cdn.net/' + maxgie.getContact(mid).pictureStatus,
+        'MSG_SENDER_NAME': line.getContact(mid).displayName,
+        'MSG_SENDER_ICON': 'http://dl.profile.line-cdn.net/' + line.getContact(mid).pictureStatus,
         'STKVER': sver,
         'STKPKGID': spkg,
         'STKID': sid
     }
-    maxgie.sendMessage(to, '', contentMetadata, 7)
+    line.sendMessage(to, '', contentMetadata, 7)
 def sendImage(to, path, name="image"):
     try:
         if settings["server"] == "VPS":
-            maxgie.sendImageWithURL(to, str(path))
+            line.sendImageWithURL(to, str(path))
     except Exception as error:
         logError(error)
 def command(text):
@@ -605,10 +605,10 @@ def backupData():
         logError(error)
         return False
 #==============================================================================#
-async def maxgieBot(op):
+async def lineBot(op):
     try:
         if settings["restartPoint"] != None:
-            maxgie.sendMessage(settings["restartPoint"], 'ล็อคอินแล้วเรียบร้อย ><')
+            line.sendMessage(settings["restartPoint"], 'ล็อคอินแล้วเรียบร้อย ><')
             settings["restartPoint"] = None
         if op.type == 0:
             return
@@ -616,8 +616,8 @@ async def maxgieBot(op):
             if settings["autoAdd"] == True:
              # if op.param2 in admin:
                  # return
-              maxgie.findAndAddContactsByMid(op.param1)
-              maxgie.sendMessage(op.param1,"{}".format(tagadd["add"]))
+              line.findAndAddContactsByMid(op.param1)
+              line.sendMessage(op.param1,"{}".format(tagadd["add"]))
               msgSticker = sets["messageSticker"]["listSticker"]["add"]
               if msgSticker != None:
                   sid = msgSticker["STKID"]
@@ -629,56 +629,56 @@ async def maxgieBot(op):
             if settings["autoblock"] == True:
               #if op.param2 in admin:
                  # return
-              maxgie.sendMessage(op.param1,tagadd["b"])
+              line.sendMessage(op.param1,tagadd["b"])
           #    msgSticker = sets["messageSticker"]["listSticker"]["block"]
           #    if msgSticker != None:
           #        sid = msgSticker["STKID"]
           #        spkg = msgSticker["STKPKGID"]
           #        sver = msgSticker["STKVER"]
           #        sendSticker(op.param1, sver, spkg, sid)
-                    #maxgie.sendMessage(op.param1,tagaad["b"])
-              maxgie.blockContact(op.param1)
+                    #line.sendMessage(op.param1,tagaad["b"])
+              line.blockContact(op.param1)
               print ("[ 5 ] AUTO BLOCK")
         if op.type == 13:
          if kcn["autojoin"] == True:
-             G = maxgie.getCompactGroup(op.param1)
+             G = line.getCompactGroup(op.param1)
              if len(G.members) <= kcn["Members"]:
-                 maxgie.acceptGroupInvitation(op.param1)
-                 maxgie.leaveGroup(op.param1)               	
+                 line.acceptGroupInvitation(op.param1)
+                 line.leaveGroup(op.param1)               	
              else:
                  maxgie.acceptGroupInvitation(op.param1)
                  
         if op.type == 13:
-            if maxgieMID in op.param3:
+            if lineMID in op.param3:
                 if did["join"] == True:
-                    friend = maxgie.getAllContactIds()
-                    kontak = maxgie.getContacts(friend)
+                    friend = line.getAllContactIds()
+                    kontak = line.getContacts(friend)
                     for ids in kontak:
                       The = ids.mid
                       if op.param2 not in The:
                           try:
-                             maxgie.acceptGroupInvitation(op.param1)
-                             ginfo = maxgie.getGroup(op.param1)
+                             line.acceptGroupInvitation(op.param1)
+                             ginfo = line.getGroup(op.param1)
                           except:
-                             maxgie.acceptGroupInvitation(op.param1)
-                             ginfo = maxgie.getGroup(op.param1)
-                             maxgie.sendMessage(op.param1,"BYE BYE~~")
-                             maxgie.leaveGroup(op.param1)
+                             line.acceptGroupInvitation(op.param1)
+                             ginfo = line.getGroup(op.param1)
+                             line.sendMessage(op.param1,"BYE BYE~~")
+                             line.leaveGroup(op.param1)
         if op.type == 13:
-            if maxgieMID in op.param3:
-                G = maxgie.getGroup(op.param1)
+            if lineMID in op.param3:
+                G = line.getGroup(op.param1)
                 if settings["autoJoin"] == True:
                     if settings["autoCancel"]["on"] == True:
                         if len(G.members) <= settings["autoCancel"]["members"]:
-                            maxgie.acceptGroupInvitation(op.param1)
+                            line.acceptGroupInvitation(op.param1)
                         else:
-                            maxgie.leaveGroup(op.param1)
+                            line.leaveGroup(op.param1)
                     else:
-                        maxgie.acceptGroupInvitation(op.param1)
+                        line.acceptGroupInvitation(op.param1)
                 elif settings["autoCancel"]["on"] == True:
                     if len(G.members) <= settings["autoCancel"]["members"]:
-                        maxgie.acceptGroupInvitation(op.param1)
-                        maxgie.leaveGroup(op.param1)
+                        line.acceptGroupInvitation(op.param1)
+                        line.leaveGroup(op.param1)
             else:
                 Inviter = op.param3.replace("",',')
                 InviterX = Inviter.split(",")
@@ -688,15 +688,15 @@ async def maxgieBot(op):
                 if matched_list == []:
                     pass
                 else:
-                    maxgie.acceptGroupInvitation(op.param1, matched_list)
-                    maxgie.leaveGroup(op.param1, matched_list)
+                    line.acceptGroupInvitation(op.param1, matched_list)
+                    line.leaveGroup(op.param1, matched_list)
                     print ("[ 17 ] LEAVE GROUP")
         if op.type == 15:
           if settings["Leave"] == True:
             if op.param2 in admin:
                 return
-            ginfo = maxgie.getGroup(op.param1)
-            contact = maxgie.getContact(op.param2)
+            ginfo = line.getGroup(op.param1)
+            contact = line.getContact(op.param2)
             name = contact.displayName
             pp = contact.pictureStatus
             s = name + " " + tagadd["lv"]
@@ -748,10 +748,10 @@ async def maxgieBot(op):
             sendTemplate(op.param1, data)
         if op.type == 15:
           if settings["lv"] == True:
-              ginfo = maxgie.getGroup(op.param1)
+              ginfo = line.getGroup(op.param1)
               msg = sets["messageSticker"]["listSticker"]["lv"]
               if msg != None:
-                  contact = maxgie.getContact(maxgieMID)
+                  contact = line.getContact(lineMID)
                   a = contact.displayName
                   stk = msg['STKID']
                   spk = msg['STKPKGID']
@@ -761,8 +761,8 @@ async def maxgieBot(op):
           if settings["Welcome"] == True:
             if op.param2 in admin:
                 return
-            g = maxgie.getGroup(op.param1)
-            contact = maxgie.getContact(op.param2)
+            g = line.getGroup(op.param1)
+            contact = line.getContact(op.param2)
             gname = g.name
             name = contact.displayName
             pp = contact.pictureStatus
@@ -820,9 +820,9 @@ async def maxgieBot(op):
           if settings["Wc"] == True:
             if op.param2 in admin:
                 return
-            ginfo = maxgie.getGroup(op.param1)
-            contact = maxgie.getContact(op.param2)
-            cover = maxgie.getProfileCoverURL(op.param2)
+            ginfo = line.getGroup(op.param1)
+            contact = line.getContact(op.param2)
+            cover = line.getProfileCoverURL(op.param2)
             names = contact.displayName
             status = contact.statusMessage
             pp = contact.pictureStatus
@@ -883,7 +883,7 @@ async def maxgieBot(op):
               ginfo = maxgie.getGroup(op.param1)
               msg = sets["messageSticker"]["listSticker"]["wc"]
               if msg != None:
-                  contact = maxgie.getContact(maxgieMID)
+                  contact = line.getContact(lineMID)
                   a = contact.displayName
                   stk = msg['STKID']
                   spk = msg['STKPKGID']
@@ -902,10 +902,10 @@ async def maxgieBot(op):
          #   if settings["setKey"] == False: setKey = ""
          #   isValid = True
          #   if isValid != False:
-               # if msg.toType == 0 and sender != maxgieMID: to = sender
+               # if msg.toType == 0 and sender != lineMID: to = sender
                # else: to = receiver
-               # if msg.toType == 0 and settings["replays"] and sender != maxgieMID:
-                   # contact = maxgie.getContact(sender)
+               # if msg.toType == 0 and settings["replays"] and sender != lineMID:
+                   # contact = line.getContact(sender)
                     #if contact.attributes != 32 and "[ auto reply ]" not in text.lower():
                      #   msgSticker = sets["messageSticker"]["listSticker"]["replay"]
                      #   if msgSticker != None:
@@ -916,11 +916,11 @@ async def maxgieBot(op):
                      #   if "@!" in settings["reply"]:
                      #       msg_ = settings["reply"].split("@!")
                      #       sendMention(to, sender, "「 แทคส่วนตัว 」\n" + msg_[0], msg_[1])
-                     #   maxgie.sendMessage(to, "「 แทคส่วนตัว 」\n", settings["reply"])
+                     #   line.sendMessage(to, "「 แทคส่วนตัว 」\n", settings["reply"])
                      
         if op.type == 24:
             if settings["autoLeave"] == True:
-                maxgie.leaveRoom(op.param1)                      
+                line.leaveRoom(op.param1)                      
         if op.type == 25:
             msg = op.message
             if msg.contentType == 13:
@@ -928,16 +928,16 @@ async def maxgieBot(op):
                      if msg._from in admin:
                          _name = msg.contentMetadata["displayName"]
                          invite = msg.contentMetadata["mid"]
-                         groups = maxgie.getGroup(msg.to)
+                         groups = line.getGroup(msg.to)
                          pending = groups.invitee
                          targets = []
                          for s in groups.members:
                              if _name in s.displayName:
-                                 maxgie.sendMessage(msg.to,"-> " + _name + " ทำการเชิญสำเร็จ")
+                                 line.sendMessage(msg.to,"-> " + _name + " ทำการเชิญสำเร็จ")
                                  break
-                             elif invite in apalo["blacklist"]:
-                                 maxgie.sendMessage(msg.to,"ขออภัย, " + _name + " บุคคนนี้อยู่ในรายการบัญชีดำ")
-                                 maxgie.sendMessage(msg.to,"ใช้คำสั่ง!,ล้างดำ,ดึง" )
+                             elif line in apalo["blacklist"]:
+                                 line.sendMessage(msg.to,"ขออภัย, " + _name + " บุคคนนี้อยู่ในรายการบัญชีดำ")
+                                 line.sendMessage(msg.to,"ใช้คำสั่ง!,ล้างดำ,ดึง" )
                                  break                             
                              else:
                                  targets.append(invite)
@@ -946,18 +946,18 @@ async def maxgieBot(op):
                          else:
                              for target in targets:
                                  try:
-                                     maxgie.findAndAddContactsByMid(target)
-                                     maxgie.inviteIntoGroup(msg.to,[target])
-                                     maxgie.sendMessage(msg.to,"เชิญ :" + _name + "เรียบร้อย")
+                                     line.findAndAddContactsByMid(target)
+                                     line.inviteIntoGroup(msg.to,[target])
+                                     line.sendMessage(msg.to,"เชิญ :" + _name + "เรียบร้อย")
                                      apalo["winvite"] = False
                                      break
                                  except:
                                      try:
-                                         maxgie.findAndAddContactsByMid(invite)
-                                         maxgie.inviteIntoGroup(op.param1,[invite])
+                                         line.findAndAddContactsByMid(invite)
+                                         line.inviteIntoGroup(op.param1,[invite])
                                          apalo["winvite"] = False
                                      except:
-                                         maxgie.sendMessage(msg.to,"😧ตรวจพบข้อผิดพลาดที่ไม่ทราบสาเหตุ อาจเป็นได้ว่าบัญชีบัคเชิญ")
+                                         line.sendMessage(msg.to,"😧ตรวจพบข้อผิดพลาดที่ไม่ทราบสาเหตุ อาจเป็นได้ว่าบัญชีบัคเชิญ")
                                          apalo["winvite"] = False
                                          break
         if op.type == 25:
@@ -981,7 +981,7 @@ async def maxgieBot(op):
                     try:
                         if msg.to not in wait['Unsend']:
                             wait['Unsend'][msg.to] = {'B':[]}
-                        if msg._from not in [maxgieMID]:
+                        if msg._from not in [lineMID]:
                             return
                         wait['Unsend'][msg.to]['B'].append(msg.id)
                     except:pass
@@ -997,34 +997,34 @@ async def maxgieBot(op):
             setKey = settings["keyCommand"].title()
             if settings["setKey"] == False: setKey = ''
             if isValid != False:
-                if msg.toType == 0 and sender != maxgieMID: to = sender
+                if msg.toType == 0 and sender != lineMID: to = sender
                 else: to = receiver
-                if msg._from not in maxgieMID:
+                if msg._from not in lineMID:
                   if apalo["talkban"] == True:
                     if msg._from in apalo["Talkblacklist"]:
-                        maxgie.sendMention(to, "คุณติดดำผมอยู่นะครับ @! :)","",[msg._from])
-                        maxgie.kickoutFromGroup(msg.to, [msg._from])
+                        line.sendMention(to, "คุณติดดำผมอยู่นะครับ @! :)","",[msg._from])
+                        line.kickoutFromGroup(msg.to, [msg._from])
                 if msg.contentType == 13:
                   if apalo["Talkwblacklist"] == True:
                     if msg._from in admin:
                       if msg.contentMetadata["mid"] in apalo["Talkblacklist"]:
-                          maxgie.sendMessage(msg.to,"Sudah Ada")
+                          line.sendMessage(msg.to,"Sudah Ada")
                           apalo["Talkwblacklist"] = False
                       else:
                           apalo["Talkblacklist"][msg.contentMetadata["mid"]] = True
                           apalo["Talkwblacklist"] = False
-                          maxgie.unsendMessage(msg_id)
+                          line.unsendMessage(msg_id)
                           duc1(to, "🌟เพิ่มบัญชีนี้ในรายการสีดำเรียบร้อยแล้ว🌟")
                   if apalo["Talkdblacklist"] == True:
                     if msg._from in admin:
                       if msg.contentMetadata["mid"] in apalo["Talkblacklist"]:
                           del apalo["Talkblacklist"][msg.contentMetadata["mid"]]
-                          maxgie.unsendMessage(msg_id)
+                          line.unsendMessage(msg_id)
                           duc1(to, "🌟เพิ่มบัญชีนี้ในรายการสีขาวเรียบร้อยแล้ว🌟")
                           apalo["Talkdblacklist"] = False
                       else:
                           apalo["Talkdblacklist"] = False
-                          maxgie.sendMessage(msg.to,"Tidak Ada Dalam Da ftar Blacklist")
+                          line.sendMessage(msg.to,"Tidak Ada Dalam Da ftar Blacklist")
         if op.type in [25,26]:
             msg = op.message
             text = str(msg.text)
@@ -1034,7 +1034,7 @@ async def maxgieBot(op):
             to = msg.to
             isValid = True
             if isValid != False:
-                if msg.toType == 0 and sender != maxgieMID: to = sender
+                if msg.toType == 0 and sender != lineMID: to = sender
                 else: to = receiver
                 if msg.contentType == 16:
                     if msg.toType in [2,1,0]:
@@ -1043,9 +1043,9 @@ async def maxgieBot(op):
                                 purl = msg.contentMetadata["postEndUrl"].split('userMid=')[1].split('&postId=')
                                 duc1(to,"🌟ไลค์ให้แล้วนะครับ🌟")
                                 if purl[1] not in wait['postId']:
-                                    maxgie.likePost(purl[0], purl[1], random.choice([1001]))
+                                    line.likePost(purl[0], purl[1], random.choice([1001]))
                                 if sets["c"] == True:
-                                    maxgie.createComment(purl[0], purl[1], sets["cm"])
+                                    line.createComment(purl[0], purl[1], sets["cm"])
                                     wait['postId'].append(purl[1])
                                 else:
                                     pass
@@ -1054,9 +1054,9 @@ async def maxgieBot(op):
                                     purl = msg.contentMetadata['postEndUrl'].split('homeId=')[1].split('&postId=')
                                     duc1(to,"🌟ไลค์ให้แล้วนะครับ🌟")
                                     if purl[1] not in wait['postId']:
-                                        maxgie.likePost(msg._from, purl[1], random.choice([1001]))
+                                        line.likePost(msg._from, purl[1], random.choice([1001]))
                                     if sets["c"] == True:
-                                        maxgie.createComment(msg._from, purl[1], sets["cm"])
+                                        line.createComment(msg._from, purl[1], sets["cm"])
                                         wait['postId'].append(purl[1])
                                     else:pass
               
@@ -1071,7 +1071,7 @@ async def maxgieBot(op):
             sender = msg._from
             if msg.toType == 0 or msg.toType == 1 or msg.toType == 2:
                 if msg.toType == 0:
-                    if sender != maxgie.profile.mid:
+                    if sender != line.profile.mid:
                         to = sender
                     else:
                         to = receiver
@@ -1194,14 +1194,14 @@ async def maxgieBot(op):
                 elif text.lower() == "คทดำ":
                     if msg._from in maxgieMID:
                         if apalo["Talkblacklist"] == []:
-                            maxgie.unsendMessage(msg_id)
+                            line.unsendMessage(msg_id)
                             duc1(to, "🌟ไม่มีคท.คนติดดำ🌟")
                         else:
                             for bl in apalo["Talkblacklist"]:
-                                maxgie.sendMessage(to, text=None, contentMetadata={'mid': bl}, contentType=13)
+                                line.sendMessage(to, text=None, contentMetadata={'mid': bl}, contentType=13)
                 elif text.lower() == "เตะดำ":
                     if msg.toType == 2:
-                        groupMemberMids = [contact.mid for contact in maxgie.getGroup(to).members]
+                        groupMemberMids = [contact.mid for contact in line.getGroup(to).members]
                         matched_list = []
                         for mid in apalo["Talkblacklist"]:
                             matched_list += [x for x in groupMemberMids if x == mid]
@@ -1210,7 +1210,7 @@ async def maxgieBot(op):
                         else:
                             for mids in matched_list:
                                 try:
-                                    maxgie.kickoutFromGroup(to, [mids])
+                                    line.kickoutFromGroup(to, [mids])
                                 except:pass
                 
                 elif "Kick " in msg.text:
@@ -1219,7 +1219,7 @@ async def maxgieBot(op):
                     Ri2 = Ri1.replace("@","")
                     Ri3 = Ri2.rstrip()
                     _name = Ri3
-                    gs = maxgie.getGroup(msg.to)
+                    gs = line.getGroup(msg.to)
                     targets = []
                     for s in gs.members:
                         if _name in s.displayName:
@@ -1232,7 +1232,7 @@ async def maxgieBot(op):
                                 pass
                             else:
                                 try:
-                                    maxgie.kickoutFromGroup(to,[target])
+                                    line.kickoutFromGroup(to,[target])
                                 except:
                                     pass                              
                               
@@ -1255,9 +1255,9 @@ async def maxgieBot(op):
                                 pass
                             else:
                                 try:
-                                    maxgie.kickoutFromGroup(to,[target])
-                                    maxgie.findAndAddContactsByMid(target)
-                                    maxgie.inviteIntoGroup(to,[target])
+                                    line.kickoutFromGroup(to,[target])
+                                    line.findAndAddContactsByMid(target)
+                                    line.inviteIntoGroup(to,[target])
                                 except:
                                     pass
                 
@@ -1277,116 +1277,116 @@ async def maxgieBot(op):
                         else:
                             for target in targets:
                                 try:
-                                    maxgie.kickoutFromGroup(msg.to,[target])
-                                    maxgie.findAndAddContactsByMid(target)
-                                    maxgie.inviteIntoGroup(msg.to,[target])
-                                    maxgie.cancelGroupInvitation(msg.to,[target])
+                                    line.kickoutFromGroup(msg.to,[target])
+                                    line.findAndAddContactsByMid(target)
+                                    line.inviteIntoGroup(msg.to,[target])
+                                    line.cancelGroupInvitation(msg.to,[target])
                                 except:
                                     pass            
                 elif msg.text.lower().startswith("สีme "):
                             text_ = removeCmd("สีme", text)
                             try:
                                 temp["t"] = text_
-                                maxgie.sendMessage(to,"「 โค๊ดสี 」\nคือ : " + text_)
+                                line.sendMessage(to,"「 โค๊ดสี 」\nคือ : " + text_)
                             except:
-                                maxgie.sendMessage(to,"สำเเร็จแล้ว")
+                                line.sendMessage(to,"สำเเร็จแล้ว")
                 elif msg.text.lower().startswith("สีอักษร "):
                             text_ = removeCmd("สีอักษร", text)
                             try:
                                 temp["te"] = text_
-                                maxgie.sendMessage(to,"「 โค๊ดสี 」\nคือ : " + text_)
+                                line.sendMessage(to,"「 โค๊ดสี 」\nคือ : " + text_)
                             except:
-                                maxgie.sendMessage(to,"สำเเร็จแล้ว")
+                                line.sendMessage(to,"สำเเร็จแล้ว")
                 elif msg.text.lower() == "รหัสสี":
                             c="https://i.pinimg.com/originals/d0/9c/8a/d09c8ad110eb44532825df454085a376.jpg"
                             p="https://i.pinimg.com/originals/7c/d3/aa/7cd3aa57150f8f6f18711ff22c9f6d4a.jpg"
                             m="**ตัวอย่างที่1**\nคำสั่งเปลี่ยนสี me\nพิม'ตั้งสีme #333333'\n**ตัวอย่างที่2**\nคำสั่งเปลี่ยนสี tag\nพิม'ตั้งสีแทค #333333'"
-                            maxgie.sendImageWithURL(to,c)
-                            maxgie.sendImageWithURL(to,p)
-                            maxgie.sendMessage(to,m)
+                            line.sendImageWithURL(to,c)
+                            line.sendImageWithURL(to,p)
+                            line.sendMessage(to,m)
                 elif msg.text.lower().startswith("ตั้งบล็อค "):
                             text_ = removeCmd("ตั้งบล็อค", text)
                             try:
                                 tagadd["b"] = text_
-                                maxgie.sendMessage(to,"「 ตั้งบล็อคอัตโนมัติ 」\nคือ : " + text_)
+                                line.sendMessage(to,"「 ตั้งบล็อคอัตโนมัติ 」\nคือ : " + text_)
                             except:
-                                maxgie.unsendMessage(msg_id)
+                                line.unsendMessage(msg_id)
                                 duc1(to, "🌟สำเร็จแล้ววว🌟")
                 elif text.lower().startswith("ตั้งค้างเชิญ "):
                             text_ = removeCmd("ตั้งค้างเชิญ", text)
                             try:
                                 settings["autoCancel"]["members"] = text_
-                                maxgie.sendMessage(to,"「 ตั้งยกค้างเชิญ 」\nจำนวน : " + text_)
+                                line.sendMessage(to,"「 ตั้งยกค้างเชิญ 」\nจำนวน : " + text_)
                             except:
-                                maxgie.unsendMessage(msg_id)
+                                line.unsendMessage(msg_id)
                                 duc1(to, "🌟สำเร็จแล้ววว🌟")
                 if text.lower() == "ดำ":
                   if msg._from in admin:
                       apalo["Talkwblacklist"] = True
-                      maxgie.unsendMessage(msg_id)
+                      line.unsendMessage(msg_id)
                       duc1(to, "🌟ส่งคทลงมา...🌟")
                 if text.lower() == "ขาว":
                   if msg._from in admin:
                       apalo["Talkdblacklist"] = True
-                      maxgie.unsendMessage(msg_id)
+                      line.unsendMessage(msg_id)
                       duc1(to, "🌟ส่งคทลงมา...🌟")
                 elif msg.text.lower().startswith("ตั้งแทค "):
                       text_ = removeCmd("ตั้งแทค", text)
                       try:
                           tagadd["tag"] = text_
                           sa = "「 ตั้งคำแทค 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣  ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
                           sendTemplate(to,data)
                       except:
-                          maxgie.sendMessage(to,"Done. >_<")
+                          line.sendMessage(to,"Done. >_<")
                 elif msg.text.lower().startswith("ตั้งแทคแชท "):
                       text_ = removeCmd("ตั้งแทคแชท", text)
                       try:
                           settings["reply"] = text_
                           sa = "「 ตั้งคำแทค 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
                           sendTemplate(to,data)
                       except:
-                          maxgie.sendMessage(to,"Done. >_<")
+                          line.sendMessage(to,"Done. >_<")
                 elif msg.text.lower().startswith("ตั้งต้อนรับ "):
                       text_ = removeCmd("ตั้งต้อนรับ", text)
                       try:
                           tagadd["wctext"] = text_
                           sa = "「 ตั้งต้อนรับ 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": " TANBOTNEVERDIES✯͜͡❂➣", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": " TANBOTNEVERDIES✯͜͡❂➣", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
                           sendTemplate(to,data)
                       except:
-                          maxgie.sendMessags(to,"Done. >_<")
+                          line.sendMessags(to,"Done. >_<")
                 elif msg.text.lower().startswith("ตั้งคนออก "):
                             text_ = removeCmd("ตั้งคนออก", text)
                             try:
                                 tagadd["lv"] = text_
-                                maxgie.sendMessage(to,"「 ตั้งคนออก 」\nคือ : " + text_)
+                                line.sendMessage(to,"「 ตั้งคนออก 」\nคือ : " + text_)
                             except:
-                                maxgie.sendMessage(to,"สำเเร็จแล้ว")
+                                line.sendMessage(to,"สำเเร็จแล้ว")
                 elif msg.text.lower().startswith("ตั้งแอด "):
                       text_ = removeCmd("ตั้งแอด", text)
                       try:
                           tagadd["add"] = text_
                           sa = "「 ตั้งแอด 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
                           sendTemplate(to,data)
                       except:
-                          maxgie.sendMessags(to,"Done. >_<")
+                          line.sendMessags(to,"Done. >_<")
                 elif msg.text.lower().startswith("ตั้งคอมเม้น "):
                       text_ = removeCmd("ตั้งคอมเม้น", text)
                       try:
                           settings["commet"] = text_
                           sa = "「 ตั้งคอมเม้น 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "TANBOTNEVERDIES✯͜͡❂➣ ", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
                           sendTemplate(to,data)
                       except:
-                          maxgie.sendMessags(to,"Done. >_<")
+                          line.sendMessags(to,"Done. >_<")
                 elif msg.text.lower() == "ทัก":
                   if msg.toType == 0:
                      sendMention(to, to, "────────────────\n", "\n────────────────")
                   elif msg.toType == 2:
-                     group = maxgie.getGroup(to)
+                     group = line.getGroup(to)
                      contact = [mem.mid for mem in group.members]
                      mentionMembers(to, contact)       
                 if text.lower() == "เชค":
@@ -1398,8 +1398,8 @@ async def maxgieBot(op):
                     c = settings["autoCancel"]["members"]
                     b = tagadd["b"]
                     Re = settings["reply"]
-                    maxgie.generateReplyMessage(msg.id)
-                    maxgie.sendMessags(id, to, "ข้อความแอด :\n"+str(add)+"\n\nข้อความแทค :\n"+str(tag)+"\n\nข้อความเม้น :\n"+str(like)+"\n\nข้อความต้อนรับ :\n"+str(wc)+"\n\nข้อความคนออก :\n"+str(lv)+"\n\nจำนวนค้างเชิญ :\n"+str(c)+" จำนวน\n\nข้อความบล็อค :\n"+str(b)+"\n\nข้อความแทคแชท :\n"+str(Re))
+                    line.generateReplyMessage(msg.id)
+                    line.sendMessags(id, to, "ข้อความแอด :\n"+str(add)+"\n\nข้อความแทค :\n"+str(tag)+"\n\nข้อความเม้น :\n"+str(like)+"\n\nข้อความต้อนรับ :\n"+str(wc)+"\n\nข้อความคนออก :\n"+str(lv)+"\n\nจำนวนค้างเชิญ :\n"+str(c)+" จำนวน\n\nข้อความบล็อค :\n"+str(b)+"\n\nข้อความแทคแชท :\n"+str(Re))
                 if text.lower() == "/คำสั่ง" or text.lower() == "/help":
                     sas = "😀 Help Message 😀\n"
                     sa = "• คท\n"
