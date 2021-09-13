@@ -1192,7 +1192,7 @@ async def lineBot(op):
                       duc1(to, "🌟สำเร็จ🌟")
                 
                 elif text.lower() == "คทดำ":
-                    if msg._from in maxgieMID:
+                    if msg._from in lineMID:
                         if apalo["Talkblacklist"] == []:
                             line.unsendMessage(msg_id)
                             duc1(to, "🌟ไม่มีคท.คนติดดำ🌟")
@@ -1242,7 +1242,7 @@ async def lineBot(op):
                     Ri2 = Ri1.replace("@","")
                     Ri3 = Ri2.rstrip()
                     _name = Ri3
-                    gs = maxgie.getGroup(msg.to)
+                    gs = line.getGroup(msg.to)
                     targets = []
                     for s in gs.members:
                         if _name in s.displayName:
@@ -1267,7 +1267,7 @@ async def lineBot(op):
                         vkick2 = vkick1.replace("@","")
                         vkick3 = vkick2.rstrip()
                         _name = vkick3
-                        gs = maxgie.getGroup(msg.to)
+                        gs = line.getGroup(msg.to)
                         targets = []
                         for s in gs.members:
                             if _name in s.displayName:
@@ -1989,7 +1989,7 @@ async def lineBot(op):
                                         "contents": [
                                             {
                                                "type": "image",
-                                                "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                "url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                                 "size": "full"
                                             },
                                             {
@@ -2023,7 +2023,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                     "uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -2043,7 +2043,7 @@ async def lineBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                "url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                                 "size": "full"
                                             },
                                             {
@@ -2076,7 +2076,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"TANBOTNEVERDIES✯͜͡❂➣",
-                                                     "uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -2096,7 +2096,7 @@ async def lineBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                "url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                                 "size": "full"
                                             },
                                             {
@@ -2129,7 +2129,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"TANBOTNEVERDIES✯͜͡❂➣",
-                                                     "uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -2149,7 +2149,7 @@ async def lineBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                "url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                                 "size": "full"
                                             },
                                             {
@@ -2205,7 +2205,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                     "uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -2225,7 +2225,7 @@ async def lineBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                "url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                                 "size": "full"
                                             },
                                             {
@@ -2258,7 +2258,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                     "uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -2286,24 +2286,24 @@ async def lineBot(op):
                                     if clone["M"] not in target:
                                         target.append(clone["M"])
                                 for she in target:
-                                    BackupProfile = maxgie.getContact(sender)
+                                    BackupProfile = line.getContact(sender)
                                     Save1 = "http://dl.profile.line-cdn.net/{}".format(BackupProfile.pictureStatus);Save2 = "{}".format(BackupProfile.displayName);ProfileMe["PictureMe"] = Save1;ProfileMe["NameMe"] = Save2
-                                    contact = maxgie.getContact(she);ClonerV2(she)
-                                    sendMention(to, contact.mid, "=͟͟͞͞➳ คุณกำลังก็อปปี้", "สำเร็จแล้ว >_<");maxgie.sendContact(to, str(BackupProfile.mid));maxgie.sendContact(to, str(contact.mid))
+                                    contact = line.getContact(she);ClonerV2(she)
+                                    sendMention(to, contact.mid, "=͟͟͞͞➳ คุณกำลังก็อปปี้", "สำเร็จแล้ว >_<");line.sendContact(to, str(BackupProfile.mid));maxgie.sendContact(to, str(contact.mid))
                 elif text.lower() == "กลับร่าง":
                             try:
-                                maxgiestatus = maxgie.getProfile()
-                                maxgieName = maxgie.getProfile()
-                                maxgieName.statusMessage = ProfileMe["statusMessage"]
-                                maxgieName.pictureStatus = str(ProfileMe["pictureStatus"])
-                                maxgie.updateProfile(maxgiestatus)
-                                maxgieName.displayName = ProfileMe["NameMe"]
-                                maxgie.updateProfile(maxgieName)
-                                path = maxgie.downloadFileURL(ProfileMe["PictureMe"])
-                                maxgie.updateProfilePicture(path)
+                                linestatus = line.getProfile()
+                                lineName = line.getProfile()
+                                lineName.statusMessage = ProfileMe["statusMessage"]
+                                lineName.pictureStatus = str(ProfileMe["pictureStatus"])
+                                line.updateProfile(maxgiestatus)
+                                lineName.displayName = ProfileMe["NameMe"]
+                                line.updateProfile(lineName)
+                                path = line.downloadFileURL(ProfileMe["PictureMe"])
+                                line.updateProfilePicture(path)
                                 coverId = ProfileMe["coverId"]
-                                maxgie.updateProfileCoverById(coverId)
-                                BackupProfile = maxgie.getContact(sender)
+                                line.updateProfileCoverById(coverId)
+                                BackupProfile = line.getContact(sender)
                                 sendMention(to, BackupProfile.mid, "=͟͟͞͞➳ กลับบัญชีเดิมเรียบร้อย", ">_<");maxgie.sendContact(to, str(BackupProfile.mid))
                             except Exception as error:
                                 line.unsendMessage(msg_id)
@@ -2332,7 +2332,7 @@ async def lineBot(op):
                             line.generateReplyMessage(msg.id)
                             line.sendReplyImageWithURL(msg.id, to, image)
                 elif text.lower() == "myvideo" or text.lower() == "รูปวีดีโอเรา":
-                            h = line.getContact(maxgieMID)
+                            h = line.getContact(lineMID)
                             if h.videoProfile == None:
                             	return line.sendMessage(to, "คุณไม่ได้ใส่รูปวีดีโอ >_<")
                             line.generateReplyMessage(msg.id)
@@ -2525,7 +2525,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อเชล",
-"uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 },
 {
@@ -2538,7 +2538,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อผู้สร้าง",
-"uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 }
 ]
@@ -2672,7 +2672,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อเชล",
-"uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 },
 {
@@ -2722,7 +2722,7 @@ async def lineBot(op):
                                 {
                                   "contents": [
                                     {
-                                      "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                      "url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                       "type": "image"
                                     },
                                     {
@@ -2730,7 +2730,7 @@ async def lineBot(op):
                                       "color": "#00F5FF"
                                     },
                                     {
-                                      "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                      "url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                       "type": "image"
                                     }
                                   ],
@@ -2799,7 +2799,7 @@ async def lineBot(op):
                                           "text": "TANBOTNEVERDIES✯͜͡❂➣ ",
                                           "size": "xl",
                                           "action": {
-                                            "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac",
+                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
                                             "type": "uri",
                                             "label": "Add Maker"
                                           },
@@ -2890,7 +2890,7 @@ async def lineBot(op):
                                                 "contents": [
                                                     {
                                                         "type": "icon",
-                                                        "url": "https://os.line.naver.jp/os/p/"+maxgieMID,
+                                                        "url": "https://os.line.naver.jp/os/p/"+lineMID,
                                                         "size": "md"
                                                     },
                                                     {
@@ -2901,7 +2901,7 @@ async def lineBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                         }
                                                     },
                                                     {
@@ -2962,7 +2962,7 @@ async def lineBot(op):
                                                 "contents": [
                                                     {
                                                         "type": "icon",
-                                                        "url": "https://os.line.naver.jp/os/p/"+maxgieMID,
+                                                        "url": "https://os.line.naver.jp/os/p/"+lineMID,
                                                         "size": "md"
                                                     },
                                                     {
@@ -2973,7 +2973,7 @@ async def lineBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                         }
                                                     },
                                                     {
@@ -3048,7 +3048,7 @@ async def lineBot(op):
                                                 "contents": [
                                                     {
                                                         "type": "icon",
-                                                        "url": "https://os.line.naver.jp/os/p/"+maxgieMID,
+                                                        "url": "https://os.line.naver.jp/os/p/"+lineMID,
                                                         "size": "md"
                                                     },
                                                     {
@@ -3059,7 +3059,7 @@ async def lineBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                         }
                                                     },
                                                     {
@@ -3133,7 +3133,7 @@ async def lineBot(op):
                             },
                             "hero": {
                                             "type": "image",
-                                            "url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(sender).pictureStatus),
+                                            "url": "https://obs.line-scdn.net/{}".format(line.getContact(sender).pictureStatus),
                                             "size": "full",
                                             "aspectRatio": "1:1",
                                             "aspectMode": "fit",
@@ -3144,7 +3144,7 @@ async def lineBot(op):
                                 "contents": [
                               #  {
                                               #  "type": "image",
-                                                #"url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                                                #"url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                                                # "size": "full"
                                              #  },
                                     {
@@ -3189,7 +3189,7 @@ async def lineBot(op):
                         "text": "{}".format(str(ga)),
                         "sentBy": {
                              "label": "รีบอทสำเร็จ...",
-                             "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+                             "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
                              "linkUrl": "line://ti/p/~nonbysignal"
                         }
                     }
@@ -3264,7 +3264,7 @@ async def lineBot(op):
                                                 "action": {
                                                     "type": "uri",
                                                     "label": "TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                    "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                    "uri": "line://nv/profilePopup/mid=lineuda8195e53e6c6e17f3f745743e477100"
                                                 }                                                   
                                             },
                                             {
@@ -3402,7 +3402,7 @@ async def lineBot(op):
                                             "size": "full",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                             }
                                         }
                                     ]
@@ -3422,7 +3422,7 @@ async def lineBot(op):
                                             "size": "full",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                             }
                                         }
                                     ]
@@ -3680,7 +3680,7 @@ async def lineBot(op):
                     line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดมุดลิ้งเรียบร้อย🌟")
 
-                elif text.lower() == 'speed':start = time.time();maxgie.sendMessage("ue846139824ec13384cbb921b460323ac", "TANBOTNEVERDIES✯͜͡❂➣ ");elapsed_time = time.time() - start;duc1(to, "Speed : %s second"%str(round(elapsed_time,4)))
+                elif text.lower() == 'speed':start = time.time();line.sendMessage("uda8195e53e6c6e17f3f745743e477100", "TANBOTNEVERDIES✯͜͡❂➣ ");elapsed_time = time.time() - start;duc1(to, "Speed : %s second"%str(round(elapsed_time,4)))
                 
                 elif msg.text.lower().startswith("ประกาศ "):
                             txt = removeCmd("ประกาศ", text)
@@ -3724,7 +3724,7 @@ async def lineBot(op):
 {
 "contents": [
 {
-"url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+"url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
 "type": "image"
 },
 {
@@ -3732,7 +3732,7 @@ async def lineBot(op):
 "color": "#000000"
 },
 {
-"url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+"url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
 "type": "image"
 }
 ],
@@ -3784,7 +3784,7 @@ async def lineBot(op):
 {
 "contents": [
 {
-"url": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
+"url": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),
 "type": "icon",
 "size": "md"
 },
@@ -3824,7 +3824,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "TANBOTNEVERDIES✯͜͡❂➣ ",
-"uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 },
 {
@@ -3837,7 +3837,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "TANBOTNEVERDIES✯͜͡❂➣ ",
-"uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 }
 ]
@@ -3850,8 +3850,8 @@ async def lineBot(op):
                                 time.sleep(1)
                             line.sendMessage(to, "ส่งคำประกาศจำนวน  {} กลุ่ม".format(str(len(groups))))
                 elif msg.text.lower().startswith("ขายของ"):
-                            contact = maxgie.getContact(sender) 
-                            groups = maxgie.getGroupIdsJoined()
+                            contact = line.getContact(sender) 
+                            groups = line.getGroupIdsJoined()
                             for group in groups:
                                 dataProfile = [ 
                                       {
@@ -3889,7 +3889,7 @@ async def lineBot(op):
                                               "aspectMode": "cover",
                                               "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                               }
                                             },
                                         "body": {
@@ -3991,7 +3991,7 @@ async def lineBot(op):
                                                       "text": "สนใจติดต่อ",
                                                       "size": "xl",
                                                       "action": {
-                                                        "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac",
+                                                        "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
                                                         "type": "uri",
                                                         "label": "Add Maker"
                                                       },
@@ -4049,7 +4049,7 @@ async def lineBot(op):
                                               "aspectMode": "cover",
                                               "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                               }
                                             },
                                         "body": {
@@ -4151,7 +4151,7 @@ async def lineBot(op):
                                                       "text": "สนใจติดต่อ",
                                                       "size": "xl",
                                                       "action": {
-                                                        "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac",
+                                                        "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
                                                         "type": "uri",
                                                         "label": "Add Maker"
                                                       },
@@ -4209,7 +4209,7 @@ async def lineBot(op):
                                               "aspectMode": "cover",
                                               "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                               }
                                             },
                                         "body": {
@@ -4311,7 +4311,7 @@ async def lineBot(op):
                                                       "text": "สนใจติดต่อ",
                                                       "size": "xl",
                                                       "action": {
-                                                        "uri": "line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac",
+                                                        "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
                                                         "type": "uri",
                                                         "label": "Add Maker"
                                                       },
@@ -4573,9 +4573,9 @@ async def lineBot(op):
                                 lists.append(mention["M"])
                         for ls in lists:
                             line.unsendMessage(msg_id)
-                            line.sendMessage(to, yud,contentMetadata={"MSG_SENDER_NAME": str(maxgie.getContact(ls).displayName),"MSG_SENDER_ICON":"http://dl.profile.line-cdn.net/%s" % maxgie.getContact(ls).pictureStatus})
+                            line.sendMessage(to, yud,contentMetadata={"MSG_SENDER_NAME": str(line.getContact(ls).displayName),"MSG_SENDER_ICON":"ht-cdn.net/%s" % line.getContact(ls).pictureStatus})
                 elif text.startswith("ยูทูป "):
-                   a = line.adityarequestweb("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+maxgie.adityasplittext(text,'s')+"&type=video&key=AIzaSyAF-_5PLCt8DwhYc7LBskesUnsm1gFHSP8")
+                   a = line.adityarequestweb("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+line.adityasplittext(text,'s')+"&type=video&key=AIzaSyAF-_5PLCt8DwhYc7LBskesUnsm1gFHSP8")
                    if a["items"] != []:
                        no = 0
                        ret_ = []
@@ -4741,7 +4741,7 @@ async def lineBot(op):
                            if ind == 0:
                                pass
                            else:
-                               if i._from == maxgie.profile.mid:
+                               if i._from == line.profile.mid:
                                    MId.append(i.id)
                                    if len(MId) == mes:
                                        break
@@ -4838,7 +4838,7 @@ async def lineBot(op):
                         if spl[1] != "":
                             txt = txt + " ด้วยข้อความ \""+spl[1]+"\""
                         txt = txt + "\nกรุณารอสักครู่.."
-                        data = {"type": "text","text": "{}".format(str(txt)),"sentBy": {"label": "{}".format(maxgie.getContact(maxgieMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ubd86e8c77559b1493f0ad64b1dba2d6c"}}
+                        data = {"type": "text","text": "{}".format(str(txt)),"sentBy": {"label": "{}".format(line.getContact(lineMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ubd86e8c77559b1493f0ad64b1dba2d6c"}}
                         sendTemplate(to, data)
                         procLock = len(ag)
                         for gr in ag:
@@ -4850,13 +4850,13 @@ async def lineBot(op):
                             except:
                                 pass
                         sis = "สำเร็จแล้ว (｀・ω・´)"
-                        data = {"type": "text","text": "{}".format(str(sis)),"sentBy": {"label": "{}".format(maxgie.getContact(maxgieMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ubd86e8c77559b1493f0ad64b1dba2d6c"}}
+                        data = {"type": "text","text": "{}".format(str(sis)),"sentBy": {"label": "{}".format(line.getContact(maxgieMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ubd86e8c77559b1493f0ad64b1dba2d6c"}}
                         sendTemplate(to, data)
             
 #=====================================================================
 #==============================================================================#
                 elif text.lower() == 'คนสร้างกลุ่ม' or text.lower() == "แอด":
-                    group = maxgie.getGroup(to)
+                    group = line.getGroup(to)
                     cg = group.creator
                     c = cg.mid
                     name = cg.displayName
@@ -5050,7 +5050,7 @@ async def lineBot(op):
                         ret_ = "รายชื่อกลุ่มทั้งหมด :\n"
                         no = 0 + 1
                         for gid in groups:
-                            group = maxgie.getGroup(gid)
+                            group = line.getGroup(gid)
                             ret_ += "\n{}. {} | {}".format(str(no), str(group.name), str(len(group.members)))
                             no += 1
                         ret_ += "\n\nจำนวน {} กลุ่ม".format(str(len(groups)))
@@ -5736,7 +5736,7 @@ async def lineBot(op):
                                         rat_ = "\nSend At :\n{} ago".format(waktumsg)
                                         rat_ += "\nAudio :\nBelow"
                                         sendMentionFooter(at, ikkeh.mid, "# Resend Message\n\nMaker :\n", str(rat_))
-                                        maxgie.sendAudio(at, msg_dict[msg_id]["audio"])
+                                        line.sendAudio(at, msg_dict[msg_id]["audio"])
                                         del msg_dict[msg_id]
                                     else:
                                         if "sticker" in msg_dict[msg_id]:
@@ -5745,7 +5745,7 @@ async def lineBot(op):
                                             rat_ = "\nSend At :\n{} ago".format(waktumsg)
                                             rat_ += "\nSticker :\nBelow"
                                             sendMentionFooter(at, ikkeh.mid, "# Resend Message\n\nMaker :\n", str(rat_))
-                                            maxgie.sendImageWithURL(at, msg_dict[msg_id]["sticker"])
+                                            line.sendImageWithURL(at, msg_dict[msg_id]["sticker"])
                                             del msg_dict[msg_id]
                                         else:
                                             if "mid" in msg_dict[msg_id]:
@@ -5754,7 +5754,7 @@ async def lineBot(op):
                                                 rat_ = "\nSend At :\n{} ago".format(waktumsg)
                                                 rat_ += "\nContact :\nBelow"
                                                 sendMentionFooter(at, ikkeh.mid, "# Resend Message\n\nMaker :\n", str(rat_))
-                                                maxgie.sendContact(at, msg_dict[msg_id]["mid"])
+                                                line.sendContact(at, msg_dict[msg_id]["mid"])
                                                 del msg_dict[msg_id]
                                             else:
                                                 if "location" in msg_dict[msg_id]:
@@ -5832,11 +5832,11 @@ async def lineBot(op):
 def run():
     while True:
         try:
-            ops = maxgiePoll.singleTrace(count=50)
+            ops = linePoll.singleTrace(count=50)
             if ops != None:
                 for op in ops:
-                   loop.run_until_complete(maxgieBot(op))
-                   maxgiePoll.setRevision(op.revision)
+                   loop.run_until_complete(linet(op))
+                   linePoll.setRevision(op.revision)
         except Exception as e:
             logError(e)
 if __name__ == "__main__":
