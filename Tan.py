@@ -84,9 +84,7 @@ settings = {
     "message":"บัญชีนี้ได้การป้องกัน💢โดย ꧁💓 @:꓄ꍏꈤᖘꍏ꓄꓄ꍏꌩ💓꧂ ระบบได้ทำการบล็อคคุณอัตโนมัติ\n",
     "comment":"Thanks for add me",
     "userAgent": [
-                  "Mozilla/5.0 (Linux;chrome 92.0.4515.159 Android 9,'CPH2015 Build/PPR1.180610.011 /OPM1.171019.026) AppleWebKit/537.36 (KHTML, like Gecko)chrome 92.0.4515.159/ Chrome/80.0.3987.122 Mobile Safari/537.36",
-                   "Mozilla/5.0 ( Windows NT 10.0; Win64; x64 ) AppleWebKit/537.36 (KHTML เช่น Gecko) Chrome/92.0.4515.159 Safari/537.36"],
-    "mimic": {
+                      "mimic": {
         "copy": False,
         "status": False,
         "target": {}
