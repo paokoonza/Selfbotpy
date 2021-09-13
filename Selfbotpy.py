@@ -3476,9 +3476,9 @@ async def maxgieBot(op):
                 elif msg.text.lower().startswith("ประกาศแชท: "):
                     sep = text.split(" ")
                     txt = text.replace(sep[0] + " ","")
-                    friends = maxgie.friends
+                    friends = line.friends
                     for friend in friends:
-                        maxgie.sendMessage(friend, "「ข้อความอัตโนมัติ ประกาศแชท」\n{}".format(str(txt)))
+                        line.sendMessage(friend, "「ข้อความอัตโนมัติ ประกาศแชท」\n{}".format(str(txt)))
                     duc1(to, "ส่งข้อความถึงเพื่อน {} คน".format(str(len(friends))))
 #=============================================================================           
                 elif msg.text.lower().startswith("ดำ "):
@@ -3493,7 +3493,7 @@ async def maxgieBot(op):
                                 for ls in lists:
                                     try:
                                         apalo["Talkblacklist"][ls] = True
-                                        maxgie.sendMessage(to, 'Add to TalkBan')
+                                        line.sendMessage(to, 'Add to TalkBan')
                                     except:
                                         pass
                 elif msg.text.lower().startswith("ล้าง "):
@@ -3508,12 +3508,12 @@ async def maxgieBot(op):
                                 for ls in lists:
                                     try:
                                         del apalo["Talkblacklist"][ls]
-                                        maxgie.sendMessage(to, 'Deleted from TalkBan')
+                                        line.sendMessage(to, 'Deleted from TalkBan')
                                     except:
                                         pass
                 elif text.lower() == "เชคดำ":
                             if apalo["Talkblacklist"] == {}:
-                              maxgie.unsendMessage(msg_id)
+                              line.unsendMessage(msg_id)
                               duc1(to, "🌟ไม่พบคนที่ยัดดำ🌟")
                             else:
                               ma = ""
@@ -3547,144 +3547,144 @@ async def maxgieBot(op):
                     duc1(to,str(sa))
                 if text.lower() == "เปิดกันรัน":
                     settings["autoCancel"]["on"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดกันรันเรียบร้อย🌟")
                 if text.lower() == "ปิดกันรัน":
                     settings["autoCancel"]["on"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดกันรันเรียบร้อย🌟")
                 if text.lower() == "กินห้องเปิด":
-                  if msg._from in maxgieMID:
+                  if msg._from in lineMID:
                       kcn["autojoin"] = True
-                      maxgie.unsendMessage(msg_id)
+                      line.unsendMessage(msg_id)
                       duc1(to, "🌟กินห้อง (เปิด) ใช้งาน🌟")
                   else:
-                      maxgie.sendMessage(msg.to,"「 Status Autoleave 」\nเปิดใช้งานกินห้องอัตโนมัติแล้ว")
+                      line.sendMessage(msg.to,"「 Status Autoleave 」\nเปิดใช้งานกินห้องอัตโนมัติแล้ว")
                 if text.lower() == "กินห้องปิด":
-                  if msg._from in maxgieMID:
+                  if msg._from in lineMID:
                       kcn["autojoin"] = False
-                      maxgie.unsendMessage(msg_id)
+                      line.unsendMessage(msg_id)
                       duc1(to, "🌟กินห้อง (ปิด) ใช้งาน🌟")
                   else:
-                      maxgie.sendMessage(msg.to,"「 Status Autoleave 」\nเปิดใช้งานกินห้องอัตโนมัติแล้ว") 
+                      line.sendMessage(msg.to,"「 Status Autoleave 」\nเปิดใช้งานกินห้องอัตโนมัติแล้ว") 
                 if text.lower() == "เปิดแอด":
                     settings["autoAdd"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดแอดเรียบร้อย🌟")
                 if text.lower() == "ปิดแอด":
                     settings["autoAdd"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดแอดเรียบร้อย🌟")
                 if text.lower() == "ปิดไลค์":
                    sets["l"] = False
-                   maxgie.unsendMessage(msg_id)
+                   line.unsendMessage(msg_id)
                    duc1(to, "🌟ปิดไลค์แล้ว🌟")
                 if text.lower() == "เปิดไลค์":
                    sets["l"] = True
-                   maxgie.unsendMessage(msg_id)
+                   line.unsendMessage(msg_id)
                    duc1(to, "🌟เปิดไลค์แล้ว🌟")
                 if text.lower() == "เปิดแทค2":
                     tagadd["tagss"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดแทค2เรียบร้อย🌟")
                 if text.lower() == "ปิดแทค2":
                     tagadd["tagss"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดแทค2เรียบร้อย🌟")
                 if text.lower() == "เปิดคอมเม้น":
                     settings["com"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดคอมเม้นเรียบร้อย🌟")
                 if text.lower() == "ปิดคอมเม้น":
                     settings["com"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดคอมเม้นเรียบร้อย🌟")
                 if text.lower() == "เปิดต้อนรับ":
                     settings["Welcome"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดต้อนรับเรียบร้อย🌟")
                 if text.lower() == "ปิดต้อนรับ":
                     settings["Welcome"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดต้อนรับเรียบร้อย🌟")
                 if text.lower() == "เปิดต้อนรับ2":
                     settings["Wc"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดต้อนรับ2เรียบร้อย🌟")
                 if text.lower() == "ปิดต้อนรับ2":
                     settings["Wc"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดต้อนรับ2เรียบร้อย🌟")
                 if text.lower() == "เปิดคนออก":
                     settings["Leave"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดคนออกเรียบร้อย🌟")
                 if text.lower() == "ปิดคนออก":
                     settings["Leave"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดคนออกเรียบร้อย🌟")
                 if text.lower() == "เปิดยกเลิก":
                     settings["unsendMessage"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดยกเลิกเรียบร้อย🌟")
                 if text.lower() == "ปิดยกเลิก":
                     settings["unsendMessage"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดยกเลิกเรียบร้อย🌟")
                 if text.lower() == "เปิดติ๊กใหญ่":
                     settings["Sticker"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดติ๊กใหญ่เรียบร้อย🌟")
                 if text.lower() == "ปิดติ๊กใหญ่":
                     settings["Sticker"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดติ๊กใหญ่เรียบร้อย🌟")
                 if text.lower() == "เปิดโค๊ดติ๊ก":
                     sets["Sticker"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดโค๊ดติ๊กเรียบร้อย🌟")
                 if text.lower() == "ปิดโค๊ดติ๊ก":
                     sets["Sticker"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดโค๊ดติ๊กเรียบร้อย🌟")
                 if text.lower() == "เปิดแทค3":
                     sets["tagsticker"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดแทค3เรียบร้อย🌟")
                 if text.lower() == "ปิดแทค3":
                     sets["tagsticker"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดแทค3เรียบร้อย🌟")
                 if text.lower() == "เปิดติ๊กคนออก":
                     settings["lv"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดติ๊กคนออกเรียบร้อย🌟")
                 if text.lower() == "ปิดติ๊กคนออก":
                     settings["lv"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดติ๊กคนออกเรียบร้อย🌟")
                 if text.lower() == "เปิดติ๊กคนเข้า":
                     settings["wcsti2"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดติ๊กคนเข้าเรียบร้อย🌟")
                 if text.lower() == "ปิดติ๊กคนเข้า":
                     settings["wcsti2"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดติ๊กคนเข้าเรียบร้อย🌟")
                 if text.lower() == "เปิดมุดลิ้ง":
                     sets["autoJoinTicket"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟เปิดมุดลิ้งเรียบร้อย🌟")
                 if text.lower() == "ปิดมุดลิ้ง":
                     sets["autoJoinTicket"] = False
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดมุดลิ้งเรียบร้อย🌟")
 
                 elif text.lower() == 'speed':start = time.time();maxgie.sendMessage("ue846139824ec13384cbb921b460323ac", "TANBOTNEVERDIES✯͜͡❂➣ ");elapsed_time = time.time() - start;duc1(to, "Speed : %s second"%str(round(elapsed_time,4)))
                 
                 elif msg.text.lower().startswith("ประกาศ "):
                             txt = removeCmd("ประกาศ", text)
-                            groups = maxgie.getGroupIdsJoined()
+                            groups = line.getGroupIdsJoined()
                             url = 'https://nekos.life/api/v2/img/ngif'
                             text1 = requests.get(url).text
                             image = json.loads(text1)['url']
@@ -3848,7 +3848,7 @@ async def maxgieBot(op):
 }
                                 sendTemplate(group, data)
                                 time.sleep(1)
-                            maxgie.sendMessage(to, "ส่งคำประกาศจำนวน  {} กลุ่ม".format(str(len(groups))))
+                            line.sendMessage(to, "ส่งคำประกาศจำนวน  {} กลุ่ม".format(str(len(groups))))
                 elif msg.text.lower().startswith("ขายของ"):
                             contact = maxgie.getContact(sender) 
                             groups = maxgie.getGroupIdsJoined()
@@ -4345,14 +4345,14 @@ async def maxgieBot(op):
                                 }
                                 sendTemplate(group, data)
                                 time.sleep(1)
-                            maxgie.sendMessage(to, "ส่งคำประกาศจำนวน  {} กลุ่ม".format(str(len(groups))))
+                            line.sendMessage(to, "ส่งคำประกาศจำนวน  {} กลุ่ม".format(str(len(groups))))
 #==============================================================================#
                 elif text.lower() == "แทค":
-                        group = maxgie.getGroup(to);nama = [contact.mid for contact in group.members];nama.remove(maxgie.getProfile().mid)
-                        maxgie.datamention(to,'TANBOTNEVERDIES✯͜͡❂➣ ',nama)
+                        group = line.getGroup(to);nama = [contact.mid for contact in group.members];nama.remove(line.getProfile().mid)
+                        line.datamention(to,'TANBOTNEVERDIES✯͜͡❂➣ ',nama)
                 elif text.lower() == "/แทค" or text.lower() == "tagall":
                     if msg._from in maxgieMID:
-                        group = maxgie.getGroup(msg.to)
+                        group = line.getGroup(msg.to)
                         nama = [contact.mid for contact in group.members]
                         nm1, nm2, nm3, nm4, nm5, nm6, nm7, nm8, nm9, jml = [], [], [], [], [], [], [], [], [], len(nama)
                         if jml <= 20:
@@ -4502,12 +4502,12 @@ async def maxgieBot(op):
                     sep = msg.text.split(" ")
                     textnya = msg.text.replace(sep[0] + " ","")
                     urlnya ="http://chart.apis.google.com/chart?chs=480x80&cht=p3&chtt=" + textnya +"&chts=ff3333,70&chf=bg,s,ff3333"
-                    maxgie.sendImageWithURL(msg.to, urlnya)
+                    line.sendImageWithURL(msg.to, urlnya)
                 elif msg.text.lower().startswith("เขียน1 "):
                     sep = text.split(" ")
                     textnya = text.replace(sep[0] + " ", "")
                     text = "{}".format(textnya)
-                    contact = maxgie.getContact(maxgieMID)
+                    contact = line.getContact(lineMID)
                     data = {
                         "type": "flex",
                         "altText": "มาอ่าน",
@@ -4554,8 +4554,8 @@ async def maxgieBot(op):
                                         lists.append(mention["M"])
                                 for ls in lists:
                                     try:
-                                       maxgie.findAndAddContactsByMid(ls)
-                                       maxgie.inviteIntoGroup(to, [ls])
+                                       line.findAndAddContactsByMid(ls)
+                                       line.inviteIntoGroup(to, [ls])
                                     except:
                                        duc1(to, "Limited !")
                 elif msg.text.lower().startswith("สะกด"):
@@ -4572,10 +4572,10 @@ async def maxgieBot(op):
                             if mention["M"] not in lists:
                                 lists.append(mention["M"])
                         for ls in lists:
-                            maxgie.unsendMessage(msg_id)
-                            maxgie.sendMessage(to, yud,contentMetadata={"MSG_SENDER_NAME": str(maxgie.getContact(ls).displayName),"MSG_SENDER_ICON":"http://dl.profile.line-cdn.net/%s" % maxgie.getContact(ls).pictureStatus})
+                            line.unsendMessage(msg_id)
+                            line.sendMessage(to, yud,contentMetadata={"MSG_SENDER_NAME": str(maxgie.getContact(ls).displayName),"MSG_SENDER_ICON":"http://dl.profile.line-cdn.net/%s" % maxgie.getContact(ls).pictureStatus})
                 elif text.startswith("ยูทูป "):
-                   a = maxgie.adityarequestweb("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+maxgie.adityasplittext(text,'s')+"&type=video&key=AIzaSyAF-_5PLCt8DwhYc7LBskesUnsm1gFHSP8")
+                   a = line.adityarequestweb("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+maxgie.adityasplittext(text,'s')+"&type=video&key=AIzaSyAF-_5PLCt8DwhYc7LBskesUnsm1gFHSP8")
                    if a["items"] != []:
                        no = 0
                        ret_ = []
@@ -4585,9 +4585,9 @@ async def maxgieBot(op):
                        k = len(ret_)//10
                        for aa in range(k+1):
                            data = {"messages": [{"type": "flex","altText": "ยูทูป","contents": {"type": "carousel","contents": ret_[aa*10 : (aa+1)*10]}}]}
-                           maxgie.sendMessage(to,data)
+                           line.sendMessage(to,data)
                    else:
-                      maxgie.sendMessage(to,"Type: Search Youtube Video\nStatus: "+str(self.adityasplittext(msg.text,'s'))+" not found")
+                      line.sendMessage(to,"Type: Search Youtube Video\nStatus: "+str(self.adityasplittext(msg.text,'s'))+" not found")
                 
                 elif msg.text.lower().startswith("image "):
                                 query = removeCmd("image", text)
@@ -4701,32 +4701,32 @@ async def maxgieBot(op):
                  #=====================================================================
 
                 elif msg.text.lower().startswith("ยกเชิญ"):
-                                if msg._from in maxgieMID:                                
+                                if msg._from in lineMID:                                
                                     if msg.toType == 2:
-                                        group = maxgie.getGroup(receiver)
+                                        group = line.getGroup(receiver)
                                         gMembMids = [contact.mid for contact in group.invitee]
                                         k = len(gMembMids)//20
-                                        maxgie.sendMessage(msg.to,"[ ยกค้างเชิญ จำนวน {} คน] \nรอสักครู่...".format(str(len(gMembMids))))
+                                        line.sendMessage(msg.to,"[ ยกค้างเชิญ จำนวน {} คน] \nรอสักครู่...".format(str(len(gMembMids))))
                                         num=1
                                         for i in range(k+1):
                                             for j in gMembMids[i*20 : (i+1)*20]:
                                                 time.sleep(random.uniform(0.5,0.4))
-                                                maxgie.cancelGroupInvitation(msg.to,[j])
+                                                line.cancelGroupInvitation(msg.to,[j])
                                                 print ("[Command] "+str(num)+" => "+str(len(gMembMids))+" cancel members")
                                                 num = num+1
-                                            maxgie.sendMessage(receiver,"รอสักครู่🕛เดียวยกต่อ 20 คน\n 『.TANBOTMEVERDIE✯͜͡❂➣ 』 ")
+                                            line.sendMessage(receiver,"รอสักครู่🕛เดียวยกต่อ 20 คน\n 『.TANBOTMEVERDIE✯͜͡❂➣ 』 ")
                                             time.sleep(random.uniform(15,10))
-                                        maxgie.sendMessage(receiver,"[ ยกค้างเชิญ จำนวน {} คน เรียบร้อยแล้ว👏]".format(str(len(gMembMids))))
+                                        line.sendMessage(receiver,"[ ยกค้างเชิญ จำนวน {} คน เรียบร้อยแล้ว👏]".format(str(len(gMembMids))))
                                         time.sleep(random.uniform(0.95,1))
-                                        maxgie.sendMessage(receiver, None, contentMetadata={"STKID": "52002735","STKPKGID": "11537","STKVER": "1" }, contentType=7)
+                                        line.sendMessage(receiver, None, contentMetadata={"STKID": "52002735","STKPKGID": "11537","STKVER": "1" }, contentType=7)
                                         gname = line.getGroup(receiver).name
-                                        maxgie.sendMessage(Notify,"[ ยกค้างเชิญ >> "+gname+"  <<] \n จำนวน {} คน เรียบร้อยแล้ว👏\n『TANBOTMEVERDIE✯͜͡❂➣ 』".format(str(len(gMembMids))))
+                                        line.sendMessage(Notify,"[ ยกค้างเชิญ >> "+gname+"  <<] \n จำนวน {} คน เรียบร้อยแล้ว👏\n『TANBOTMEVERDIE✯͜͡❂➣ 』".format(str(len(gMembMids))))
                                         time.sleep(random.uniform(0.95,1))
-                                        maxgie.leaveGroup(receiver)
+                                        line.leaveGroup(receiver)
                                 								
-                                    maxgie.sendMessage(receiver,"[ไม่มีค้างเชิญ แล้วนะ😁]")
-                                    maxgie.sendMessage(receiver, None, contentMetadata={"STKID": "52114123","STKPKGID": "11539","STKVER": "1" }, contentType=7)
-                                    maxgie.leaveGroup(receiver)
+                                    line.sendMessage(receiver,"[ไม่มีค้างเชิญ แล้วนะ😁]")
+                                    line.sendMessage(receiver, None, contentMetadata={"STKID": "52114123","STKPKGID": "11539","STKVER": "1" }, contentType=7)
+                                    line.leaveGroup(receiver)
                 #=====================================================================              
                 elif msg.text.lower().startswith("ยกเลิก "):
                    args = msg.text.lower().replace("ยกเลิก ","")
@@ -4735,7 +4735,7 @@ async def maxgieBot(op):
                        mes = int(args[1])
                    except:
                        mes = 100
-                       M = maxgie.getRecentMessagesV2(to, 100)
+                       M = line.getRecentMessagesV2(to, 100)
                        MId = []
                        for ind,i in enumerate(M):
                            if ind == 0:
@@ -4746,13 +4746,13 @@ async def maxgieBot(op):
                                    if len(MId) == mes:
                                        break
                        def unsMes(id):
-                           maxgie.unsendMessage(id)
+                           line.unsendMessage(id)
                        for i in MId:
                            thread1 = threading.Thread(target=unsMes, args=(i,))
                            thread1.start()
                            thread1.join()
                        duc1(to, ' 「 กำลังยกเลิก 」\nยกเลิกทั้งหมด {} ข้อความ'.format(len(MId))) 
-                       maxgie.unsendMessage(msg_id)                                       
+                       line.unsendMessage(msg_id)                                       
 #=====================================================================                                       
                 
                 
@@ -4767,8 +4767,8 @@ async def maxgieBot(op):
                                         lists.append(mention["M"])
                                 for ls in lists:
                                     contact = maxgie.getContact(ls)
-                                    maxgie.findAndAddContactsByMid(ls)
-                                maxgie.generateReplyMessage(msg.id)
+                                    line.findAndAddContactsByMid(ls)
+                                line.generateReplyMessage(msg.id)
                                 duc1(id, to, "Success add " + str(contact.displayName) + " to Friendlist")
                 elif msg.text.lower().startswith("ลบเพื่อน "):
                             if 'MENTION' in msg.contentMetadata.keys()!= None:
@@ -4780,13 +4780,13 @@ async def maxgieBot(op):
                                     if mention["M"] not in lists:
                                         lists.append(mention["M"])
                                 for ls in lists:
-                                    contact = maxgie.getContact(ls)
-                                    n = len(maxgie.getAllContactIds())
+                                    contact = line.getContact(ls)
+                                    n = len(line.getAllContactIds())
                                     try:
-                                        maxgie.deleteContact(ls)
+                                        line.deleteContact(ls)
                                     except:pass
-                                    t = len(maxgie.getAllContactIds())
-                                    maxgie.generateReplyMessage(msg.id)
+                                    t = len(line.getAllContactIds())
+                                    line.generateReplyMessage(msg.id)
                                     duc1(id, to, "Type: Friendlist\n • Detail: Delete friend\n • Status: Succes..\n • Before: %s Friendlist\n • After: %s Friendlist"%(n,t))
                 elif msg.text.lower().startswith("บล็อค "):
                             if 'MENTION' in msg.contentMetadata.keys()!= None:
@@ -4798,25 +4798,25 @@ async def maxgieBot(op):
                                     if mention["M"] not in lists:
                                         lists.append(mention["M"])
                                 for ls in lists:
-                                    contact = maxgie.getContact(ls)
-                                    maxgie.blockContact(ls)
-                                maxgie.generateReplyMessage(msg.id)
+                                    contact = line.getContact(ls)
+                                    line.blockContact(ls)
+                                line.generateReplyMessage(msg.id)
                                 duc1(id, to, "Success add " + str(contact.displayName) + " to Blocklist")
                 elif msg.text.lower().startswith("ไอดีไลน์ "):
                             a = removeCmd("ไอดีไลน์", text)
-                            b = maxgie.findContactsByUserid(a)
+                            b = line.findContactsByUserid(a)
                             line = b.mid
-                            maxgie.unsendMessage(msg_id)
+                            line.unsendMessage(msg_id)
                             duc1(to, "line://ti/p/~" + a)
-                            maxgie.sendContact(to, line)                                                                                           
-                            maxgie.sendMessage(to,str(hasil))
+                            line.sendContact(to, line)                                                                                           
+                            line.sendMessage(to,str(hasil))
                 elif msg.text.lower().startswith("stag "):
                     sep = text.split(" ")
                     text = text.replace(sep[0] + " ","")
                     cond = text.split(" ")
                     jml = int(cond[0])
                     if msg.toType == 2:
-                        group = maxgie.getGroup(to)
+                        group = line.getGroup(to)
                     for x in range(jml):
                         if 'MENTION' in msg.contentMetadata.keys()!= None:
                             names = re.findall(r'@(\w+)', text)
@@ -4827,13 +4827,13 @@ async def maxgieBot(op):
                                 if mention["M"] not in lists:
                                     lists.append(mention["M"])
                             for receiver in lists:
-                                contact = maxgie.getContact(receiver)
+                                contact = line.getContact(receiver)
                                 RhyN_(to, contact.mid)
                 elif "/ลบรัน" in msg.text.lower():
                     spl = re.split("/ลบรัน",msg.text,flags=re.IGNORECASE)
                     if spl[0] == "":
                         spl[1] = spl[1].strip()
-                        ag = maxgie.getGroupIdsInvited()
+                        ag = line.getGroupIdsInvited()
                         txt = "กำลังยกเลิกค้างเชิญจำนวน "+str(len(ag))+" กลุ่ม"
                         if spl[1] != "":
                             txt = txt + " ด้วยข้อความ \""+spl[1]+"\""
@@ -4843,10 +4843,10 @@ async def maxgieBot(op):
                         procLock = len(ag)
                         for gr in ag:
                             try:
-                                maxgie.acceptGroupInvitation(gr)
+                                line.acceptGroupInvitation(gr)
                                 if spl[1] != "":
-                                    maxgie.sendMessage(gr,spl[1])
-                                maxgie.leaveGroup(gr)
+                                    line.sendMessage(gr,spl[1])
+                                line.leaveGroup(gr)
                             except:
                                 pass
                         sis = "สำเร็จแล้ว (｀・ω・´)"
@@ -4904,47 +4904,47 @@ async def maxgieBot(op):
                         }
                     }
                     sendTemplate(to, data)
-                    maxgie.sendContact(to, c)
+                    line.sendContact(to, c)
                 elif text.lower() == 'ไอดีกลุ่ม':
-                    gid = maxgie.getGroup(to)
+                    gid = line.getGroup(to)
                   #  
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "{ Group ID }\n" + gid.id)
-                    maxgie.sendMessage(to, maxgie.getGroup(to).name, contentMetadata = {'previewUrl': 'http://dl.profile.line-cdn.net/'+maxgie.getGroup(to).pictureStatus, 'i-installUrl': 'https://line.me/ti/p/~', 'type': 'mt', 'subText': "★ʄທയஆടஷະ★ ", 'a-installUrl': 'https://line.me/ti/p/~', 'a-installUrl': ' https://line.me/ti/p/~', 'a-packageName': 'com.spotify.music', 'countryCode': 'ID', 'a-linkUri': 'https://line.me/ti/p/~', 'i-linkUri': 'https://line.me/ti/p/~', 'id': 'mt000000000a6b79f9', 'text': '★ʄທയஆടஷະ★ ', 'linkUri': 'https://line.me/ti/p/~'}, contentType=19)
+                    line.sendMessage(to, line.getGroup(to).name, contentMetadata = {'previewUrl': 'http://dl.profile.line-cdn.net/'+maxgie.getGroup(to).pictureStatus, 'i-installUrl': 'https://line.me/ti/p/~', 'type': 'mt', 'subText': "★ʄທയஆടஷະ★ ", 'a-installUrl': 'https://line.me/ti/p/~', 'a-installUrl': ' https://line.me/ti/p/~', 'a-packageName': 'com.spotify.music', 'countryCode': 'ID', 'a-linkUri': 'https://line.me/ti/p/~', 'i-linkUri': 'https://line.me/ti/p/~', 'id': 'mt000000000a6b79f9', 'text': '★ʄທയஆടஷະ★ ', 'linkUri': 'https://line.me/ti/p/~'}, contentType=19)
                 elif text.lower() == 'รูปกลุ่ม':
-                    group = maxgie.getGroup(to)
+                    group = line.getGroup(to)
                     path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
-                    maxgie.sendImageWithURL(to, path)
+                    line.sendImageWithURL(to, path)
                 elif text.lower() == 'ชื่อกลุ่ม':
-                    gid = maxgie.getGroup(to)
-                    maxgie.unsendMessage(msg_id)
+                    gid = line.getGroup(to)
+                    line.unsendMessage(msg_id)
                     duc1(to, "ชื่อกลุ่ม -> \n" + gid.name) 
                 elif text.lower() == 'ลิ้ง':
                     if msg.toType == 2:
-                        group = maxgie.getGroup(to)
+                        group = line.getGroup(to)
                         if group.preventedJoinByTicket == False:
-                            ticket = maxgie.reissueGroupTicket(to)
-                            maxgie.sendMessage(to, "ลิ้งของกลุ่ม : "+group.name+"\nhttps://line.me/R/ti/g/{}".format(str(ticket)))
+                            ticket = line.reissueGroupTicket(to)
+                            line.sendMessage(to, "ลิ้งของกลุ่ม : "+group.name+"\nhttps://line.me/R/ti/g/{}".format(str(ticket)))
                 elif text.lower() == 'เปิดลิ้ง':
                     if msg.toType == 2:
-                        group = maxgie.getGroup(to)
+                        group = line.getGroup(to)
                         if group.preventedJoinByTicket == False:
-                           maxgie.unsendMessage(msg_id)
+                           line.unsendMessage(msg_id)
                            duc1(to, "เปิดลิ้งเรียบร้อย")
                         else:
                             group.preventedJoinByTicket = False
-                            maxgie.updateGroup(group)
-                            maxgie.sendMessage(to, "เปิดลิ้งเรียบร้อย")
+                            line.updateGroup(group)
+                            line.sendMessage(to, "เปิดลิ้งเรียบร้อย")
                 elif text.lower() == 'ปิดลิ้ง':
                     if msg.toType == 2:
-                        group = maxgie.getGroup(to)
+                        group = line.getGroup(to)
                         if group.preventedJoinByTicket == True:
-                           maxgie.unsendMessage(msg_id)
+                           line.unsendMessage(msg_id)
                            duc1(to, "ปิดลิ้งเรียบร้อย")
                         else:
                             group.preventedJoinByTicket = True
-                            maxgie.updateGroup(group)
-                            maxgie.sendMessage(to, "ปิดลิ้งเรียบร้อย")
+                            line.updateGroup(group)
+                            line.sendMessage(to, "ปิดลิ้งเรียบร้อย")
                 elif text.lower() == 'ข้อมูลกลุ่ม':
                     group = maxgie.getGroup(to)
                     try:
@@ -4960,7 +4960,7 @@ async def maxgieBot(op):
                         gTicket = "ไม่สมารถแสดงลิ้งได้"
                     else:
                         gQr = "เปิด"
-                        gTicket = "https://line.me/R/ti/g/{}".format(str(maxgie.reissueGroupTicket(group.id)))
+                        gTicket = "https://line.me/R/ti/g/{}".format(str(line.reissueGroupTicket(group.id)))
                     path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
                     ret_ = "╔══[ ข้อมูลของกลุ่มนี้ ]"
                     ret_ += "\n╠ ชื่อของกลุ่ม : {}".format(str(group.name))
@@ -5002,7 +5002,7 @@ async def maxgieBot(op):
                         }
                     }
                     sendTemplate(to, data)
-                    maxgie.sendImageWithURL(to, path)
+                    line.sendImageWithURL(to, path)
                 elif text.lower() == 'คนในห้อง':
                     if msg.toType == 2:
                         group = maxgie.getGroup(to)
@@ -5046,7 +5046,7 @@ async def maxgieBot(op):
                         }
                         sendTemplate(to, data)
                 elif text.lower() == 'กลุ่มทั้งหมด':
-                        groups = maxgie.groups
+                        groups = line.groups
                         ret_ = "รายชื่อกลุ่มทั้งหมด :\n"
                         no = 0 + 1
                         for gid in groups:
@@ -5084,31 +5084,31 @@ async def maxgieBot(op):
                     if msg._from in admin:
                         proses = text.split(" ")
                         string = text.replace(proses[0] + " ","")
-                        profile_A = maxgie.getProfile()
+                        profile_A = line.getProfile()
                         profile_A.displayName = string
-                        maxgie.updateProfile(profile_A)
-                        maxgie.sendMessage(msg.to,"Update to :\n" + string)
+                        line.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"Update to :\n" + string)
                         print ("Update Name")
 
                 elif "อัพตัส " in msg.text.lower():
                     if msg._from in admin:
                         proses = text.split(" ")
                         string = text.replace(proses[0] + " ","")
-                        profile_A = maxgie.getProfile()
+                        profile_A = line.getProfile()
                         profile_A.statusMessage = string
-                        maxgie.updateProfile(profile_A)
-                        maxgie.sendMessage(msg.to,"Succes Update :\n" + string)
+                        line.updateProfile(profile_A)
+                        line.sendMessage(msg.to,"Succes Update :\n" + string)
                         print ("Update Bio Succes")
                         
                 elif text.lower() == "อัพรูปโปร":
                     sets["changePictureProfile"] = True
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ส่งรูปภาพที่จะอัพมาเลยครับ🌟")
                 elif text.lower() == "อัพรูปกลุ่ม":
                     if msg.toType == 2:
                         if to not in sets["changeGroupPicture"]:
                             sets["changeGroupPicture"].append(to)
-                        maxgie.unsendMessage(msg_id)
+                        line.unsendMessage(msg_id)
                         duc1(to, "🌟ส่งรูปภาพที่จะอัพมาเลยครับ🌟")
             
                 elif text.lower() == 'เพื่อน':
@@ -5139,47 +5139,47 @@ async def maxgieBot(op):
                 elif msg.text.lower()== "ตั้งติ๊กคนแทค":
                     sets["messageSticker"]["addStatus"] = True
                     sets["messageSticker"]["addName"] = "tag"
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ส่งติ๊กที่จะใช้ลงมา🌟")
                 elif msg.text.lower() == "ลบติ๊กคนแทค":
                     sets["messageSticker"]["listSticker"]["tag"] = None
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ลบติ๊กคนแทคแล้วครับ🌟")
                 elif msg.text.lower()== "ตั้งติ๊กคนเข้า":
                     sets["messageSticker"]["addStatus"] = True
                     sets["messageSticker"]["addName"] = "wc"
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ส่งติ๊กที่จะใช้ลงมา🌟")
                 elif msg.text.lower() == "ลบติ๊กคนเข้า":
                     sets["messageSticker"]["listSticker"]["wc"] = None
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ลบติ๊กคนเข้าแล้วครับ🌟")
                 elif msg.text.lower()== "ตั้งติ๊กคนออก":
                     sets["messageSticker"]["addStatus"] = True
                     sets["messageSticker"]["addName"] = "lv"
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ส่งติ๊กที่จะใช้ลงมา🌟")
                 elif msg.text.lower() == "ลบติ๊กคนออก":
                     sets["messageSticker"]["listSticker"]["lv"] = None
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ลบติ๊กคนออกแล้วครับ🌟")
                 elif msg.text.lower()== "ตั้งติ๊กคนแอด":
                     sets["messageSticker"]["addStatus"] = True
                     sets["messageSticker"]["addName"] = "add"
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ส่งติ๊กที่จะใช้ลงมา🌟")
                 elif msg.text.lower() == "ลบติ๊กคนแอด":
                     sets["messageSticker"]["listSticker"]["add"] = None
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ลบติ๊กคนแอดแล้วครับ🌟")
                 elif msg.text.lower() == "ตั้งติ๊กมุดลิ้ง":
                     sets["messageSticker"]["addStatus"] = True
                     sets["messageSticker"]["addName"] = "join2"
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ส่งติ๊กที่จะใช้ลงมาครับ🌟")
                 elif msg.text.lower() == "ลบติ๊กมุดลิ้ง":
                     sets["messageSticker"]["listSticker"]["join2"] = None
-                    maxgie.unsendMessage(msg_id)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ลบติ๊กมุดลิ้งแล้ว🌟")
                     
 #=====================================================================
@@ -5187,8 +5187,8 @@ async def maxgieBot(op):
                 if sets["changePictureProfile"] == True:
                     path = maxgie.downloadObjectMsg(msg_id)
                     sets["changePictureProfile"] = False
-                    maxgie.updateProfilePicture(path)
-                    maxgie.unsendMessage(msg_id)
+                    line.updateProfilePicture(path)
+                    line.unsendMessage(msg_id)
                     duc1(to, "🌟ทำการเปลี่ยนแล้วครับ🌟")
                     
         if op.type == 26:
@@ -5219,16 +5219,16 @@ async def maxgieBot(op):
                             ret_ += "\nSTKVER : {}".format(stk_ver)
                             ret_ += "\nLINK : line://shop/detail/{}".format(pkg_id)
                             print(msg)
-                            maxgie.sendImageWithURL(to, "http://dl.stickershop.line.naver.jp/products/0/0/"+msg.contentMetadata["STKVER"]+"/"+msg.contentMetadata["STKPKGID"]+"/WindowsPhone/stickers/"+msg.contentMetadata["STKID"]+".png")
-                            maxgie.sendMessage(to, str(ret_))
+                            line.sendImageWithURL(to, "http://dl.stickershop.line.naver.jp/products/0/0/"+msg.contentMetadata["STKVER"]+"/"+msg.contentMetadata["STKPKGID"]+"/WindowsPhone/stickers/"+msg.contentMetadata["STKID"]+".png")
+                            line.sendMessage(to, str(ret_))
                         except Exception as error:
-                            maxgie.sendMessage(to, str(error))
+                            line.sendMessage(to, str(error))
                 if msg.text:
                     if msg.text.lower().lstrip().rstrip() in wbanlist:
-                        if msg.text not in maxgieMID:
+                        if msg.text not in lineMID:
                             try:
-                                maxgie.kickoutFromGroup(msg.to,[sender])
-                                maxgie.unsendMessage(msg_id)
+                                line.kickoutFromGroup(msg.to,[sender])
+                                line.unsendMessage(msg_id)
                                 duc1(to, "🌟บอกแล้วอย่าพิมจุกไปดิครับ🌟")
                             except Exception as e:
                                 print(e)
@@ -5242,15 +5242,15 @@ async def maxgieBot(op):
                                     n_links.append(l)
                             for ticket_id in n_links:
                                 group = maxgie.findGroupByTicket(ticket_id)
-                                maxgie.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                maxgie.sendMessage(group.id,str(tagadd["m"]))
+                                line.acceptGroupInvitationByTicket(group.id,ticket_id)
+                                line.sendMessage(group.id,str(tagadd["m"]))
                             #    msgSticker = sets["messageSticker"]["listSticker"]["join2"]
                             #    if msgSticker != None:
                             #        sid = msgSticker["STKID"]
                             #        spkg = msgSticker["STKPKGID"]
                             #        sver = msgSticker["STKVER"]
                             #        sendSticker(group.id, str(sver), str(spkg), str(sid))
-                                maxgie.unsendMessage(msg_id)
+                                line.unsendMessage(msg_id)
                                 duc1(to, "🌟มุดเข้าลิ้งกลุ่ม %s เรียบร้อย 555🌟" % str(group.name))
                 if msg.contentType == 7:
                     if sets["messageSticker"]["addStatus"] == True:
@@ -5261,7 +5261,7 @@ async def maxgieBot(op):
                                 "STKVER": msg.contentMetadata["STKVER"],
                                 "STKPKGID": msg.contentMetadata["STKPKGID"]
                             }
-                            maxgie.sendMessage(to, "Success Sticker " + name + " Done...")
+                            line.sendMessage(to, "Success Sticker " + name + " Done...")
                         sets["messageSticker"]["addStatus"] = False
                         sets["messageSticker"]["addName"] = None
                     if sets["addSticker"]["status"] == True:
@@ -5270,7 +5270,7 @@ async def maxgieBot(op):
                         stickers[sets["addSticker"]["name"]]["STKPKGID"] = msg.contentMetadata["STKPKGID"]
                         f = codecs.open('sticker.json','w','utf-8')
                         json.dump(stickers, f, sort_keys=True, indent=4, ensure_ascii=False)
-                        maxgie.sendMessage(to, "Success Added sticker {}".format(str(sets["addSticker"]["name"])))
+                        line.sendMessage(to, "Success Added sticker {}".format(str(sets["addSticker"]["name"])))
                         sets["addSticker"]["status"] = False
                         sets["addSticker"]["name"] = ""
             elif msg.contentType == 7:
@@ -5284,14 +5284,14 @@ async def maxgieBot(op):
                     ret_ += "\n╠ STICKER VERSION : {}".format(stk_ver)
                     ret_ += "\n╠ STICKER URL : line://shop/detail/{}".format(pkg_id)
                     ret_ += "\n╚══[ Finish ]"
-                    maxgie.sendMessage(to, str(ret_))
+                    line.sendMessage(to, str(ret_))
 #=====================================================================
         if op.type == 22:
             if did["join"] == True:
-                maxgie.leaveRoom(op.param1)              
+                line.leaveRoom(op.param1)              
         if op.type == 24:
             if did["join"] == True:
-                maxgie.leaveRoom(op.param1)
+                line.leaveRoom(op.param1)
 #========================================================================
         if op.type == 25 or op.type == 26:
             msg = op.message
@@ -5301,7 +5301,7 @@ async def maxgieBot(op):
             sender = msg._from
             if msg.toType == 0 or msg.toType == 1 or msg.toType == 2:
                 if msg.toType == 0:
-                    if sender != maxgie.profile.mid:
+                    if sender != line.profile.mid:
                         to = sender
                     else:
                         to = receiver
@@ -5318,7 +5318,7 @@ async def maxgieBot(op):
             elif msg.contentType == 7: # Content type is sticker
                 if settings['Sticker']:
                     if 'STKOPT' in msg.contentMetadata:
-                        contact = maxgie.getContact(sender)
+                        contact = line.getContact(sender)
                         A = contact.displayName
                         stk = msg.contentMetadata['STKID']
                         spk = msg.contentMetadata['STKPKGID']
@@ -5345,7 +5345,7 @@ async def maxgieBot(op):
             if settings["setKey"] == False: setKey = ''
             if isValid != False:
              #   elif msg.contentType == 7:
-                if msg.toType == 0 and sender != maxgieMID: to = sender
+                if msg.toType == 0 and sender != lineMID: to = sender
                 else: to = receiver
             #    elif msg.contentType == 7:
             #        if "/ti/g/" in msg.text.lower():
@@ -5357,20 +5357,20 @@ async def maxgieBot(op):
             #                    if l not in n_links:
             #                        n_links.append(l)
             #                for ticket_id in n_links:
-            #                    group = maxgie.findGroupByTicket(ticket_id)
-            #                    maxgie.acceptGroupInvitationByTicket(group.id,ticket_id)
+            #                    group = line.findGroupByTicket(ticket_id)
+            #                    line.acceptGroupInvitationByTicket(group.id,ticket_id)
                                 #
-             #                   maxgie.sendMessage(to, "เข้าไปสิงในห้องชื่อ %s 👈 เรียบร้อยแล้ว" % str(group.name))
-                if msg.contentType == 0 and sender not in maxgieMID and msg.toType == 2:
+             #                   line.sendMessage(to, "เข้าไปสิงในห้องชื่อ %s 👈 เรียบร้อยแล้ว" % str(group.name))
+                if msg.contentType == 0 and sender not in lineMID and msg.toType == 2:
                     if "MENTION" in list(msg.contentMetadata.keys()) != None:
                          if tagadd["tags"] == True:
-                             me = maxgie.getContact(sender)
+                             me = line.getContact(sender)
                              name = re.findall(r'@(\w+)', msg.text)
                              mention = ast.literal_eval(msg.contentMetadata["MENTION"])
                              mentionees = mention['MENTIONEES']
                              for mention in mentionees:
-                                   if mention['M'] in maxgieMID:
-                                          cover = maxgie.getProfileCoverURL(sender)
+                                   if mention['M'] in lineMID:
+                                          cover = line.getProfileCoverURL(sender)
                                           pp = me.pictureStatus
                                           profile = "https://profile.line-scdn.net/" + str(pp)
                                           name = me.displayName
