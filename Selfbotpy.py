@@ -1643,7 +1643,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"TANBOTNEVERDIES✯͜͡❂➣ ",
-                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -1696,7 +1696,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"꧁TANBOTNEVERDIES꧂",
-                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -1749,7 +1749,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"꧁TANBOTNEVERDIES꧂",
-                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -1825,7 +1825,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"꧁TANBOTNEVERDIES꧂ ",
-                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -1878,7 +1878,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"꧁TANBOTNEVERDIES꧂ ",
-                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a'
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100'
                                             },
                                         ]
                                     },
@@ -2022,7 +2022,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"꧁TANBOTNEVERDIES꧂",
-                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -2074,8 +2074,8 @@ async def lineBot(op):
                                                  "color":"#00F5FF",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"udb43d62b8ab3d9390881ded66f8a037a",
-                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                     "label":"uda8195e53e6c6e17f3f745743e477100",
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -2128,7 +2128,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"TANBOTNEVERDIES✯͜͡❂➣",
-                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -2204,7 +2204,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"꧁TANBOTNEVERDIES꧂ ",
-                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -2257,7 +2257,7 @@ async def lineBot(op):
                                                  "action":{
                                                      "type":"uri",
                                                      "label":"꧁TANBOTNEVERDIES꧂ ",
-                                                     "uri":"line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                     "uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                  },
                                             },
                                         ]
@@ -2524,7 +2524,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อเชล",
-"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 },
 {
@@ -2537,7 +2537,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อผู้สร้าง",
-"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 }
 ]
@@ -2671,7 +2671,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อเชล",
-"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 },
 {
@@ -2684,7 +2684,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "ติดต่อผู้สร้าง",
-"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 }
 ]
@@ -2798,7 +2798,7 @@ async def lineBot(op):
                                           "text": "꧁TANBOTNEVERDIES꧂ ",
                                           "size": "xl",
                                           "action": {
-                                            "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
+                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
                                             "type": "uri",
                                             "label": "Add Maker"
                                           },
@@ -2900,7 +2900,7 @@ async def lineBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                         }
                                                     },
                                                     {
@@ -2972,7 +2972,7 @@ async def lineBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                         }
                                                     },
                                                     {
@@ -3058,7 +3058,7 @@ async def lineBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                            "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                         }
                                                     },
                                                     {
@@ -3263,7 +3263,7 @@ async def lineBot(op):
                                                 "action": {
                                                     "type": "uri",
                                                     "label": "꧁TANBOTNEVERDIES꧂ ",
-                                                    "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                    "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                                 }                                                   
                                             },
                                             {
@@ -3333,7 +3333,7 @@ async def lineBot(op):
                 elif text.lower() == 'ข้อมูล' or text.lower() == "about":
                     try:
                         arr = []
-                        owner = "ubd86e8c77559b1493f0ad64b1dba2d6c"
+                        owner = "uda8195e53e6c6e17f3f745743e477100"
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
@@ -3381,7 +3381,7 @@ async def lineBot(op):
                                             "size": "full",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                             }
                                         }
                                     ]
@@ -3401,7 +3401,7 @@ async def lineBot(op):
                                             "size": "full",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                             }
                                         }
                                     ]
@@ -3421,7 +3421,7 @@ async def lineBot(op):
                                             "size": "full",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                             }
                                         }
                                     ]
@@ -3679,7 +3679,7 @@ async def lineBot(op):
                     line.unsendMessage(msg_id)
                     duc1(to, "🌟ปิดมุดลิ้งเรียบร้อย🌟")
 
-                elif text.lower() == 'speed':start = time.time();line.sendMessage("udb43d62b8ab3d9390881ded66f8a037a", "꧁TANBOTNEVERDIES꧂ ");elapsed_time = time.time() - start;duc1(to, "Speed : %s second"%str(round(elapsed_time,4)))
+                elif text.lower() == 'speed':start = time.time();line.sendMessage("uda8195e53e6c6e17f3f745743e477100", "꧁TANBOTNEVERDIES꧂ ");elapsed_time = time.time() - start;duc1(to, "Speed : %s second"%str(round(elapsed_time,4)))
                 
                 elif msg.text.lower().startswith("ประกาศ "):
                             txt = removeCmd("ประกาศ", text)
@@ -3823,7 +3823,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "꧁TANBOTNEVERDIES꧂ ",
-"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 },
 {
@@ -3836,7 +3836,7 @@ async def lineBot(op):
 "action": {
 "type": "uri",
 "label": "꧁TANBOTNEVERDIES꧂ ",
-"uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
+"uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
 }
 ]
@@ -3888,7 +3888,7 @@ async def lineBot(op):
                                               "aspectMode": "cover",
                                               "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                               }
                                             },
                                         "body": {
@@ -3990,7 +3990,7 @@ async def lineBot(op):
                                                       "text": "สนใจติดต่อ",
                                                       "size": "xl",
                                                       "action": {
-                                                        "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
+                                                        "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
                                                         "type": "uri",
                                                         "label": "Add Maker"
                                                       },
@@ -4048,7 +4048,7 @@ async def lineBot(op):
                                               "aspectMode": "cover",
                                               "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                               }
                                             },
                                         "body": {
@@ -4150,7 +4150,7 @@ async def lineBot(op):
                                                       "text": "สนใจติดต่อ",
                                                       "size": "xl",
                                                       "action": {
-                                                        "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
+                                                        "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
                                                         "type": "uri",
                                                         "label": "Add Maker"
                                                       },
@@ -4208,7 +4208,7 @@ async def lineBot(op):
                                               "aspectMode": "cover",
                                               "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"
+                                                "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"
                                               }
                                             },
                                         "body": {
@@ -4310,7 +4310,7 @@ async def lineBot(op):
                                                       "text": "สนใจติดต่อ",
                                                       "size": "xl",
                                                       "action": {
-                                                        "uri": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a",
+                                                        "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
                                                         "type": "uri",
                                                         "label": "Add Maker"
                                                       },
