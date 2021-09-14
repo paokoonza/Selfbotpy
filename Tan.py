@@ -36,7 +36,7 @@ bot1 = line.getProfile().mid
 RfuBot=[lineMID]
 Family=["uda8195e53e6c6e17f3f745743e477100",lineMID]
 admin = "uda8195e53e6c6e17f3f745743e477100" 
-admin=['udb43d62b8ab3d9390881ded66f8a037a',lineMID]
+admin=['uda8195e53e6c6e17f3f745743e477100',lineMID]
 RfuFamily = RfuBot + Family
 protectname = []
 protecturl = []
@@ -84,31 +84,27 @@ settings = {
     "message":"บัญชีนี้ได้การป้องกัน💢โดย ꧁💓 @:꓄ꍏꈤᖘꍏ꓄꓄ꍏꌩ💓꧂ ระบบได้ทำการบล็อคคุณอัตโนมัติ\n",
     "comment":"Thanks for add me",
     "userAgent": [
-                   "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (X11; U; Linux amd64; rv:5.0) Gecko/20100101 Firefox/5.0 (Debian)",
-                   "Mozilla/5.0 (X11; U; Linux amd64; en-US; rv:5.0) Gecko/20110619 Firefox/5.0",
-                   "Mozilla/5.0 (X11; Linux) Gecko Firefox/5.0",
-                   "Mozilla/5.0 (X11; Linux x86_64; rv:5.0) Gecko/20100101 Firefox/5.0 FirePHP/0.5",
-                   "Mozilla/5.0 (X11; Linux x86_64; rv:5.0) Gecko/20100101 Firefox/5.0 Firefox/5.0",
-                   "Mozilla/5.0 (X11; Linux x86_64) Gecko Firefox/5.0",
-                   "Mozilla/5.0 (X11; Linux ppc; rv:5.0) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (X11; Linux AMD64) Gecko Firefox/5.0",
-                   "Mozilla/5.0 (X11; FreeBSD amd64; rv:5.0) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:5.0) Gecko/20110619 Firefox/5.0",
-                   "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:5.0) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (Windows NT 6.1.1; rv:5.0) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (Windows NT 5.2; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (Windows NT 5.1; U; rv:5.0) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (Windows NT 5.1; rv:2.0.1) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (Windows NT 5.0; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
-                   "Mozilla/5.0 (Windows NT 5.0; rv:5.0) Gecko/20100101 Firefox/5.0"
-    ],
-    "wblack": false,
-    "wblacklist": false
- {
-"mimic": {
+        "Mozilla / 5.0 (X11; U; Linux i586; de; rv: 5.0) Gecko / 20000062 Firefox / 5.0" ,
+        "Mozilla / 5.0 (X11; U; Linux amd64; rv: 5.0) Gecko / 20000062 Firefox / 5.0 (Debian)" ,
+        "Mozilla / 5.0 (X11; U; Linux amd64; en-US; rv: 5.0) Gecko / 20110619 Firefox / 5.0" ,
+        "Mozilla / 5.0 (X11; Linux) Gecko Firefox / 5.0" ,
+        "Mozilla / 5.0 (X11; Linux x86_64; rv: 5.0) Gecko / 20000062 Firefox / 5.0 FirePHP / 0.5" ,
+        "Mozilla / 5.0 (X11; Linux x86_64; rv: 5.0) Gecko / 20000062 Firefox / 5.0 Firefox / 5.0" ,
+        "Mozilla / 5.0 (X11; Linux x86_64) Gecko Firefox / 5.0" ,
+        "Mozilla / 5.0 (X11; Linux ppc; rv: 5.0) Gecko / 20000062 Firefox / 5.0" ,
+        "Mozilla / 5.0 (X11; Linux AMD64) Gecko Firefox / 5.0" ,
+        "Mozilla / 5.0 (X11; FreeBSD amd64; rv: 5.0) Gecko / 20000062 Firefox / 5.0" ,
+        "Mozilla / 5.0 (Windows NT 6.2; WOW64; rv: 5.0) Gecko / 20000062 Firefox / 5.0" ,
+        "Mozilla / 5.0 (Windows NT 6.1; Win64; x64; rv: 5.0) Gecko / 20110619 Firefox / 5.0" ,
+        "Mozilla / 5.0 (Windows NT 6.1; Win64; x64; rv: 5.0) Gecko / 20000062  Firefox / 5.0" ,
+        "Mozilla / 5.0 (Windows NT 6.1; rv: 6.0) Gecko / 20000062 Firefox / 5.0" ,
+        "Mozilla / 5.0 (Windows NT 6.1.1; rv: 5.0) Gecko / 20000062 Firefox / 5.0" ,
+        "Mozilla / 5.0 (Windows NT 5.2; WOW64; rv: 5.0) Gecko / 20000062 Firefox / 5.0" ,
+        "Mozilla / 5.0 (Windows NT 5.1; U; rv: 5.0) Gecko / 20000062 Firefox / 5.0" ,
+        "Mozilla / 5.0 (Windows NT 5.1; rv: 2.0.1) Gecko / 20000062 Firefox / 5.0" ,
+        "Mozilla / 5.0 (Windows NT 5.0; WOW64; rv: 5.0) Gecko / 20000062 Firefox / 5.0" ,
+        "Mozilla / 5.0 (Windows NT 5.0; rv: 5.0) Gecko / 20000062 Firefox / 5.0"      ],
+    "mimic": {
         "copy": False,
         "status": False,
         "target": {}
