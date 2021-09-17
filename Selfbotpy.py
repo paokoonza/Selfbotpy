@@ -31,7 +31,7 @@ LINE = LINE('')
 LINE.log("Auth Token : " + str(LINE.authToken))
 LINE.log("Timeline Token : " + str(LINE.tl.channelAccessToken))
 
-waitOpen = codecs.open("read.json","r","utf-8")
+waitOpen = codecs.open("temp.json","r","utf-8")
 settingsOpen = codecs.open("read.json","r","utf-8")
 imagesOpen = codecs.open("image.json","r","utf-8")
 stickersOpen = codecs.open("sticker.json","r","utf-8")
