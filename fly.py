@@ -1,4 +1,4 @@
--*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
 from linepy import 
 from akad.ttypes import Message 
 from multiprocessing import Pool, Process
