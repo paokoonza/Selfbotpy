@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from linepy import* 
-from akad.ttypes impor tMessage* 
+from akad.ttypes import tMessage* 
 from multiprocessing import Pool, Process
 from datetime import datetime
 from time import sleep
