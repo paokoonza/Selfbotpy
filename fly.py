@@ -1,18 +1,13 @@
-#-*- coding: utf-8 -*-
-
+# -*- coding: utf-8 -*-
 from linepy import *
-from akad.ttypes import Message
-from akad.ttypes import ContentType as Type
+from akad.ttypes import *
+from multiprocessing import Pool, Process
 from datetime import datetime
 from time import sleep
 from bs4 import BeautifulSoup
 from humanfriendly import format_timespan, format_size, format_number, format_length
-import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib.request, urllib.parse, urllib.error, urllib.parse
+import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib.request, urllib.parse, urllib.error, urllib.parse,antolib,subprocess,unicodedata,GACSender
 from gtts import gTTS
-import html5lib,shutil
-import wikipedia,goslate
-import youtube_dl, pafy, asyncio
-from multiprocessing import Pool, Process
 from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
@@ -20,10 +15,13 @@ botStart = time.time()
 line = LINE("")
 line.log("Auth Token : " + str(line.authToken))
 line.log("Timeline Token : " + str(line.tl.channelAccessToken))
+
 print ("Login usa ptatan1983!!")
+
 lineMID = line.profile.mid
 lineProfile = line.getProfile()
 lineSettings = line.getSettings()
+
 oepoll = OEPoll(line)
 #call = Call(line)
 readOpen = codecs.open("read.json","r","utf-8")
@@ -35,12 +33,13 @@ Exc = [line]
 lineMID = line.getProfile().mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID]
-Family=["uda8195e53e6c6e17f3f745743e477100",lineMID]
-admin=["udb43d62b8ab3d9390881ded66f8a037a",lineMID]
+Family=["6da06d7acf0c7f3e6efa882a0a586079",lineMID]
+admin=["d4eeecceb16994a98d693df838debdd7",lineMID]
 RfuFamily = RfuBot + Family
 #ทำใว้เพือบับได้แจกบอทบิน55
 welcome = []
 autocancel = {}
+
 #==============================================================================#
 msg_dict = {}
 
