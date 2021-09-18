@@ -15,13 +15,10 @@ botStart = time.time()
 line = LINE("")
 line.log("Auth Token : " + str(line.authToken))
 line.log("Timeline Token : " + str(line.tl.channelAccessToken))
-
 print ("Login usa ptatan1983!!")
-
 lineMID = line.profile.mid
 lineProfile = line.getProfile()
 lineSettings = line.getSettings()
-
 oepoll = OEPoll(line)
 #call = Call(line)
 readOpen = codecs.open("read.json","r","utf-8")
@@ -39,7 +36,6 @@ RfuFamily = RfuBot + Family
 #ทำใว้เพือบับได้แจกบอทบิน55
 welcome = []
 autocancel = {}
-
 #==============================================================================#
 msg_dict = {}
 
