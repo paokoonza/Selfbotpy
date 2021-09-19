@@ -738,7 +738,7 @@ async def lineBot(op):
                          "size":"full",
                          "action": {
                              "type": "uri",
-                             "uri": "line://app/1626602314-Vrp0l7Ae?type=profile"
+                             "uri": "https://line.me/R/ti/p/~ptatan1983"
                           }
                     },
                 }
@@ -807,7 +807,7 @@ async def lineBot(op):
                          "size":"full",
                          "action": {
                              "type": "uri",
-                             "uri": "line://app/1626602314-Vrp0l7Ae?type=profile"
+                             "uri": "https://line.me/R/ti/p/~ptatan1983"
                           }
                     },
                 }
