@@ -32,7 +32,7 @@ LINE.log("Auth Token : " + str(LINE.authToken))
 LINE.log("Timeline Token : " + str(LINE.tl.channelAccessToken))
 
 waitOpen = codecs.open("temp.json","r","utf-8")
-settingsOpen = codecs.open("read.json","r","utf-8")
+settingsOpen = codecs.open("settings.json","r","utf-8")
 imagesOpen = codecs.open("image.json","r","utf-8")
 stickersOpen = codecs.open("sticker.json","r","utf-8")
 wait = json.load(waitOpen)
@@ -208,7 +208,7 @@ ProfileMe["pictureStatus"] = LINEProfile.pictureStatus
 coverId = line.getProfileDetail()["result"]["objectId"]
 ProfileMe["coverId"] = coverId
 #=====================================================================
-with open("max.json", "r", encoding="utf_8_sig") as f:
+with open("temp.json", "r", encoding="utf_8_sig") as f:
     anu = json.loads(f.read())
     anu.update(settings)
     settings = anu
