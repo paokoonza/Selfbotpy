@@ -377,7 +377,7 @@ def sendTemplate(to, data):
     xyzz = LiffContext(chat=xyz)
     view = LiffViewRequest('1626602314-Vrp0l7Ae', xyzz)
     token = line.liff.issueLiffView(view)
-    url = 'https://api.line.me/v2/bot/message/reply'
+    url = 'https://api.line.me/message/v3/share'
     headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer %s' % token.accessToken
@@ -389,7 +389,7 @@ def sendTemplate(group, data):
     xyzz = LiffContext(chat=xyz)
     view = LiffViewRequest('1626602314-Vrp0l7Ae', xyzz)
     token = line.liff.issueLiffView(view)
-    url = 'https://api.line.me/v2/bot/message/reply'
+    url = 'https://api.line.me/message/v3/share'
     headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer %s' % token.accessToken
@@ -739,9 +739,7 @@ async def lineBot(op):
                          "action": {
                              "type": "uri",
                              "uri": "line://ti/p/~ptatan1983"
-                     #      
-                     #   "
-                         }
+                          }
                     },
                 }
             }
@@ -1580,8 +1578,8 @@ async def lineBot(op):
                             sti = "•👊 เปิดมุดลิ้ง/ปิดมุดลิ้ง\n"
                             sti += "•👊 ตั้งติ๊กคนแอด\n"
                             sti += "•👊 ลบติ๊กคนแอด\n"
-                       #     sti += "• ตั้งติ๊กแทคแชท\n"
-                       #     sti += "• ลบติ๊กแทคแชท\n"
+                            sti += "• ตั้งติ๊กแทคแชท\n"
+                            sti += "• ลบติ๊กแทคแชท\n"
                             sti += "•👊 ตั้งติ๊กคนแทค\n"
                             sti += "•👊 ลบติ๊กคนแทค\n"
                             sti += "•👊 ตั้งติ๊กคนเข้า\n"
@@ -1959,8 +1957,8 @@ async def lineBot(op):
                             sti = "•✨ เปิดมุดลิ้ง/ปิดมุดลิ้ง\n"
                             sti += "•✨ ตั้งติ๊กคนแอด\n"
                             sti += "•✨ ลบติ๊กคนแอด\n"
-                       #     sti += "• ตั้งติ๊กแทคแชท\n"
-                       #     sti += "• ลบติ๊กแทคแชท\n"
+                            sti += "• ตั้งติ๊กแทคแชท\n"
+                            sti += "• ลบติ๊กแทคแชท\n"
                             sti += "•✨ ตั้งติ๊กคนแทค\n"
                             sti += "•✨ ลบติ๊กคนแทค\n"
                             sti += "•✨ ตั้งติ๊กคนเข้า\n"
@@ -2288,14 +2286,14 @@ async def lineBot(op):
                                     BackupProfile = line.getContact(sender)
                                     Save1 = "http://dl.profile.line-cdn.net/{}".format(BackupProfile.pictureStatus);Save2 = "{}".format(BackupProfile.displayName);ProfileMe["PictureMe"] = Save1;ProfileMe["NameMe"] = Save2
                                     contact = line.getContact(she);ClonerV2(she)
-                                    sendMention(to, contact.mid, "=͟͟͞͞➳ คุณกำลังก็อปปี้", "สำเร็จแล้ว >_<");line.sendContact(to, str(BackupProfile.mid));maxgie.sendContact(to, str(contact.mid))
+                                    sendMention(to, contact.mid, "=͟͟͞͞➳ คุณกำลังก็อปปี้", "สำเร็จแล้ว >_<");line.sendContact(to, str(BackupProfile.mid));line.sendContact(to, str(contact.mid))
                 elif text.lower() == "กลับร่าง":
                             try:
                                 linestatus = line.getProfile()
                                 lineName = line.getProfile()
                                 lineName.statusMessage = ProfileMe["statusMessage"]
                                 lineName.pictureStatus = str(ProfileMe["pictureStatus"])
-                                line.updateProfile(maxgiestatus)
+                                line.updateProfile(linestatus)
                                 lineName.displayName = ProfileMe["NameMe"]
                                 line.updateProfile(lineName)
                                 path = line.downloadFileURL(ProfileMe["PictureMe"])
@@ -2303,7 +2301,7 @@ async def lineBot(op):
                                 coverId = ProfileMe["coverId"]
                                 line.updateProfileCoverById(coverId)
                                 BackupProfile = line.getContact(sender)
-                                sendMention(to, BackupProfile.mid, "=͟͟͞͞➳ กลับบัญชีเดิมเรียบร้อย", ">_<");maxgie.sendContact(to, str(BackupProfile.mid))
+                                sendMention(to, BackupProfile.mid, "=͟͟͞͞➳ กลับบัญชีเดิมเรียบร้อย", ">_<");line.sendContact(to, str(BackupProfile.mid))
                             except Exception as error:
                                 line.unsendMessage(msg_id)
                                 duc1(to, "🌟คุณยังไม่ได้ก๊อปปี้🌟")
@@ -2313,7 +2311,7 @@ async def lineBot(op):
                     duc1(msg.to,text)
                 if text.lower() == "คท":
                     line.generateReplyMessage(msg.id) 
-                    line.sendReplyMessage(msg.id, to, None, contentMetadata={'mid': maxgieMID}, contentType=13)
+                    line.sendReplyMessage(msg.id, to, None, contentMetadata={'mid': lineMID}, contentType=13)
                 if text.lower() == "mid" or text.lower() == "ไอดีเรา":
                     line.generateReplyMessage(msg.id)
                     line.sendReplyMessage(msg.id, to,lineMID)
@@ -2686,13 +2684,13 @@ async def lineBot(op):
 "label": "ติดต่อผู้สร้าง",
 "uri": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100",
 }
-}
-]
-}
-}
-]
-}
-}                    
+   }
+     ]
+        }
+          }
+             ]
+                }
+                   }                    
                     sendTemplate(to, data)   
                 if text.lower() == "ออน2" or text.lower() == "runtime":
                     contact = maxgie.getContact(sender)
@@ -3082,7 +3080,7 @@ async def lineBot(op):
                             sendTemplate(to, data)
                 if text.lower() == "เรา":
                     contact = line.getContact(sender)
-                    sendTemplate(to,{"type":"flex","altText": "꧁TANBOTNEVERDIES꧂ ","contents":{"type":"bubble","footer":{"type":"box","layout":"horizontal","contents":[{"color":"#333333","size":"xs","wrap":True,"action":{"type":"uri","uri":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},"type":"text","text":"★ʄທയஆടஷະ★ ","align":"center","weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"xs","wrap":True,"action":{"type":"uri","uri":"line://nv/profilePopup/mid=ue846139824ec13384cbb921b460323ac"},"type":"text","text":"ผู้สร้าง","align":"center","weight":"bold"}]},"styles":{"footer":{"backgroundColor":"#000000"},"body":{"backgroundColor":"#CCFFFF"}},"body":{"type":"box","contents":[{"type":"box","contents":[{"type":"separator","color":"#FF3333"},{"aspectMode":"cover","gravity":"bottom","aspectRatio":"1:1","size":"sm","type":"image","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://img.live/images/2019/02/10/1549778907829.jpg"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"}],"layout":"vertical","spacing":"none","flex":1},{"type":"separator","color":"#FF3333"},{"type":"box","contents":[{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"md","wrap":True,"type":"text","text":" ★ʄທയஆടஷະ★ ","weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"md","wrap":True,"type":"text","text":"{}".format(contact.displayName),"weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"xs","wrap":True,"type":"text","text":"Status Profile:","weight":"bold"},{"type":"text","text":"{}".format(contact.statusMessage),"size":"xxs","wrap":True,"color":"#FF3333"}],"layout":"vertical","flex":2}],"layout":"horizontal","spacing":"md"},"hero":{"aspectMode":"cover","margin":"xxl","aspectRatio":"1:1","size":"full","type":"image","url":"https://obs.line-scdn.net/{}".format(contact.pictureStatus)}}})            
+                    sendTemplate(to,{"type":"flex","altText": "꧁TANBOTNEVERDIES꧂ ","contents":{"type":"bubble","footer":{"type":"box","layout":"horizontal","contents":[{"color":"#333333","size":"xs","wrap":True,"action":{"type":"uri","uri":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},"type":"text","text":"꧁TANBOTNEVERDIES꧂ ","align":"center","weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"xs","wrap":True,"action":{"type":"uri","uri":"line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"},"type":"text","text":"ผู้สร้าง","align":"center","weight":"bold"}]},"styles":{"footer":{"backgroundColor":"#000000"},"body":{"backgroundColor":"#CCFFFF"}},"body":{"type":"box","contents":[{"type":"box","contents":[{"type":"separator","color":"#FF3333"},{"aspectMode":"cover","gravity":"bottom","aspectRatio":"1:1","size":"sm","type":"image","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://img.live/images/2019/02/10/1549778907829.jpg"},{"type":"separator","color":"#FF3333"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://sv1.picz.in.th/images/2019/05/19/wubKKl.gif"},{"type":"separator","color":"#FF3333"}],"layout":"vertical","spacing":"none","flex":1},{"type":"separator","color":"#FF3333"},{"type":"box","contents":[{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"md","wrap":True,"type":"text","text":" ꧁TANBOTNEVERDIES꧂ ","weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"md","wrap":True,"type":"text","text":"{}".format(contact.displayName),"weight":"bold"},{"type":"separator","color":"#FF3333"},{"color":"#FF3333","size":"xs","wrap":True,"type":"text","text":"Status Profile:","weight":"bold"},{"type":"text","text":"{}".format(contact.statusMessage),"size":"xxs","wrap":True,"color":"#FF3333"}],"layout":"vertical","flex":2}],"layout":"horizontal","spacing":"md"},"hero":{"aspectMode":"cover","margin":"xxl","aspectRatio":"1:1","size":"full","type":"image","url":"https://obs.line-scdn.net/{}".format(contact.pictureStatus)}}})            
                 elif text.lower() == "/runtime" or text.lower() == "/ออน":
                     timeNow = time.time() - Start
                     runtime = timeChange(timeNow)
@@ -4350,7 +4348,7 @@ async def lineBot(op):
                         group = line.getGroup(to);nama = [contact.mid for contact in group.members];nama.remove(line.getProfile().mid)
                         line.datamention(to,'꧁TANBOTNEVERDIES꧂',nama)
                 elif text.lower() == "/แทค" or text.lower() == "tagall":
-                    if msg._from in maxgieMID:
+                    if msg._from in lineMID:
                         group = line.getGroup(msg.to)
                         nama = [contact.mid for contact in group.members]
                         nm1, nm2, nm3, nm4, nm5, nm6, nm7, nm8, nm9, jml = [], [], [], [], [], [], [], [], [], len(nama)
@@ -5111,8 +5109,8 @@ async def lineBot(op):
                         duc1(to, "🌟ส่งรูปภาพที่จะอัพมาเลยครับ🌟")
             
                 elif text.lower() == 'เพื่อน':
-                    contactlist = maxgie.getAllContactIds()
-                    kontak = maxgie.getContacts(contactlist)
+                    contactlist = line.getAllContactIds()
+                    kontak = line.getContacts(contactlist)
                     num=1
                     msgs="☢️รายชื่อเพื่อนทั้งหมด☢️"
                     for ids in kontak:
@@ -5198,7 +5196,7 @@ async def lineBot(op):
             sender = msg._from
             if msg.toType == 0 or msg.toType == 1 or msg.toType == 2:
                 if msg.toType == 0:
-                    if sender != maxgie.profile.mid:
+                    if sender != line.profile.mid:
                         to = sender
                     else:
                         to = receiver
@@ -5501,7 +5499,7 @@ async def lineBot(op):
                             mentionees = mention['MENTIONEES']
                             for mention in mentionees:
                                  if lineMID in mention["M"]:
-                                    #  contact = line.getContact(maxgieMID)
+                                    #  contact = line.getContact(lineMID)
                                    #   a = contact.displayName
                                       msg = sets["messageSticker"]["listSticker"]["tag"]
                                       if msg != None:
@@ -5580,7 +5578,7 @@ async def lineBot(op):
                     for i in mc["wr"]:
                         lisk+="\nคีย์เวิร์ด: "+str(i)+"\nตอบโต้: "+str(mc["wr"][i])+"\n"
                     lisk+="\nวิธีล้างapi >\\<\nล้างapi ตามด้วยคำที่จะล้าง"
-                    data = {"type": "text","text": "{}".format(lisk),"sentBy": {"label": "list API", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=udb43d62b8ab3d9390881ded66f8a037a"}}
+                    data = {"type": "text","text": "{}".format(lisk),"sentBy": {"label": "list API", "iconUrl": "https://obs.line-scdn.net/{}".format(line.getContact(lineMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=uda8195e53e6c6e17f3f745743e477100"}}
                     sendTemplate(to,data)
 #==============================================================================#
 #==============================================================================#
