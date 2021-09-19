@@ -36,7 +36,7 @@ RfuBot=[lineMID]
 Family=["6da06d7acf0c7f3e6efa882a0a586079",lineMID]
 admin=["d4eeecceb16994a98d693df838debdd7",lineMID]
 RfuFamily = RfuBot + Family
-#ทำใว้เพือบับได้แจกบอทบิน55
+#\\ทำใว้เพื่อ ได้แจกบอทบิน55
 welcome = []
 autocancel = {}
 
