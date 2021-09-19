@@ -3,8 +3,8 @@
     "Sticker": false,
     "Wc": false,
     "Welcome": false,
-    "access_key": "0066725464abd96d2cee00863ad9067f",
-    "access_token": "ec6a73ed66f5704bf4d071a2174fb736238aaeb6",
+    "access_key": "d4eeecceb16994a98d693df838debdd7",
+    "access_token": "171da2f1-d71b-449d-ab5a-b68659c0fa15",
     "addContact": {
         "name": "",
         "status": false
@@ -28,7 +28,7 @@
     "ani_guess": [
         "c9a9f741633543d70449a7d9801cbbd28"
     ],
-    "apiKey": "8e3cf182-807a-4186-9261-a6c8741a9237",
+    "apiKey": "7a6f780a-ceae-471d-a19a-3de7e4cd5d2a",
     "autoAdd": false,
     "autoJoin": false,
     "autoJoinTicket": false,
