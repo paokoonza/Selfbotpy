@@ -366,7 +366,7 @@ def lineBot(op):
             sender = msg._from
 
         if op.type == 55:
-            print ("tanlinepy")
+            print ("linepy")
             try:
                 if op.param1 in read['readPoint']:
                     if op.param2 in read['readMember'][op.param1]:
