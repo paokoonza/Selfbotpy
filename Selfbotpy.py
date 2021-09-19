@@ -738,7 +738,7 @@ async def lineBot(op):
                          "size":"full",
                          "action": {
                              "type": "uri",
-                             "uri": "line://ti/p/~ptatan1983"
+                             "uri": "line://app/1626602314-Vrp0l7Ae?type=profile"
                           }
                     },
                 }
@@ -807,9 +807,8 @@ async def lineBot(op):
                          "size":"full",
                          "action": {
                              "type": "uri",
-                             "uri": "line://ti/p/~ptatan1983"
-                           #"
-                         }
+                             "uri": "line://app/1626602314-Vrp0l7Ae?type=profile"
+                          }
                     },
                 }
             }
@@ -1505,7 +1504,7 @@ async def lineBot(op):
                                         "action": {
                                             "type":"uri",
                                             "label":"ผู้สร้าง",
-                                            "uri":"line://ti/p/~ptatan1983"
+                                            "uri":"line://app/1626602314-Vrp0l7Ae?type=profile"
                                         },
                                     },
                                 ]
