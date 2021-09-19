@@ -200,7 +200,7 @@ settings["myProfile"]["statusMessage"] = LINEProfile.statusMessage
 settings["myProfile"]["pictureStatus"] = LINEProfile.pictureStatus
 cont = LINE.getContact(LINEMID)
 settings["myProfile"]["videoProfile"] = cont.videoProfile
-coverId = maxgie.getProfileDetail()["result"]["objectId"]
+coverId = LINE.getProfileDetail()["result"]["objectId"]
 settings["myProfile"]["coverId"] = coverId
 
 ProfileMe["statusMessage"] = LINEProfile.statusMessage
@@ -212,7 +212,7 @@ with open("max.json", "r", encoding="utf_8_sig") as f:
     anu = json.loads(f.read())
     anu.update(settings)
     settings = anu
-with open("Max2.json", "r", encoding="utf_8_sig") as f:
+with open("settings.json", "r", encoding="utf_8_sig") as f:
     itu = json.loads(f.read())
     itu.update(wait)
     wait = itu
