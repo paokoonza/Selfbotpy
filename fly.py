@@ -50,7 +50,7 @@ settings = {
     'autoCancel':{"on":True,"members":0},	
    "autoJoin": False,
     "welcome":"􀼂􀅝church􏿿􀼂􀅜arbor􏿿﹏􀼂􀅞limo 1􏿿􀼂􀅟limo 2􏿿􀼂􀅠limo 3􏿿﹏􀼂􀅜arbor􏿿􀼂􀅝church􏿿􏿿􀼂􀅝present􏿿",
-    "kick":"✧✯͜͡❂➣TANBOTNEVERDIE✯͜͡❂➣✧",
+    "kick":"✧꧁TANBOTNEVERDIES꧂✧",
     "bye":"􀼂􀅝church􏿿􀼂􀅜arbor􏿿﹏􀼂􀅞limo 1􏿿􀼂􀅟limo 2􏿿􀼂􀅠limo 3􏿿﹏􀼂􀅜arbor􏿿􀼂􀅝church􏿿",    
     "userAgent": [
         "Mozilla/5.0 (Android 4.4; Mobile; rv:70.0) Gecko/70.0 Firefox/70.0",
